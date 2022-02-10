@@ -1,0 +1,33 @@
+Sprint 1:
+- UI :
+	Login
+	Calendar View (week)
+	User preference indication - muscle group and frequency
+	Daily workout details
+	
+- Backend:
+	Dummy login authenticator
+	User class (preferences) - Calendar, UserPreferences, Login credentials
+	Workout class - stores exercises
+	Calendar class - stores workouts
+	Preferences - muscle groups and daily availability
+	
+- Tasks:
+	Implement Login page UI
+	Implement week view page UI (Landing page)
+	Implement Preference indication page
+	Implement daily workout view page UI
+	
+	Create login interface
+	Create dummy login class - hardcoded username/password values to check against
+	Create API interface class
+	Create Preference class
+	Create Workout class
+	Create Calendar class
+	Create User class
+	Create load/save interface
+	
+- Product Backlog
+	Generate workouts based on indicated preferences
+	View schedule of workouts on weekly basis
+	View workout day details
