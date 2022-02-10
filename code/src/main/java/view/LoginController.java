@@ -23,6 +23,13 @@ public class LoginController {
 
     @FXML
     void initialize() {
+        this.bindLogin();
+
+    }
+
+    private void bindLogin() {
+        this.loginButton.disableProperty().bind(
+                this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
     }
 
 }
