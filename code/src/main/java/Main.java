@@ -1,4 +1,3 @@
-package code.model;
 
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ import javafx.scene.Scene;
  * @version Fall 2021
  */
 public class Main extends Application {
-    public static final String WINDOW_TITLE = "Discount Finder";
+    public static final String WINDOW_TITLE = "Workout Manager";
     public static final String GUI_RESOURCE = "view/LoginPage.fxml";
 
     /**
