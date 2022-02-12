@@ -1,69 +1,41 @@
-package view;
+package WorkoutManager.view;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import WorkoutManager.model.Days;
+import WorkoutManager.model.MuscleGroup;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import model.Days;
-import model.MuscleGroup;
+import javafx.stage.Stage;
 
 public class PreferenceController {
+
+    @FXML
+    private AnchorPane mainPane;
 
     @FXML
     private GridPane daysGridPane;
 
     @FXML
-    private CheckBox mondayCheckBox;
-
-    @FXML
-    private CheckBox tuesdayCheckbox;
-
-    @FXML
-    private CheckBox wednesdayCheckbox;
-
-    @FXML
-    private CheckBox thursdayCheckbox;
-
-    @FXML
-    private CheckBox fridayCheckbox;
-
-    @FXML
-    private CheckBox saturdayCheckbox;
-
-    @FXML
-    private CheckBox sundayCheckbox;
-
-    @FXML
     private GridPane muscleGridPane;
-
-    @FXML
-    private CheckBox armsCheckBox;
-
-    @FXML
-    private CheckBox legsCheckbox;
-
-    @FXML
-    private CheckBox backCheckbox;
-
-    @FXML
-    private CheckBox coreCheckbox;
-
-    @FXML
-    private CheckBox stretchCheckbox;
 
     @FXML
     private Button applyPrefButton;
 
     @FXML
+    private Button cancelButton;
+
+    @FXML
     void handleApplyPrefButton(ActionEvent event) {
         List<Days> selectedDays = this.getDaysSelected();
-        System.out.println(selectedDays);
         List<MuscleGroup> selectedMuscles = this.getSelectedMuscles();
+        System.out.println(selectedDays);
         System.out.println(selectedMuscles);
 
     }
@@ -77,6 +49,7 @@ public class PreferenceController {
                     Days day = Days.valueOf(ckbox.getText().toUpperCase());
                     selectedDays.add(day);
                 }
+
             }
         }
         return selectedDays;
@@ -94,6 +67,12 @@ public class PreferenceController {
             }
         }
         return selectedMuscles;
+    }
+
+    @FXML
+    void handleCancelButton(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
     }
 
     @FXML

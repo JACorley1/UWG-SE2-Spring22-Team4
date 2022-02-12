@@ -1,4 +1,4 @@
-package model;
+package WorkoutManager.model;
 
 /**
  * Creates a enum for the days of the week

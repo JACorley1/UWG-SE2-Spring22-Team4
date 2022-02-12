@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\Main.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\Main.java">
 </file>
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\model\Days.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\model\Days.java">
 </file>
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\model\MuscleGroup.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\model\MuscleGroup.java">
 </file>
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\model\User.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\model\User.java">
 <error line="100" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 </file>
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\view\LoginController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\view\LoginController.java">
 </file>
-<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\view\PreferenceController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\WorkoutManager\view\PreferenceController.java">
 </file>
 </checkstyle>

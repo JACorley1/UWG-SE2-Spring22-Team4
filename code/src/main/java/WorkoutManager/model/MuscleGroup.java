@@ -1,4 +1,4 @@
-package model;
+package WorkoutManager.model;
 
 /**
  * Creates a enum for each Muscle groupd for the user to select
