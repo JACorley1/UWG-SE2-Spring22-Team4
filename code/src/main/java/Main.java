@@ -15,7 +15,8 @@ import javafx.scene.Scene;
  */
 public class Main extends Application {
     public static final String WINDOW_TITLE = "Workout Manager";
-    public static final String GUI_RESOURCE = "view/LoginPage.fxml";
+    public static final String LOGIN_PAGE = "view/LoginPage.fxml";
+    public static final String PREFRENCES_PAGE = "view/PreferencePage.fxml";
 
     /**
      * JavaFX entry point.
@@ -27,7 +28,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource(Main.GUI_RESOURCE));
+        Parent parent = FXMLLoader.load(getClass().getResource(Main.PREFRENCES_PAGE));
         Scene scene = new Scene(parent);
         primaryStage.setTitle(WINDOW_TITLE);
         primaryStage.setScene(scene);
