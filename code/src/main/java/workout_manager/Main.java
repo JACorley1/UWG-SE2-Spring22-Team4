@@ -1,3 +1,5 @@
+package workout_manager;
+
 
 import java.io.IOException;
 
@@ -15,8 +17,8 @@ import javafx.scene.Scene;
  */
 public class Main extends Application {
     public static final String WINDOW_TITLE = "Workout Manager";
-    public static final String GUI_RESOURCE = "view/LoginPage.fxml";
-
+    public static final String GUI_RESOURCE = "view/codebehind/LoginPage.fxml";
+    
     /**
      * JavaFX entry point.
      *

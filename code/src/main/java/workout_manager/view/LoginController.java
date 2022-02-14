@@ -1,4 +1,6 @@
-package view;
+package workout_manager.view;
+
+
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
