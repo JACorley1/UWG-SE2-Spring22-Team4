@@ -1,13 +1,18 @@
 package WorkoutManager.view;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import WorkoutManager.Main;
 import WorkoutManager.model.Days;
 import WorkoutManager.model.MuscleGroup;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
@@ -70,9 +75,13 @@ public class PreferenceController {
     }
 
     @FXML
-    void handleCancelButton(ActionEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.close();
+    void handleCancelButton(ActionEvent event) throws IOException {
+        Stage stage = (Stage) this.cancelButton.getScene().getWindow();
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.LOGIN_PAGE));
+        Scene scene = new Scene(parent);
+        stage.setTitle(Main.WINDOW_TITLE);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

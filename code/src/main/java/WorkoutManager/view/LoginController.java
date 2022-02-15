@@ -28,14 +28,12 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
 
-        Stage modalStage = new Stage();
+        Stage stage = (Stage) this.loginButton.getScene().getWindow();
         Parent parent = FXMLLoader.load(Main.class.getResource(Main.PREFRENCES_PAGE));
         Scene scene = new Scene(parent);
-        modalStage.setTitle(Main.WINDOW_TITLE);
-        modalStage.setScene(scene);
-        modalStage.initModality(Modality.WINDOW_MODAL);
-        modalStage.initOwner(((Node) event.getSource()).getScene().getWindow());
-        modalStage.showAndWait();
+        stage.setTitle(Main.WINDOW_TITLE);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
