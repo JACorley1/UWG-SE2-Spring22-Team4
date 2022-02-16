@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginControlle">
+   <children>
+      <TextField fx:id="userNameTextfield" layoutX="75.0" layoutY="180.0" promptText="Enter UserName" />
+      <TextField fx:id="passwordTextfield" layoutX="75.0" layoutY="226.0" promptText="Enter Password" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="162.0" prefHeight="18.0" prefWidth="98.0" text="UserName" textAlignment="CENTER" underline="true" />
+      <Label alignment="CENTER" layoutX="123.0" layoutY="206.0" text="PassWord" underline="true" />
+      <Button fx:id="loginButton" layoutX="127.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
+      <ImageView disable="true" fitHeight="129.0" fitWidth="98.0" layoutX="106.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/WeightLifting.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+   </children>
+</AnchorPane>
