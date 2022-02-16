@@ -7,6 +7,23 @@ package WorkoutManager.model;
  * @author wtjracer
  */
 public enum MuscleGroup {
-    ARMS, LEGS, BACK, CORE, STRETCH
+    ARMS("arms"), LEGS("legs"), BACK("back"), ABS("abs"), CHEST("chest"), SHOULDERS("shoulders"), CALVES("calves");
+
+    private final String value;
+
+    private MuscleGroup(String value) {
+        this.value = value;
+    }
+
+    /**
+     * returns the string value of this muscle
+     * 
+     * @precondition none
+     * @postconditino none
+     * @return the string value of the enum
+     */
+    public String valueOf() {
+        return this.value;
+    }
 
 }

@@ -43,6 +43,10 @@ public class PreferenceController {
         System.out.println(selectedDays);
         System.out.println(selectedMuscles);
 
+        for (MuscleGroup muscle : selectedMuscles) {
+            System.out.println(muscle.valueOf());
+        }
+
     }
 
     private List<Days> getDaysSelected() {
