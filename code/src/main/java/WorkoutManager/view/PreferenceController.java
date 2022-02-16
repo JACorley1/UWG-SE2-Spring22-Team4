@@ -40,12 +40,6 @@ public class PreferenceController {
     void handleApplyPrefButton(ActionEvent event) {
         List<Days> selectedDays = this.getDaysSelected();
         List<MuscleGroup> selectedMuscles = this.getSelectedMuscles();
-        System.out.println(selectedDays);
-        System.out.println(selectedMuscles);
-
-        for (MuscleGroup muscle : selectedMuscles) {
-            System.out.println(muscle.valueOf());
-        }
 
     }
 
