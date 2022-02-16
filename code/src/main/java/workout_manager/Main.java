@@ -1,6 +1,5 @@
 package workout_manager;
 
-
 import java.io.IOException;
 
 import javafx.application.Application;
@@ -17,8 +16,9 @@ import javafx.scene.Scene;
  */
 public class Main extends Application {
     public static final String WINDOW_TITLE = "Workout Manager";
-    public static final String GUI_RESOURCE = "view/codebehind/LoginPage.fxml";
-    
+    public static final String LOGIN_PAGE = "view/codebehind/LoginPage.fxml";
+    public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
+
     /**
      * JavaFX entry point.
      *
@@ -29,7 +29,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource(Main.GUI_RESOURCE));
+        Parent parent = FXMLLoader.load(getClass().getResource(Main.LOGIN_PAGE));
         Scene scene = new Scene(parent);
         primaryStage.setTitle(WINDOW_TITLE);
         primaryStage.setScene(scene);

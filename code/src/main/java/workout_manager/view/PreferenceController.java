@@ -1,12 +1,10 @@
-package WorkoutManager.view;
+package workout_manager.view;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import WorkoutManager.Main;
-import WorkoutManager.model.Days;
-import WorkoutManager.model.MuscleGroup;
+import workout_manager.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +16,8 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import workout_manager.model.Days;
+import workout_manager.model.MuscleGroup;
 
 public class PreferenceController {
 

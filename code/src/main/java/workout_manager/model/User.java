@@ -1,4 +1,4 @@
-package WorkoutManager.model;
+package workout_manager.model;
 
 import java.util.ArrayList;
 import java.util.List;
