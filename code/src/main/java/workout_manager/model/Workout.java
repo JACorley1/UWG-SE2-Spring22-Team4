@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * defines the workout class
  */
 public class Workout {
-    
+
     private ArrayList<ExerciseAlt> exercises;
 
     /**
@@ -15,16 +15,17 @@ public class Workout {
     public Workout() {
         this.exercises = new ArrayList<ExerciseAlt>();
     }
-    
+
     /**
      * adds an exercise to the workout
+     * 
      * @param exercise the exercise to add to the workout
      */
-    public void addExercise(ExcerciseAlt exercise) {
+    public void addExercise(ExerciseAlt exercise) {
         this.exercises.add(exercise);
     }
 
-    public ExcersizeAlt getExercise(int indexOfExercise) {
+    public ExerciseAlt getExercise(int indexOfExercise) {
         return this.exercises.get(indexOfExercise);
 
     }
