@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java">
+</file>
+<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Exercise.java">
+<error line="12" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="12" column="32" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="16" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="16" column="33" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="20" column="30" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="24" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="24" column="26" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="28" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="28" column="28" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="31" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="31" column="34" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java">
+<error line="3" column="8" severity="warning" message="Unused import - java.io.IOException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="warning" message="Unused import - java.lang.reflect.Array." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="8" column="8" severity="warning" message="Unused import - kong.unirest.HttpRequest." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="11" column="8" severity="warning" message="Unused import - kong.unirest.json.JSONArray." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="15" column="8" severity="warning" message="Unused import - com.google.gson.JsonArray." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="17" column="8" severity="warning" message="Unused import - com.google.gson.JsonObject." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="31" column="12" severity="warning" message="Variable &apos;host&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="31" column="19" severity="warning" message="The String &quot;https://exercisedb.p.rapidapi.com/exercises/bodyPart/&quot; appears 2 times in the file." source="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck"/>
+<error line="32" column="12" severity="warning" message="Variable &apos;charset&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="34" column="12" severity="warning" message="Instance variable name &apos;x_rapidapi_host&apos; should start with a lower case letter and use only letters and digits. It must have more than one letter." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="34" column="12" severity="warning" message="Variable &apos;x_rapidapi_host&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="35" severity="warning" message="Don&apos;t use trailing comments." source="com.puppycrawl.tools.checkstyle.checks.TrailingCommentCheck"/>
+<error line="35" column="12" severity="warning" message="Instance variable name &apos;x_rapidapi_key&apos; should start with a lower case letter and use only letters and digits. It must have more than one letter." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+<error line="35" column="12" severity="warning" message="Variable &apos;x_rapidapi_key&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="35" column="81" severity="warning" message="&apos;;&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="40" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="40" column="46" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="43" column="78" severity="warning" message="Reference to instance variable &apos;charset&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="47" column="27" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="48" column="59" severity="warning" message="Reference to instance variable &apos;host&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="49" severity="warning" message="&apos;.&apos; has incorrect indentation level 12, expected level should be 14." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="49" column="40" severity="warning" message="Reference to instance variable &apos;x_rapidapi_host&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="50" severity="warning" message="&apos;.&apos; has incorrect indentation level 12, expected level should be 14." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="50" column="39" severity="warning" message="Reference to instance variable &apos;x_rapidapi_key&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
+<error line="51" severity="warning" message="&apos;.&apos; has incorrect indentation level 12, expected level should be 14." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
+</file>
+</checkstyle>
