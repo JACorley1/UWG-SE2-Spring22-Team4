@@ -69,6 +69,8 @@
 <error line="21" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 <error line="25" column="63" severity="warning" message="Must have at least one statement." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
 </file>
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
+</file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
