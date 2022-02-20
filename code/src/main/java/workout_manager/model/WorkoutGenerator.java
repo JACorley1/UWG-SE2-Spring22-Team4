@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class WorkoutGenerator {
-    //private WorkoutCalendar workoutCalendar;
+    private WorkoutCalendar workoutCalendar;
     private Map<MuscleGroup, ArrayList<ExerciseAlt>> exerciseMap;
     private ArrayList<MuscleGroup> upperBody;
     private ArrayList<MuscleGroup> lowerBody;
@@ -14,7 +14,7 @@ public class WorkoutGenerator {
     private DataFetcher fetcher;
 
     public WorkoutGenerator() {
-       // this.workoutCalendar = new WorkoutCalendar();
+        this.workoutCalendar = new WorkoutCalendar();
         this.exerciseMap = new HashMap<MuscleGroup, ArrayList<ExerciseAlt>>();
     }
 
@@ -23,7 +23,7 @@ public class WorkoutGenerator {
         this.populateExercises(preferences);
 
         for (Days currentDay : preferences.getSelectedDays()) {
-          //  this.workoutCalendar.addWorkout(currentDay, createBalancedWorkout());
+            this.workoutCalendar.addWorkout(currentDay, createBalancedWorkout());
         }
     }
 
