@@ -19,6 +19,7 @@ public class Main extends Application {
     public static final String WINDOW_TITLE = "Workout Manager";
     public static final String LOGIN_PAGE = "view/codebehind/LoginPage.fxml";
     public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
+    public static final String WEEKLY_VIEW_PAGE = "view/codebehind/WeeklyView.fxml";
 
     /**
      * JavaFX entry point.
@@ -30,7 +31,8 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource(Main.LOGIN_PAGE));
+        //Parent parent = FXMLLoader.load(getClass().getResource(Main.LOGIN_PAGE));
+        Parent parent = FXMLLoader.load(getClass().getResource(Main.WEEKLY_VIEW_PAGE));
         Scene scene = new Scene(parent);
         primaryStage.setTitle(WINDOW_TITLE);
         primaryStage.setScene(scene);
