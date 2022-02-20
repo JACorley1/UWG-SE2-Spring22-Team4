@@ -8,14 +8,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.LoginController">
    <children>
-      <TextField fx:id="userNameTextfield" layoutX="75.0" layoutY="180.0" promptText="Enter UserName" />
-      <TextField fx:id="passwordTextfield" layoutX="75.0" layoutY="226.0" promptText="Enter Password" />
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="162.0" prefHeight="18.0" prefWidth="98.0" text="UserName" textAlignment="CENTER" underline="true" />
-      <Label alignment="CENTER" layoutX="123.0" layoutY="206.0" text="PassWord" underline="true" />
-      <Button fx:id="loginButton" layoutX="127.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
-      <ImageView fitHeight="129.0" fitWidth="98.0" layoutX="106.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="userNameTextfield" layoutX="226.0" layoutY="224.0" promptText="Enter Username" />
+      <TextField fx:id="passwordTextfield" layoutX="226.0" layoutY="270.0" promptText="Enter Password" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="251.0" layoutY="206.0" prefHeight="18.0" prefWidth="98.0" text="Username" textAlignment="CENTER" underline="true" />
+      <Label alignment="CENTER" layoutX="274.0" layoutY="250.0" text="Password" underline="true" />
+      <Button fx:id="loginButton" layoutX="278.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
+      <ImageView fitHeight="129.0" fitWidth="98.0" layoutX="257.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@WeightLifting.png" />
          </image>
