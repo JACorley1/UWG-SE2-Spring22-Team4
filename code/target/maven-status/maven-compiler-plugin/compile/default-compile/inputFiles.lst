@@ -1,14 +1,19 @@
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\DataFetcher.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutDataFetcher.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Exercise.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java
-C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java
+
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\DataFetcher.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LocalLoginAuthenticator.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutDataFetcher.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\test\TestLocalLoginAuthenticator.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Exercise.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LoginAuthenticator.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Group4\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java
+
