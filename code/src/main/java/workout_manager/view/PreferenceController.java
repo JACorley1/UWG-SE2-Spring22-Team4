@@ -19,6 +19,15 @@ import javafx.stage.Stage;
 import workout_manager.model.Days;
 import workout_manager.model.MuscleGroup;
 
+/**
+ * Creates a controller for the preferences page
+ * 
+ * @precondition none
+ * @postcondition none
+ * @author wtjracer
+ * @version Spring 2022
+ * 
+ */
 public class PreferenceController {
 
     @FXML

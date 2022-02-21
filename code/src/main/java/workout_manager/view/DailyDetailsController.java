@@ -2,6 +2,7 @@ package workout_manager.view;
 
 import java.io.IOException;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,14 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import workout_manager.Main;
 
+/**
+ * Creates a controller for the daily details page
+ * 
+ * @precondition none
+ * @postcondition none
+ * @author wtjracer
+ * @version Spring 2022
+ */
 public class DailyDetailsController {
 
     @FXML
@@ -33,6 +42,10 @@ public class DailyDetailsController {
         stage.setScene(scene);
         stage.show();
 
+    }
+
+    @FXML
+    void initialize() {
     }
 
 }

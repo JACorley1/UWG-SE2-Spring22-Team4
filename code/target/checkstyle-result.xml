@@ -49,7 +49,6 @@
 <error line="14" column="5" severity="warning" message="Redundant &apos;private&apos; modifier." source="com.puppycrawl.tools.checkstyle.checks.modifier.RedundantModifierCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
-<error line="8" severity="warning" message="Type Javadoc comment is missing @author tag." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
 <error line="100" severity="warning" message="Javadoc has empty description section." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
@@ -80,11 +79,23 @@
 <error line="3" column="8" severity="warning" message="Unused import - workout_manager.model.LocalLoginAuthenticator." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
+<error line="20" column="4" severity="warning" message="Unknown tag &apos;precondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="21" column="4" severity="warning" message="Unknown tag &apos;postcondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="51" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
+<error line="17" column="4" severity="warning" message="Unknown tag &apos;precondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="18" column="4" severity="warning" message="Unknown tag &apos;postcondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
+<error line="25" column="4" severity="warning" message="Unknown tag &apos;precondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="26" column="4" severity="warning" message="Unknown tag &apos;postcondition&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 </file>
 <file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
+<error line="8" column="8" severity="warning" message="Unused import - javafx.scene.Node." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="20" column="33" severity="warning" message="Variable &apos;dayText&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+</file>
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WorkoutViewModel.java">
+<error line="3" column="8" severity="warning" message="Unused import - javafx.beans.property.SimpleStringProperty." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
 </checkstyle>

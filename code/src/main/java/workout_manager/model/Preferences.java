@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 /**
  * class that stores the user's selected preferences
+ *
+ * @author wtjracer
+ * @version Spring 2022
  */
 public class Preferences {
 

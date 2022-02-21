@@ -11,6 +11,14 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 
+/**
+ * Creates a controller fro the login page
+ * 
+ * @precondition none
+ * @postcondition none
+ * @author wtjracer
+ * @version Spring 2022
+ */
 public class LoginController {
 
     @FXML

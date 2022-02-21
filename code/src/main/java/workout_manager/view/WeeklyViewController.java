@@ -47,6 +47,11 @@ public class WeeklyViewController {
     private Rectangle preferencesPageButton;
 
     @FXML
+    void initialize() {
+
+    }
+
+    @FXML
     void handleShowWorkoutDetail(MouseEvent event) throws IOException {
         Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
         Parent parent = FXMLLoader.load(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
