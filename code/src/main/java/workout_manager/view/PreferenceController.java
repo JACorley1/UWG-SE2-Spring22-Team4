@@ -37,9 +37,16 @@ public class PreferenceController {
     private Button cancelButton;
 
     @FXML
-    void handleApplyPrefButton(ActionEvent event) {
+    void handleApplyPrefButton(ActionEvent event) throws IOException {
         List<Days> selectedDays = this.getDaysSelected();
         List<MuscleGroup> selectedMuscles = this.getSelectedMuscles();
+
+        Stage stage = (Stage) this.cancelButton.getScene().getWindow();
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.DAILY_DETAILS));
+        Scene scene = new Scene(parent);
+        stage.setTitle(Main.WINDOW_TITLE);
+        stage.setScene(scene);
+        stage.show();
 
     }
 

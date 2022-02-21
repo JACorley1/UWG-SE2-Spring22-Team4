@@ -19,7 +19,9 @@ public class Main extends Application {
     public static final String WINDOW_TITLE = "Workout Manager";
     public static final String LOGIN_PAGE = "view/codebehind/LoginPage.fxml";
     public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
-    public static final String WEEKLY_VIEW_PAGE = "view/codebehind/WeeklyView.fxml";
+
+    public static final String DAILY_DETAILS = "view/codebehind/DailyDetailsPage.fxml";
+
 
     /**
      * JavaFX entry point.
