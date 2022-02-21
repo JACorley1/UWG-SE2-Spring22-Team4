@@ -25,7 +25,7 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.loginButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.PREFERENCE_PAGE));
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);

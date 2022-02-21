@@ -42,7 +42,7 @@ public class PreferenceController {
         List<MuscleGroup> selectedMuscles = this.getSelectedMuscles();
 
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.DAILY_DETAILS));
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
@@ -82,7 +82,7 @@ public class PreferenceController {
     @FXML
     void handleCancelButton(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.LOGIN_PAGE));
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);

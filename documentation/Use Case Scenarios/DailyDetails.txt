@@ -1,0 +1,8 @@
+Daily Details Page Use Case Scenario
+
+Context - User has clicked on one of the Red circles in the Weekly View Page.
+
+Primary Flow
+1 - The user is Directed to the Daily Details Page to observe the workout that was created for that day.
+2 - The user looks at their workout and hits the back button.
+3 - The user is directed back to the Weekly View Page.

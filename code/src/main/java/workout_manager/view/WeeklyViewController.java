@@ -48,12 +48,12 @@ public class WeeklyViewController {
 
     @FXML
     void handleShowWorkoutDetail(MouseEvent event) throws IOException {
-        // Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
-        // Parent parent = FXMLLoader.load(Main.class.getResource(Main.WORKOUT_DETAIL_PAGE));
-        // Scene scene = new Scene(parent);
-        // stage.setTitle(Main.WINDOW_TITLE);
-        // stage.setScene(scene);
-        // stage.show();
+        Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
+        Parent parent = FXMLLoader.load(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
+        Scene scene = new Scene(parent);
+        stage.setTitle(Main.WINDOW_TITLE);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -66,4 +66,3 @@ public class WeeklyViewController {
         stage.show();
     }
 }
-
