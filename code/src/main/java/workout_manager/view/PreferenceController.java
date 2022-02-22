@@ -22,8 +22,6 @@ import workout_manager.model.MuscleGroup;
 /**
  * Creates a controller for the preferences page
  * 
- * @precondition none
- * @postcondition none
  * @author wtjracer
  * @version Spring 2022
  * 

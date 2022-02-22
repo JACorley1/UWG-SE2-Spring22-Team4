@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * defines the workout class
+ * 
+ * @author group4
  */
 public class Workout {
 
@@ -25,6 +27,12 @@ public class Workout {
         this.exercises.add(exercise);
     }
 
+    /**
+     * gets the exercise from the workout
+     * 
+     * @param indexOfExercise the index of the exercise needed
+     * @return the exercise object
+     */
     public ExerciseAlt getExercise(int indexOfExercise) {
         return this.exercises.get(indexOfExercise);
 

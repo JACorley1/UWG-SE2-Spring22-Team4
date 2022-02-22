@@ -2,7 +2,6 @@ package workout_manager.view;
 
 import java.io.IOException;
 
-import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,8 +16,6 @@ import workout_manager.Main;
 /**
  * Creates a controller for the daily details page
  * 
- * @precondition none
- * @postcondition none
  * @author wtjracer
  * @version Spring 2022
  */

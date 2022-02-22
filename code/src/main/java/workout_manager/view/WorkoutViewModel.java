@@ -1,6 +1,5 @@
 package workout_manager.view;
 
-import javafx.beans.property.SimpleStringProperty;
 
 /**
  * Creates a view model for the app

@@ -14,6 +14,10 @@ import javafx.stage.Stage;
 import workout_manager.Main;
 import javafx.scene.shape.Rectangle;
 
+/**
+ * the weeklyViewController
+ * @author group4
+ */
 public class WeeklyViewController {
 
     @FXML

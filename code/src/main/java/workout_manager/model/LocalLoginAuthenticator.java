@@ -1,10 +1,15 @@
 package workout_manager.model;
 
+/**
+ * local login authenticator class
+ * 
+ * @author group4
+ */
 public class LocalLoginAuthenticator implements LoginAuthenticator {
-    
-    private static String USERNAME = "username";
-    private static String PASSWORD = "password";
-    
+
+    private static final String USERNAME = "username";
+    private static final String PASSWORD = "password";
+
     @Override
     public boolean authenticateLoginCredentials(String username, String password) {
         if (username == null) {
@@ -21,5 +26,5 @@ public class LocalLoginAuthenticator implements LoginAuthenticator {
         }
 
         return username.matches(USERNAME) && password.matches(PASSWORD);
-    }    
+    }
 }

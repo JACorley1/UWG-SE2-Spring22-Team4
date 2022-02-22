@@ -98,6 +98,8 @@ public class User {
     }
 
     /**
+     * sets the userName for the user.
+     * 
      * @preCondtion userName != isEmpty() && userName != null
      * @postCondition getUserName == userName
      * @param userName the username to set for this user

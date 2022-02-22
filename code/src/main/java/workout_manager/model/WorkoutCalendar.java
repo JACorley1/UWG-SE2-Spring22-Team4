@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * defines the workoutCalendar class
+ * 
+ * @author grou4
  */
 public class WorkoutCalendar {
 
@@ -13,16 +15,17 @@ public class WorkoutCalendar {
     /**
      * constructs a workout calendar object
      */
-    public WorkoutCalendar(){
+    public WorkoutCalendar() {
         this.workoutCalendar = new HashMap<Days, Workout>();
     }
 
     /**
      * adds a workout to a specific day
-     * @param day the day the workout is scheduled on
+     * 
+     * @param day          the day the workout is scheduled on
      * @param workoutToAdd the workout to add
      */
-    public void addWorkout(Days day, Workout workoutToAdd){
+    public void addWorkout(Days day, Workout workoutToAdd) {
 
         this.workoutCalendar.put(day, workoutToAdd);
 
@@ -30,18 +33,20 @@ public class WorkoutCalendar {
 
     /**
      * gets the map of days and workouts.
+     * 
      * @return the users calendar
      */
-    public Map<Days, Workout> getCalendar(){
+    public Map<Days, Workout> getCalendar() {
         return this.workoutCalendar;
     }
 
     /**
      * gets a specified days workout
+     * 
      * @param day the day to get the workout for
      * @return the workout scheduled on the day.
      */
-    public Workout getDaysWorkout(Days day){
+    public Workout getDaysWorkout(Days day) {
         return this.workoutCalendar.get(day);
     }
 

@@ -3,15 +3,16 @@ package workout_manager.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * defines the workout generator class.
+ * 
+ * @author group4
  */
 public class WorkoutGenerator {
     private Map<MuscleGroup, ArrayList<ExerciseAlt>> exerciseMap;
     private WorkoutCalendar workoutCalendar;
-    private  WorkoutDataFetcher dataFetcher;
+    private WorkoutDataFetcher dataFetcher;
 
     /**
      * creates a workout generator object.
@@ -24,14 +25,15 @@ public class WorkoutGenerator {
 
     /**
      * generates workouts based on the current users selected preferences
+     * 
      * @param preferences the current users selected preferences.
      */
     public void generateWorkouts(Preferences preferences) {
-       
+
         this.populateExercises(preferences);
 
         for (Days currentDay : preferences.getSelectedDays()) {
-            this.workoutCalendar.addWorkout(currentDay, createBalancedWorkout());
+            this.workoutCalendar.addWorkout(currentDay, this.createBalancedWorkout());
         }
     }
 

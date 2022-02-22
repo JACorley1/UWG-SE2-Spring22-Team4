@@ -1,7 +1,12 @@
 package workout_manager.model;
+
 /**
  * exercise class for if we want to use gifs rather than text descriptions.
+ * currently unused.
+ * 
+ * @author group4
  */
+/*
 public class Exercise {
 
     private String bodyPart;
@@ -10,27 +15,29 @@ public class Exercise {
     private String id;
     private String name;
     private String target;
-  
-    public String getBodyPart(){
+
+    public String getBodyPart() {
         return this.bodyPart;
     }
 
-    public String getEquipment(){
+    public String getEquipment() {
         return this.equipment;
     }
 
-    public String getGifUrl(){
+    public String getGifUrl() {
         return this.gifUrl;
     }
 
-    public String getId(){
+    public String getId() {
         return this.id;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    public String getTargetArea(){
+
+    public String getTargetArea() {
         return this.target;
     }
 }
+*/
