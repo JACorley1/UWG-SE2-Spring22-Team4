@@ -5,25 +5,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * defines the workout generator class.
+ */
 public class WorkoutGenerator {
-    // private WorkoutCalendar workoutCalendar;
     private Map<MuscleGroup, ArrayList<ExerciseAlt>> exerciseMap;
-    private ArrayList<MuscleGroup> upperBody;
-    private ArrayList<MuscleGroup> lowerBody;
-    private ArrayList<MuscleGroup> core;
-    private DataFetcher fetcher;
+    private WorkoutCalendar workoutCalendar;
+    private  WorkoutDataFetcher dataFetcher;
 
+    /**
+     * creates a workout generator object.
+     */
     public WorkoutGenerator() {
-        // this.workoutCalendar = new WorkoutCalendar();
+        this.workoutCalendar = new WorkoutCalendar();
         this.exerciseMap = new HashMap<MuscleGroup, ArrayList<ExerciseAlt>>();
+        this.dataFetcher = new WorkoutDataFetcher();
     }
 
+    /**
+     * generates workouts based on the current users selected preferences
+     * @param preferences the current users selected preferences.
+     */
     public void generateWorkouts(Preferences preferences) {
-        WorkoutDataFetcher dataFetcher = new WorkoutDataFetcher();
+       
         this.populateExercises(preferences);
 
         for (Days currentDay : preferences.getSelectedDays()) {
-            // this.workoutCalendar.addWorkout(currentDay, createBalancedWorkout());
+            this.workoutCalendar.addWorkout(currentDay, createBalancedWorkout());
         }
     }
 
@@ -43,7 +51,7 @@ public class WorkoutGenerator {
 
     private void populateExercises(Preferences preferences) {
         for (MuscleGroup current : preferences.getSelectedMuscles()) {
-            this.exerciseMap.put(current, this.fetcher.getExercises(current.valueOf()));
+            this.exerciseMap.put(current, this.dataFetcher.getExercises(current.valueOf()));
         }
     }
 
