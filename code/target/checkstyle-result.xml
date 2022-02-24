@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\DataFetcher.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\DataFetcher.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Exercise.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Exercise.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java">
 <error line="26" column="8" severity="warning" message="Unused @param tag for &apos;language&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LocalLoginAuthenticator.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LocalLoginAuthenticator.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LoginAuthenticator.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\LoginAuthenticator.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutDataFetcher.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutDataFetcher.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java">
 <error line="22" column="48" severity="warning" message="Expected @param tag for &apos;dataFetcher&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
 </file>
-<file name="C:\Users\jorda\OneDrive\Desktop\se project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WorkoutViewModel.java">
+<file name="C:\Users\wtjra\OneDrive\Desktop\SeProject\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WorkoutViewModel.java">
 </file>
 </checkstyle>
