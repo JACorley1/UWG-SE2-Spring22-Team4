@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * defines the workoutCalendar class
  * 
- * @author grou4
+ * @author group4
  */
 public class WorkoutCalendar {
 

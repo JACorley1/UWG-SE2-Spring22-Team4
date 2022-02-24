@@ -16,6 +16,6 @@ public interface DataFetcher {
      * @param muscleCategory the muscle category to retrieve exercises for
      * @return a list of the exercises that match the category
      */
-    ArrayList<ExerciseAlt> getExercises(String muscleCategory);
+    ArrayList<ExerciseAlt> getExercises(int muscleCategory);
 
 }

@@ -7,12 +7,15 @@ package workout_manager.model;
  * @author wtjracer
  */
 public enum MuscleGroup {
-    ARMS("arms"), LEGS("legs"), BACK("back"), ABS("abs"), CHEST("chest"), SHOULDERS("shoulders"), CALVES("calves");
+    ARMS("arms", 8), LEGS("legs", 9), BACK("back", 12), ABS("abs", 10), CHEST("chest", 11), SHOULDERS("shoulders", 13),
+    CALVES("calves", 14);
 
     private final String value;
+    private final int code;
 
-    MuscleGroup(String value) {
+    MuscleGroup(String value, int code) {
         this.value = value;
+        this.code = code;
     }
 
     /**
@@ -24,6 +27,15 @@ public enum MuscleGroup {
      */
     public String valueOf() {
         return this.value;
+    }
+
+    /**
+     * returns the int code for the muscle
+     * 
+     * @return the int code for the muscle
+     */
+    public int getCode() {
+        return this.code;
     }
 
 }

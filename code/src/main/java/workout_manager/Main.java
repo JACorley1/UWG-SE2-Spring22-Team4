@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import workout_manager.model.WorkoutDataFetcher;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -36,6 +37,9 @@ public class Main extends Application {
         primaryStage.setTitle(WINDOW_TITLE);
         primaryStage.setScene(scene);
         primaryStage.show();
+        WorkoutDataFetcher test = new WorkoutDataFetcher();
+        
+        System.out.println(test.getExercises(8).size());
     }
 
     /**
