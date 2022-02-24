@@ -21,20 +21,25 @@ public class Workout {
     /**
      * adds an exercise to the workout
      * 
+     * @precondition exercise cant be null
+     * @postcondition exercises.size() == exercises.size +1 @prev
+     * 
      * @param exercise the exercise to add to the workout
      */
     public void addExercise(ExerciseAlt exercise) {
+        if (exercise == null) {
+            throw new IllegalArgumentException("Exercise can't be null");
+        }
         this.exercises.add(exercise);
     }
 
     /**
-     * gets the exercise from the workout
+     * gets the collection of exercises in the workout
      * 
-     * @param indexOfExercise the index of the exercise needed
-     * @return the exercise object
+     * @return the collection of exercises
      */
-    public ExerciseAlt getExercise(int indexOfExercise) {
-        return this.exercises.get(indexOfExercise);
-
+    public ArrayList<ExerciseAlt> getExercises() {
+        return this.exercises;
     }
+
 }
