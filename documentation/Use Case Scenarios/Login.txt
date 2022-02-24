@@ -1,0 +1,11 @@
+Login Use Case Scenario
+
+Context - User has enetered in information in both fields
+
+Primary Flow
+1 - Login button is enabled
+2 - User selects Login button
+3 - System displays the weekly Workout view for the user
+
+NO INFORMATION ENTERED
+a1 - Login button is diabled and user cannot go to next page until info is entered.

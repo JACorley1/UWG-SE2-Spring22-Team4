@@ -1,36 +1,38 @@
 package workout_manager.view;
 
 import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import workout_manager.Main;
 
 /**
- * Creates a controller fro the login page
+ * Creates a controller for the daily details page
  * 
  * @author wtjracer
  * @version Spring 2022
  */
-public class LoginController {
+public class DailyDetailsController {
 
     @FXML
-    private TextField userNameTextfield;
+    private TextArea workoutTextArea;
 
     @FXML
-    private TextField passwordTextfield;
+    private Label dayLabel;
 
     @FXML
-    private Button loginButton;
+    private Button backButton;
 
     @FXML
-    void handleLogin(ActionEvent event) throws IOException {
-        Stage stage = (Stage) this.loginButton.getScene().getWindow();
+    void handleBackButton(ActionEvent event) throws IOException {
+        Stage stage = (Stage) this.backButton.getScene().getWindow();
         Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
@@ -41,13 +43,6 @@ public class LoginController {
 
     @FXML
     void initialize() {
-        this.bindLogin();
-
-    }
-
-    private void bindLogin() {
-        this.loginButton.disableProperty().bind(
-                this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
     }
 
 }

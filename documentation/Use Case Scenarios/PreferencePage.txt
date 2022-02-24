@@ -1,0 +1,13 @@
+Preference Page Use Case Scenario
+
+Context - User has successfully logged in and clicked the settings button from the Weekly View Page
+
+Primary Flow
+1 - User selects which days they are available and which muscle groups they wish to workout.
+2 - User selects "Apply Preferences" button and the workout generator takes the given prefeneces and generates workouts.
+3 - The user is directed back to the Weekly View Page, and the days with workouts associated with them will be identifed with a red circle.
+
+Alternative Flow(s)
+1 - User clicks the gear icon in the upper-right corner of the Weekly-view Page by mistake.
+2 - User clicks "Cancel" in the preferences page and is directed back to the Weekly View Page.
+
