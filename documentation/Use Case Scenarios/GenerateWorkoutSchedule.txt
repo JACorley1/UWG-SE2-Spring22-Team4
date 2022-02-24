@@ -1,0 +1,21 @@
+Context - User is logged in and is viewing the calendar page
+
+Primary Flow 
+1 - User selects preferences button
+2 - preferences page is displayed
+3 - user selects muscle preferences
+4 - user selects availability preferences
+5 - user selects apply preferences
+6 - 7 day workout schedule is generated based on preferences and saved to server
+7 - calendar page is displayed with generated schedule
+
+Alternative Flow
+a3-4 - no preferences are selected
+a5 - user selects apply preferences
+a6 - system requests user to select preferences and does not allow navigation to calendar page.
+
+BAD CONNECTION
+a6 - system fails to connect to server
+a7 - system informs user of error and prompts to retry later.
+a8 - system returns to calendar page
+return to step 1
