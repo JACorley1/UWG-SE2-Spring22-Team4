@@ -5,6 +5,8 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import workout_manager.view.LoginController;
+import workout_manager.viewmodel.ModelControllerManager;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -20,6 +22,7 @@ public class Main extends Application {
     public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
     public static final String WEEKLY_VIEW_PAGE = "view/codebehind/WeeklyView.fxml";
     public static final String DAILY_DETAILS_PAGE = "view/codebehind/DailyDetailsPage.fxml";
+    private ModelControllerManager mcm;
 
     /**
      * JavaFX entry point.
@@ -31,8 +34,16 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource(Main.LOGIN_PAGE));
+        this.mcm = new ModelControllerManager();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Main.LOGIN_PAGE));
+        Parent parent = loader.load();
+
+        LoginController login = loader.<LoginController>getController();
+
+        login.initParams(this.mcm);
+
         Scene scene = new Scene(parent);
+
         primaryStage.setTitle(WINDOW_TITLE);
         primaryStage.setScene(scene);
         primaryStage.show();
