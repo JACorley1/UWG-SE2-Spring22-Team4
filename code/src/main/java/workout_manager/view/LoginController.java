@@ -1,15 +1,21 @@
 package workout_manager.view;
 
 import java.io.IOException;
+
+import javafx.beans.binding.BooleanBinding;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
+import workout_manager.model.LocalLoginAuthenticator;
+import workout_manager.model.User;
+import workout_manager.viewmodel.ModelControllerManager;
 
 /**
  * Creates a controller fro the login page
@@ -18,6 +24,8 @@ import workout_manager.Main;
  * @version Spring 2022
  */
 public class LoginController {
+    private LocalLoginAuthenticator loginAuthenticator;
+    private ModelControllerManager mcm;
 
     @FXML
     private TextField userNameTextfield;
@@ -29,25 +37,45 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     void handleLogin(ActionEvent event) throws IOException {
-        Stage stage = (Stage) this.loginButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
-        Scene scene = new Scene(parent);
-        stage.setTitle(Main.WINDOW_TITLE);
-        stage.setScene(scene);
-        stage.show();
+        boolean authenticated = this.loginAuthenticator.authenticateLoginCredentials(this.userNameTextfield.getText(),
+                this.passwordTextfield.getText());
+
+        if (authenticated) {
+            this.mcm.setUser(new User(this.userNameTextfield.getText(), this.passwordTextfield.getText()));
+            this.errorLabel.setVisible(false);
+            Stage stage = (Stage) this.loginButton.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+            Parent parent = loader.load();
+            WeeklyViewController wvc = loader.<WeeklyViewController>getController();
+            wvc.initParams(this.mcm);
+            Scene scene = new Scene(parent);
+            stage.setTitle(Main.WINDOW_TITLE);
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            this.errorLabel.setVisible(true);
+            this.errorLabel.setText("Username or Password Not found");
+        }
 
     }
 
     @FXML
     void initialize() {
+        this.loginAuthenticator = new LocalLoginAuthenticator();
         this.bindLogin();
-
     }
 
     private void bindLogin() {
         this.loginButton.disableProperty().bind(
                 this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
+    }
+
+    public void initParams(ModelControllerManager mcm) {
+        this.mcm = mcm;
     }
 
 }

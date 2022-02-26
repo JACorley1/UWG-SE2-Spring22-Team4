@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import workout_manager.Main;
+import javafx.beans.property.SimpleListProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +19,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import workout_manager.model.Days;
 import workout_manager.model.MuscleGroup;
+import workout_manager.viewmodel.ModelControllerManager;
 
 /**
  * Creates a controller for the preferences page
@@ -27,6 +29,11 @@ import workout_manager.model.MuscleGroup;
  * 
  */
 public class PreferenceController {
+
+    private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>();
+    private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>();
+
+    private ModelControllerManager mcm;
 
     @FXML
     private AnchorPane mainPane;
@@ -45,11 +52,12 @@ public class PreferenceController {
 
     @FXML
     void handleApplyPrefButton(ActionEvent event) throws IOException {
-        List<Days> selectedDays = this.getDaysSelected();
-        List<MuscleGroup> selectedMuscles = this.getSelectedMuscles();
-
+        this.mcm.setUserPrefs();
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+        Parent parent = loader.load();
+        WeeklyViewController wvc = loader.<WeeklyViewController>getController();
+        wvc.initParams(this.mcm);
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
@@ -57,39 +65,43 @@ public class PreferenceController {
 
     }
 
-    private List<Days> getDaysSelected() {
-        List<Days> selectedDays = new ArrayList<Days>();
+    public SimpleListProperty<Days> getDaysSelected() {
         for (Node node : this.daysGridPane.getChildren()) {
             if (node instanceof CheckBox) {
                 CheckBox ckbox = (CheckBox) node;
                 if (ckbox.isSelected()) {
                     Days day = Days.valueOf(ckbox.getText().toUpperCase());
-                    selectedDays.add(day);
+                    this.selectedDays.add(day);
                 }
-
             }
         }
-        return selectedDays;
+        return this.selectedDays;
     }
 
-    private List<MuscleGroup> getSelectedMuscles() {
-        List<MuscleGroup> selectedMuscles = new ArrayList<MuscleGroup>();
+    public SimpleListProperty<MuscleGroup> getSelectedMuscles() {
         for (Node node : this.muscleGridPane.getChildren()) {
             if (node instanceof CheckBox) {
                 CheckBox ckbox = (CheckBox) node;
                 if (ckbox.isSelected()) {
                     MuscleGroup muscle = MuscleGroup.valueOf(ckbox.getText().toUpperCase());
-                    selectedMuscles.add(muscle);
+                    this.selectedMuscles.add(muscle);
                 }
             }
         }
-        return selectedMuscles;
+        return this.selectedMuscles;
+    }
+
+    public Button getPrefButton() {
+        return this.applyPrefButton;
     }
 
     @FXML
     void handleCancelButton(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+        Parent parent = loader.load();
+        WeeklyViewController wvc = loader.<WeeklyViewController>getController();
+        wvc.initParams(this.mcm);
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
@@ -99,6 +111,10 @@ public class PreferenceController {
     @FXML
     void initialize() {
 
+    }
+
+    public void initParams(ModelControllerManager mcm) {
+        this.mcm = mcm;
     }
 
 }

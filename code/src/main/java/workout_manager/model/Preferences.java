@@ -1,17 +1,18 @@
 package workout_manager.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * class that stores the user's selected preferences
  *
- * @author wtjracer
+ * @author Jordan Wagner
  * @version Spring 2022
  */
 public class Preferences {
 
-    private ArrayList<Days> availableDays;
-    private ArrayList<MuscleGroup> musclesSelected;
+    private List<Days> availableDays;
+    private List<MuscleGroup> musclesSelected;
 
     /**
      * preferences object that contains user selected preferences
@@ -19,11 +20,16 @@ public class Preferences {
      * @param selectedDays    the days selected by the user
      * @param selectedMuscles the muscles selected by the user
      */
-    public Preferences(ArrayList<Days> selectedDays, ArrayList<MuscleGroup> selectedMuscles) {
+    public Preferences(List<MuscleGroup> selectedMuscles, List<Days> selectedDays) {
 
         this.availableDays = selectedDays;
         this.musclesSelected = selectedMuscles;
 
+    }
+
+    public Preferences() {
+        this.availableDays = new ArrayList<Days>();
+        this.musclesSelected = new ArrayList<MuscleGroup>();
     }
 
     /**
@@ -31,7 +37,7 @@ public class Preferences {
      * 
      * @return the list of muscles
      */
-    public ArrayList<MuscleGroup> getSelectedMuscles() {
+    public List<MuscleGroup> getSelectedMuscles() {
         return this.musclesSelected;
     }
 
@@ -40,7 +46,7 @@ public class Preferences {
      * 
      * @return the array list of selected days
      */
-    public ArrayList<Days> getSelectedDays() {
+    public List<Days> getSelectedDays() {
         return this.availableDays;
 
     }

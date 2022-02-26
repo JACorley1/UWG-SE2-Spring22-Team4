@@ -12,13 +12,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import workout_manager.Main;
+import workout_manager.viewmodel.ModelControllerManager;
 import javafx.scene.shape.Rectangle;
 
 /**
  * the weeklyViewController
+ * 
  * @author group4
  */
 public class WeeklyViewController {
+
+    private ModelControllerManager mcm;
 
     @FXML
     private AnchorPane weeklyViewAnchorPane;
@@ -58,8 +62,13 @@ public class WeeklyViewController {
     @FXML
     void handleShowWorkoutDetail(MouseEvent event) throws IOException {
         Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
+        Parent parent = loader.load();
+
+        DailyDetailsController ddc = loader.<DailyDetailsController>getController();
+        ddc.initParams(this.mcm);
         Scene scene = new Scene(parent);
+
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
@@ -68,10 +77,18 @@ public class WeeklyViewController {
     @FXML
     void handleNavigateToPreferencesPage(MouseEvent event) throws IOException {
         Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
-        Parent parent = FXMLLoader.load(Main.class.getResource(Main.PREFERENCE_PAGE));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.PREFERENCE_PAGE));
+        Parent parent = loader.load();
+
+        PreferenceController pc = loader.<PreferenceController>getController();
+        pc.initParams(this.mcm);
         Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void initParams(ModelControllerManager mcm) {
+        this.mcm = mcm;
     }
 }

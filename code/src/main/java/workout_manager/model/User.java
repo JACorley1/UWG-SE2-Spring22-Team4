@@ -11,8 +11,9 @@ import java.util.List;
  */
 public class User {
 
-    private List<Days> preferredDays;
-    private List<MuscleGroup> preferredMuscles;
+    private Preferences preferences;
+    private WorkoutCalendar workoutCalender;
+
     private String userName;
     private String passWord;
 
@@ -26,64 +27,58 @@ public class User {
      * @param passWord the User's passWord
      */
     public User(String userName, String passWord) {
-        this.preferredDays = new ArrayList<Days>();
-        this.preferredMuscles = new ArrayList<MuscleGroup>();
+
+        this.preferences = new Preferences();
         this.setUserName(userName);
         this.setPassWord(passWord);
+        this.workoutCalender = new WorkoutCalendar();
 
     }
 
     /**
-     * Gets the prefeerred days from the user
+     * gets the preferences from the user
+     * 
+     * @precondition none
+     * @postcondtion none
+     * 
+     * @return this preferences
+     */
+    public Preferences getPreferences() {
+        return this.preferences;
+    }
+
+    /**
+     * Sets the preferences for the user
+     * 
+     * @precondition none
+     * @postcondition this.preferences = preferences
+     * 
+     * @param preferences
+     */
+    public void setPreferences(Preferences preferences) {
+        this.preferences = preferences;
+    }
+
+    /**
+     * Gets the workout calender from the user
      * 
      * @precondition none
      * @postcondition none
-     * @return this.preferredDays
+     * @return this.workoutCalender
      */
-    public List<Days> getPreferredDays() {
-        return this.preferredDays;
+    public WorkoutCalendar getWorkoutCalender() {
+        return workoutCalender;
     }
 
     /**
-     * sets the preferred days for this user
-     * 
-     * @precondition preferred days != isEmpty()
-     * @postcondition none
-     * 
-     * @param preferredDays
-     */
-    public void setPreferredDays(List<Days> preferredDays) {
-        if (preferredDays.isEmpty()) {
-            throw new IllegalArgumentException("preferredDays cannot be empty");
-        }
-        this.preferredDays = preferredDays;
-    }
-
-    /**
-     * Gets the prefeerred Muscles from the user
+     * Setss the workout Calender from the user
      * 
      * @precondition none
      * @postcondition none
-     * @return this.preferredMuscles
+     * @param workoutCalender is the workout Calnder to set
      */
-
-    public List<MuscleGroup> getPreferredMuscles() {
-        return this.preferredMuscles;
-    }
-
-    /**
-     * sets the preferred Muscles for this user
-     * 
-     * @precondition preferredMuscles != isEmpty()
-     * @postcondition none
-     * 
-     * @param preferredMuscles is the selected list of muscles to set for the user
-     */
-    public void setPreferredMuscles(List<MuscleGroup> preferredMuscles) {
-        if (preferredMuscles.isEmpty()) {
-            throw new IllegalArgumentException("preferredMuscles cannot be empty");
-        }
-        this.preferredMuscles = preferredMuscles;
+    public void setWorkoutCalender(WorkoutCalendar workoutCalender) {
+        this.workoutCalender = workoutCalender;
     }
 
     /**
