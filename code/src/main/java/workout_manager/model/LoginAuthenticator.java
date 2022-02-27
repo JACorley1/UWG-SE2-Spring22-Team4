@@ -1,7 +1,8 @@
 package workout_manager.model;
 /**
  * loginAuthenticator interface
- * @author group4
+ * @author Ben Alton
+ * @version Spring 2022
  */
 public interface LoginAuthenticator {
 
