@@ -2,16 +2,20 @@ package workout_manager.view;
 
 import java.io.IOException;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import workout_manager.Main;
+import workout_manager.model.ExerciseAlt;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
@@ -22,6 +26,9 @@ import workout_manager.viewmodel.ModelControllerManager;
  */
 public class DailyDetailsController {
     private ModelControllerManager mcm;
+    private final static String WORKOUT_OVERVIEW = "View Full Workout";
+    private ObservableList<String> exercises = FXCollections.observableArrayList();
+   
 
     @FXML
     private TextArea workoutTextArea;
@@ -31,6 +38,9 @@ public class DailyDetailsController {
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private ComboBox<String> exerciseSelector;
 
     @FXML
     void handleBackButton(ActionEvent event) throws IOException {
@@ -46,12 +56,51 @@ public class DailyDetailsController {
 
     }
 
-    @FXML
-    void initialize() {
+    private void exercizeSelectorListener() {
+		this.exerciseSelector.getSelectionModel().selectedItemProperty().addListener((obs, oldValue, newValue) -> {
+			this.setExcersizeDetails(newValue);
+		});
+	
+	}
+
+    private void setExcersizeDetails(String exerciseName) {
+        for (ExerciseAlt currentExcersize : this.mcm.getCurrentWorkout().getExercises()) {
+            if (currentExcersize.getName().equals(exerciseName)){
+                this.workoutTextArea.setText(currentExcersize.getDescription());
+            }
+        }
     }
 
-    public void initParams(ModelControllerManager mcm) {
+    
+    @FXML
+    void handleExerciseSelection(ActionEvent event) {
+
+    }
+
+    private void showOverView(String dayName){
+        String overViewText = "";
+        for (ExerciseAlt currentExercise : this.mcm.getWorkout(dayName).getExercises()) {
+            this.exercises.add(currentExercise.getName());
+            overViewText += currentExercise.getName() + System.lineSeparator();
+        }
+        this.workoutTextArea.setText(overViewText);
+    }
+
+
+
+    @FXML
+    void initialize() {
+        this.exercizeSelectorListener();
+    }
+
+    public void initParams(ModelControllerManager mcm, String nameClicked) {
         this.mcm = mcm;
+        this.dayLabel.setText(nameClicked);
+        this.exercises.add(WORKOUT_OVERVIEW);
+        this.showOverView(nameClicked);
+        this.exerciseSelector.setItems(this.exercises);
+        this.exerciseSelector.getSelectionModel().select(WORKOUT_OVERVIEW);
+    
     }
 
 }

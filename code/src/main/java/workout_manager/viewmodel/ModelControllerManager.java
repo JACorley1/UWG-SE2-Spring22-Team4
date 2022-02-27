@@ -1,11 +1,21 @@
 package workout_manager.viewmodel;
 
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonIOException;
+
 import javafx.beans.property.SimpleListProperty;
-import javafx.scene.control.Button;
+
 import workout_manager.model.Days;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.User;
+import workout_manager.model.Workout;
+import workout_manager.model.WorkoutCalendar;
 import workout_manager.model.WorkoutDataFetcher;
 import workout_manager.model.WorkoutGenerator;
 import workout_manager.view.DailyDetailsController;
@@ -27,9 +37,8 @@ public class ModelControllerManager {
     private static WorkoutDataFetcher dataFetcher;
     private WorkoutGenerator workoutGenerator;
     private User user;
-
-    private SimpleListProperty<Days> days;
-    private SimpleListProperty<MuscleGroup> muscles;
+    private Workout currentWorkout;
+ 
 
     /**
      * 
@@ -43,31 +52,49 @@ public class ModelControllerManager {
         dataFetcher = new WorkoutDataFetcher();
         this.workoutGenerator = new WorkoutGenerator(dataFetcher);
 
-        this.muscles = new SimpleListProperty<MuscleGroup>();
-        this.days = new SimpleListProperty<Days>();
-
     }
 
-    /**
-     * bind prefernces for the user
-     * 
-     * @precondition none
-     * @postcondition none
-     */
-    public void intitializeBindings() {
-        this.muscles.bindBidirectional(this.prefController.getSelectedMuscles());
-        this.days.bindBidirectional(this.prefController.getDaysSelected());
-        this.muscles.addAll(this.user.getPreferences().getSelectedMuscles());
-        this.days.addAll(this.user.getPreferences().getSelectedDays());
+    public Preferences getCurrentPreferences() {
+        return this.user.getPreferences();
     }
 
-    public void setUserPrefs() {
-        this.user.setPreferences(
-                new Preferences(this.muscles.subList(0, this.muscles.size()), this.days.subList(0, this.days.size())));
+    public Workout getWorkout(String day){
+        for (Days currentDay : Days.values()) {
+            if (day.toUpperCase().equals(currentDay.toString())){
+                this.currentWorkout = this.user.getWorkoutCalender().getDaysWorkout(currentDay);
+                return this.user.getWorkoutCalender().getDaysWorkout(currentDay);
+            }
+        }
+        return null;
+    }
+
+    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days) {
+   
+        this.user.setPreferences(new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size())));
+        this.generateWorkoutCalendar();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        try {
+            gson.toJson(user, new FileWriter("userFile.json"));
+        } catch (JsonIOException | IOException e) {
+
+            e.printStackTrace();
+        }
+        
+    }
+
+    private void generateWorkoutCalendar(){
+       this.user.setWorkoutCalender(this.workoutGenerator.generateWorkouts(this.user.getPreferences())); 
     }
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Workout getCurrentWorkout(){
+        return this.currentWorkout;
+    }
+    public void setCurrentWOrkout(Workout workoutToSet){
+        this.currentWorkout = workoutToSet;
     }
 
 }
