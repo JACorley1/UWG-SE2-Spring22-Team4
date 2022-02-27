@@ -6,6 +6,7 @@ import java.util.List;
 
 import workout_manager.Main;
 import javafx.beans.property.SimpleListProperty;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,8 +31,8 @@ import workout_manager.viewmodel.ModelControllerManager;
  */
 public class PreferenceController {
 
-    private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>();
-    private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>();
+    private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>(FXCollections.observableArrayList());
+    private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>(FXCollections.observableArrayList());
 
     private ModelControllerManager mcm;
 
@@ -52,7 +53,7 @@ public class PreferenceController {
 
     @FXML
     void handleApplyPrefButton(ActionEvent event) throws IOException {
-        this.mcm.setUserPrefs();
+        this.mcm.setUserPrefs(this.getSelectedMuscles(), this.getDaysSelected());
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Parent parent = loader.load();
@@ -65,7 +66,8 @@ public class PreferenceController {
 
     }
 
-    public SimpleListProperty<Days> getDaysSelected() {
+    private SimpleListProperty<Days> getDaysSelected() {
+        this.selectedDays.clear();
         for (Node node : this.daysGridPane.getChildren()) {
             if (node instanceof CheckBox) {
                 CheckBox ckbox = (CheckBox) node;
@@ -78,7 +80,8 @@ public class PreferenceController {
         return this.selectedDays;
     }
 
-    public SimpleListProperty<MuscleGroup> getSelectedMuscles() {
+    private SimpleListProperty<MuscleGroup> getSelectedMuscles() {
+        this.selectedMuscles.clear();
         for (Node node : this.muscleGridPane.getChildren()) {
             if (node instanceof CheckBox) {
                 CheckBox ckbox = (CheckBox) node;
@@ -89,10 +92,6 @@ public class PreferenceController {
             }
         }
         return this.selectedMuscles;
-    }
-
-    public Button getPrefButton() {
-        return this.applyPrefButton;
     }
 
     @FXML
@@ -110,11 +109,36 @@ public class PreferenceController {
 
     @FXML
     void initialize() {
+    }
 
+    private void displayDays(){
+        for (Node node : this.daysGridPane.getChildren()) {
+            if (node instanceof CheckBox) {
+                CheckBox ckbox = (CheckBox) node;
+                Days day = Days.valueOf(ckbox.getText().toUpperCase());
+                if (this.mcm.getCurrentPreferences().getSelectedDays().contains(day)) {
+                    ckbox.selectedProperty().set(true);
+                }
+            }
+        }
+    }
+
+    private void displayMuscles() {
+        for (Node node : this.muscleGridPane.getChildren()) {
+            if (node instanceof CheckBox) {
+                CheckBox ckbox = (CheckBox) node;
+                MuscleGroup muscle = MuscleGroup.valueOf(ckbox.getText().toUpperCase());
+                if (this.mcm.getCurrentPreferences().getSelectedMuscles().contains(muscle)) {
+                    ckbox.selectedProperty().set(true);
+                }
+            }
+        }
     }
 
     public void initParams(ModelControllerManager mcm) {
         this.mcm = mcm;
+        this.displayDays();
+        this.displayMuscles();
     }
 
 }

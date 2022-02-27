@@ -40,13 +40,13 @@
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="82.0" text="Thursday" GridPane.columnIndex="4" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="81.0" text="Friday" GridPane.columnIndex="5" />
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="87.0" text="Saturday" GridPane.columnIndex="6" />
-            <Circle fx:id="sundayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="mondayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="tuesdayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="wednesdayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="thursdayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="fridayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <Circle fx:id="saturdayCircle" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Sunday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Monday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Tuesday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Wednesday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Thursday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Friday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Circle fx:id="Saturday" fill="RED" onMouseClicked="#handleShowWorkoutDetail" radius="17.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="73.0" prefHeight="52.0" prefWidth="313.0" text="Weekly Training Schedule" textFill="RED">

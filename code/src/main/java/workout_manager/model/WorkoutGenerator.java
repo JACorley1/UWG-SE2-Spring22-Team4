@@ -56,7 +56,7 @@ public class WorkoutGenerator {
         Workout workout = new Workout();
         for (MuscleGroup currentGroup : exerciseMap.keySet()) {
             int range = exerciseMap.get(currentGroup).size();
-            int amountToAdd = 3;
+            int amountToAdd = 1;
             while (amountToAdd > 0) {
                 int randomIndex = (int) (Math.random() * range);
                 workout.addExercise(exerciseMap.get(currentGroup).get(randomIndex));

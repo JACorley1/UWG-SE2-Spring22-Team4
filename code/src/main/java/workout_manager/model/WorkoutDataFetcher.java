@@ -23,7 +23,7 @@ import com.google.gson.reflect.TypeToken;
 public class WorkoutDataFetcher implements DataFetcher {
 
     private File exerciseDataFile = new File(
-            "src/main/java/workout_manager/model/exerciseData.json");
+            "UWG-SE2-Spring22-Team4/code/src/main/java/workout_manager/model/exerciseData.json");
     private ArrayList<ExerciseAlt> exerciseData;
     private static final int NOEQUIPMENT = 7;
 

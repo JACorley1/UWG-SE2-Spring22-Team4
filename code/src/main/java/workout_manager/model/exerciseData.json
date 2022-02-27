@@ -76,7 +76,7 @@
 		"category": 9,
 		"muscles": [],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [1],
 		"language": 2,
 		"license": 2,
 		"license_author": "axel",
@@ -386,7 +386,7 @@
 			12
 		],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [3],
 		"language": 2,
 		"license": 2,
 		"license_author": "sebk",
@@ -653,7 +653,7 @@
 			1
 		],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [1],
 		"language": 2,
 		"license": 1,
 		"license_author": "wger.de",
@@ -709,7 +709,7 @@
 		"muscles_secondary": [
 			8
 		],
-		"equipment": [],
+		"equipment": [10],
 		"language": 2,
 		"license": 2,
 		"license_author": "sevae",
@@ -766,7 +766,7 @@
 		"category": 11,
 		"muscles": [],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [7],
 		"language": 2,
 		"license": 2,
 		"license_author": "er0355",
@@ -787,7 +787,7 @@
 		"muscles_secondary": [
 			2
 		],
-		"equipment": [],
+		"equipment": [1],
 		"language": 2,
 		"license": 1,
 		"license_author": "wger.de",
@@ -806,31 +806,13 @@
 			4
 		],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [1],
 		"language": 2,
 		"license": 1,
 		"license_author": "wger.de",
 		"variations": []
 	},
-	{
-		"id": 124,
-		"uuid": "8715a96e-c8a2-458a-b023-4ea7d82fdab8",
-		"name": "Butterfly Reverse",
-		"exercise_base": 139,
-		"status": "2",
-		"description": "",
-		"creation_date": "2013-05-05",
-		"category": 13,
-		"muscles": [
-			2
-		],
-		"muscles_secondary": [],
-		"equipment": [],
-		"language": 2,
-		"license": 1,
-		"license_author": "wger.de",
-		"variations": []
-	},
+
 	{
 		"id": 207,
 		"uuid": "1b9ed9da-46d1-4484-8acc-236379ee823c",
@@ -844,7 +826,7 @@
 			4
 		],
 		"muscles_secondary": [],
-		"equipment": [],
+		"equipment": [3],
 		"language": 2,
 		"license": 1,
 		"license_author": "tuckerm",
@@ -923,8 +905,7 @@
 		],
 		"muscles_secondary": [],
 		"equipment": [
-			3,
-			10
+			7
 		],
 		"language": 2,
 		"license": 3,
@@ -4861,7 +4842,7 @@
 		"muscles_secondary": [
 			7
 		],
-		"equipment": [],
+		"equipment": [7],
 		"language": 2,
 		"license": 1,
 		"license_author": "wger.de",
@@ -5170,7 +5151,7 @@
 		"name": "Standing Calf Raises",
 		"exercise_base": 622,
 		"status": "2",
-		"description": " Get onto the calf raises machine, you should able to completely push your calves down. Stand straight, don't make a hollow back and don't bend your legs. Pull yourself up as high as you can. Make a small pause of 1 - 2 seconds and go slowly down.",
+		"description": "Stand straight, don't make a hollow back and don't bend your legs. Pull yourself up as high as you can. Make a small pause of 1 - 2 seconds and go slowly down.",
 		"creation_date": "2013-05-05",
 		"category": 14,
 		"muscles": [
@@ -5179,7 +5160,7 @@
 		"muscles_secondary": [
 			15
 		],
-		"equipment": [],
+		"equipment": [7],
 		"language": 2,
 		"license": 1,
 		"license_author": "wger.de",
