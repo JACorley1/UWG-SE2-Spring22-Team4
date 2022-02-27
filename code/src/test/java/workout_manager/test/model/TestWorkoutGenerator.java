@@ -57,7 +57,7 @@ public class TestWorkoutGenerator {
         Preferences testPref = new Preferences(selectedMuscles, selectedDays);
         WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
-        assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 3);
+        assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 1);
     }
 
     @Test
@@ -73,9 +73,9 @@ public class TestWorkoutGenerator {
         Preferences testPref = new Preferences(selectedMuscles, selectedDays);
         WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
-        assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 9);
-        assertEquals(testCal.getDaysWorkout(Days.TUESDAY).getExercises().size(), 9);
-        assertEquals(testCal.getDaysWorkout(Days.SUNDAY).getExercises().size(), 9);
+        assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 3);
+        assertEquals(testCal.getDaysWorkout(Days.TUESDAY).getExercises().size(), 3);
+        assertEquals(testCal.getDaysWorkout(Days.SUNDAY).getExercises().size(), 3);
     }
 
 }

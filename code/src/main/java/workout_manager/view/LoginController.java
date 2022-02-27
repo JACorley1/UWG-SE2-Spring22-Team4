@@ -2,7 +2,6 @@ package workout_manager.view;
 
 import java.io.IOException;
 
-import javafx.beans.binding.BooleanBinding;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.LocalLoginAuthenticator;
-import workout_manager.model.User;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
@@ -45,7 +43,7 @@ public class LoginController {
                 this.passwordTextfield.getText());
 
         if (authenticated) {
-            this.mcm.setUser(new User(this.userNameTextfield.getText(), this.passwordTextfield.getText()));
+            this.mcm.deSerialize();
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
@@ -74,6 +72,13 @@ public class LoginController {
                 this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
     }
 
+    /**
+     * initializes this.mcm to the given mcm
+     * 
+     * @precondition none
+     * @postcondition none
+     * @param mcm the mcm to be set to
+     */
     public void initParams(ModelControllerManager mcm) {
         this.mcm = mcm;
     }

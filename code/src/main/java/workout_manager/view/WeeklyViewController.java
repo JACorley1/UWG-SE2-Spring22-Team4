@@ -71,9 +71,9 @@ public class WeeklyViewController {
         stage.show();
     }
 
-    public void displayWorkoutCalendar(){
+    private void displayWorkoutCalendar() {
         for (Node currentDay : this.weeklyViewGridPane.getChildren()) {
-            if (currentDay instanceof Circle && this.checkSelectedDays(currentDay.getId().toUpperCase())){
+            if (currentDay instanceof Circle && this.checkSelectedDays(currentDay.getId().toUpperCase())) {
                 Circle daySelected = (Circle) currentDay;
                 daySelected.setFill(Color.GREEN);
             }
@@ -83,14 +83,21 @@ public class WeeklyViewController {
     private boolean checkSelectedDays(String dayToCheck) {
         boolean dayPresent = false;
         for (Days currentDay : this.mcm.getCurrentPreferences().getSelectedDays()) {
-            if (dayToCheck.contains(currentDay.toString())){
+            if (dayToCheck.contains(currentDay.toString())) {
                 dayPresent = true;
 
             }
-        }        
+        }
         return dayPresent;
     }
 
+    /**
+     * initializes this.mcm to the given mcm
+     * 
+     * @precondition none
+     * @postcondition none
+     * @param mcm the mcm to be set to
+     */
     public void initParams(ModelControllerManager mcm) {
         this.mcm = mcm;
         this.displayWorkoutCalendar();

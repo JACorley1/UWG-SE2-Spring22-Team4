@@ -1,8 +1,6 @@
 package workout_manager.view;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import workout_manager.Main;
 import javafx.beans.property.SimpleListProperty;
@@ -32,7 +30,8 @@ import workout_manager.viewmodel.ModelControllerManager;
 public class PreferenceController {
 
     private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>(FXCollections.observableArrayList());
-    private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>(FXCollections.observableArrayList());
+    private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>(
+            FXCollections.observableArrayList());
 
     private ModelControllerManager mcm;
 
@@ -54,6 +53,7 @@ public class PreferenceController {
     @FXML
     void handleApplyPrefButton(ActionEvent event) throws IOException {
         this.mcm.setUserPrefs(this.getSelectedMuscles(), this.getDaysSelected());
+        this.mcm.serialize();
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
         Parent parent = loader.load();
@@ -111,7 +111,7 @@ public class PreferenceController {
     void initialize() {
     }
 
-    private void displayDays(){
+    private void displayDays() {
         for (Node node : this.daysGridPane.getChildren()) {
             if (node instanceof CheckBox) {
                 CheckBox ckbox = (CheckBox) node;
@@ -135,6 +135,13 @@ public class PreferenceController {
         }
     }
 
+    /**
+     * initializes this.mcm to the given mcm
+     * 
+     * @precondition none
+     * @postcondition none
+     * @param mcm the mcm to be set to
+     */
     public void initParams(ModelControllerManager mcm) {
         this.mcm = mcm;
         this.displayDays();

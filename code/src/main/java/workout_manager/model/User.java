@@ -100,13 +100,14 @@ public class User {
      * @param userName the username to set for this user
      */
     public void setUserName(String userName) {
-        if (userName.isEmpty()) {
-            throw new IllegalArgumentException("userName cannot be empty");
-        }
-        if (userName.equals(null)) {
+        if (userName == null) {
             throw new NullPointerException("userName cannot be null");
+        } else if (userName.isEmpty()) {
+            throw new IllegalArgumentException("userName cannot be empty");
+        } else {
+            this.userName = userName;
         }
-        this.userName = userName;
+
     }
 
     /**
@@ -117,16 +118,18 @@ public class User {
      * @param passWord the password to set for this user
      */
     public void setPassWord(String passWord) {
-        if (passWord.isEmpty()) {
-            throw new IllegalArgumentException("passWord cannot be empty");
-        }
-        if (passWord.equals(null)) {
+        if (passWord == null) {
             throw new NullPointerException("passWord cannot be null");
+        } else if (passWord.isEmpty()) {
+            throw new IllegalArgumentException("passWord cannot be empty");
+        } else {
+            this.passWord = passWord;
         }
-        this.passWord = passWord;
+
     }
 
     /**
+     * mvn
      * gets the password from this user
      * 
      * @precondition none

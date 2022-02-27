@@ -28,7 +28,6 @@ public class DailyDetailsController {
     private ModelControllerManager mcm;
     private final static String WORKOUT_OVERVIEW = "View Full Workout";
     private ObservableList<String> exercises = FXCollections.observableArrayList();
-   
 
     @FXML
     private TextArea workoutTextArea;
@@ -57,27 +56,26 @@ public class DailyDetailsController {
     }
 
     private void exercizeSelectorListener() {
-		this.exerciseSelector.getSelectionModel().selectedItemProperty().addListener((obs, oldValue, newValue) -> {
-			this.setExcersizeDetails(newValue);
-		});
-	
-	}
+        this.exerciseSelector.getSelectionModel().selectedItemProperty().addListener((obs, oldValue, newValue) -> {
+            this.setExcersizeDetails(newValue);
+        });
+
+    }
 
     private void setExcersizeDetails(String exerciseName) {
         for (ExerciseAlt currentExcersize : this.mcm.getCurrentWorkout().getExercises()) {
-            if (currentExcersize.getName().equals(exerciseName)){
+            if (currentExcersize.getName().equals(exerciseName)) {
                 this.workoutTextArea.setText(currentExcersize.getDescription());
             }
         }
     }
 
-    
     @FXML
     void handleExerciseSelection(ActionEvent event) {
 
     }
 
-    private void showOverView(String dayName){
+    private void showOverView(String dayName) {
         String overViewText = "";
         for (ExerciseAlt currentExercise : this.mcm.getWorkout(dayName).getExercises()) {
             this.exercises.add(currentExercise.getName());
@@ -86,13 +84,20 @@ public class DailyDetailsController {
         this.workoutTextArea.setText(overViewText);
     }
 
-
-
     @FXML
     void initialize() {
         this.exercizeSelectorListener();
     }
 
+    /**
+     * initializes this.mcm to the given mcm
+     * and sets the day label to the given string
+     * 
+     * @precondition none
+     * @postcondition none
+     * @param mcm         the mcm to be set to
+     * @param nameClicked is the name of the day label to be set to
+     */
     public void initParams(ModelControllerManager mcm, String nameClicked) {
         this.mcm = mcm;
         this.dayLabel.setText(nameClicked);
@@ -100,7 +105,7 @@ public class DailyDetailsController {
         this.showOverView(nameClicked);
         this.exerciseSelector.setItems(this.exercises);
         this.exerciseSelector.getSelectionModel().select(WORKOUT_OVERVIEW);
-    
+
     }
 
 }

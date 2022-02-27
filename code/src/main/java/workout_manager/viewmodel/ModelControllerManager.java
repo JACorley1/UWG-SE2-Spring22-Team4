@@ -1,27 +1,14 @@
 package workout_manager.viewmodel;
 
-
-import java.io.FileWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonIOException;
-
 import javafx.beans.property.SimpleListProperty;
-
 import workout_manager.model.Days;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.User;
+import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
-import workout_manager.model.WorkoutCalendar;
 import workout_manager.model.WorkoutDataFetcher;
 import workout_manager.model.WorkoutGenerator;
-import workout_manager.view.DailyDetailsController;
-import workout_manager.view.LoginController;
-import workout_manager.view.PreferenceController;
-import workout_manager.view.WeeklyViewController;
 
 /**
  * Creates a ModelControllerManager
@@ -29,38 +16,47 @@ import workout_manager.view.WeeklyViewController;
  * @author group 4
  */
 public class ModelControllerManager {
-
-    private DailyDetailsController dailyController;
-    private LoginController loginController;
-    private PreferenceController prefController;
-    private WeeklyViewController weeklyViewcontroller;
     private static WorkoutDataFetcher dataFetcher;
     private WorkoutGenerator workoutGenerator;
     private User user;
     private Workout currentWorkout;
- 
+    private UserSerializer serializer;
 
     /**
+     * Creates a ModelControllerManager class
      * 
-     * 
+     * @precondition none
+     * @postcondition none
      * 
      */
     public ModelControllerManager() {
-        this.dailyController = new DailyDetailsController();
-        this.prefController = new PreferenceController();
-        this.weeklyViewcontroller = new WeeklyViewController();
+        this.serializer = new UserSerializer();
         dataFetcher = new WorkoutDataFetcher();
         this.workoutGenerator = new WorkoutGenerator(dataFetcher);
 
     }
 
+    /**
+     * gets the preferences from the user and retunrs it
+     * 
+     * @precondition none
+     * @postcondition none
+     * 
+     * @return this.user.preferences
+     */
     public Preferences getCurrentPreferences() {
         return this.user.getPreferences();
     }
 
-    public Workout getWorkout(String day){
+    /**
+     * gets the workout for the specified day from the user's workout calender
+     * 
+     * @param day is the day to get the workout from
+     * @return the found workout for the given day
+     */
+    public Workout getWorkout(String day) {
         for (Days currentDay : Days.values()) {
-            if (day.toUpperCase().equals(currentDay.toString())){
+            if (day.toUpperCase().equals(currentDay.toString())) {
                 this.currentWorkout = this.user.getWorkoutCalender().getDaysWorkout(currentDay);
                 return this.user.getWorkoutCalender().getDaysWorkout(currentDay);
             }
@@ -68,33 +64,81 @@ public class ModelControllerManager {
         return null;
     }
 
+    /**
+     * sets the user's preferences with the given information
+     * 
+     * @precondition none
+     * @postcondition none
+     * 
+     * @param muscles the list of selected muscles to set for the user's preferred
+     *                muscles
+     * @param days    the list of selected days tos set the user's available days
+     */
     public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days) {
-   
+
         this.user.setPreferences(new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size())));
         this.generateWorkoutCalendar();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        try {
-            gson.toJson(user, new FileWriter("userFile.json"));
-        } catch (JsonIOException | IOException e) {
 
-            e.printStackTrace();
-        }
-        
     }
 
-    private void generateWorkoutCalendar(){
-       this.user.setWorkoutCalender(this.workoutGenerator.generateWorkouts(this.user.getPreferences())); 
+    private void generateWorkoutCalendar() {
+        this.user.setWorkoutCalender(this.workoutGenerator.generateWorkouts(this.user.getPreferences()));
     }
 
+    /**
+     * sets this.user to the given user
+     * 
+     * @precondition none
+     * @postcondition none
+     * 
+     * @param user the user to set to
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
-    public Workout getCurrentWorkout(){
+    /**
+     * gets the current workout and returns it
+     * 
+     * @precondition none
+     * @postcondition none
+     * @return this.workout
+     */
+    public Workout getCurrentWorkout() {
         return this.currentWorkout;
     }
-    public void setCurrentWOrkout(Workout workoutToSet){
+
+    /**
+     * sets the current workout to the given workout
+     * 
+     * @precondition none
+     * @postcondition none
+     * 
+     * @param workoutToSet is the workout to set to
+     */
+    public void setCurrentWOrkout(Workout workoutToSet) {
         this.currentWorkout = workoutToSet;
+    }
+
+    /**
+     * deserializes the user
+     * 
+     * @precondition none
+     * @postcondition none
+     * 
+     */
+    public void deSerialize() {
+        this.user = this.serializer.deserialize();
+    }
+
+    /**
+     * serializes the user
+     * 
+     * @precondition none
+     * @postcondition none
+     */
+    public void serialize() {
+        this.serializer.serialize(this.user);
     }
 
 }
