@@ -20,13 +20,12 @@ import workout_manager.model.WorkoutGenerator;
  */
 public class TestWorkoutGenerator {
 
-    private static WorkoutDataFetcher fetcher = new WorkoutDataFetcher();
     private static List<Days> selectedDays;
     private static List<MuscleGroup> selectedMuscles;
 
     @Test
     void testConstruction() {
-        WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
+        WorkoutGenerator testGenerator = new WorkoutGenerator();
         assertEquals(testGenerator.getClass(), WorkoutGenerator.class);
     }
 
@@ -36,7 +35,7 @@ public class TestWorkoutGenerator {
         selectedMuscles = new ArrayList<MuscleGroup>();
         selectedMuscles.add(MuscleGroup.LEGS);
         Preferences testPref = new Preferences(selectedMuscles, selectedDays);
-        WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
+        WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertAll(
                 () -> assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().get(0).getName(), "Rest Day"),
@@ -55,7 +54,7 @@ public class TestWorkoutGenerator {
         selectedDays.add(Days.FRIDAY);
         selectedMuscles.add(MuscleGroup.LEGS);
         Preferences testPref = new Preferences(selectedMuscles, selectedDays);
-        WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
+        WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 1);
     }
@@ -71,7 +70,7 @@ public class TestWorkoutGenerator {
         selectedMuscles.add(MuscleGroup.LEGS);
         selectedMuscles.add(MuscleGroup.ARMS);
         Preferences testPref = new Preferences(selectedMuscles, selectedDays);
-        WorkoutGenerator testGenerator = new WorkoutGenerator(fetcher);
+        WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 3);
         assertEquals(testCal.getDaysWorkout(Days.TUESDAY).getExercises().size(), 3);

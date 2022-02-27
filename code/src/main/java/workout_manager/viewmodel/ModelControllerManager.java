@@ -16,7 +16,8 @@ import workout_manager.model.WorkoutGenerator;
  * @author group 4
  */
 public class ModelControllerManager {
-    private static WorkoutDataFetcher dataFetcher;
+
+    private static final String userFilePath = "src/main/java/workout_manager/model/userFile.json";
     private WorkoutGenerator workoutGenerator;
     private User user;
     private Workout currentWorkout;
@@ -30,10 +31,8 @@ public class ModelControllerManager {
      * 
      */
     public ModelControllerManager() {
-        this.serializer = new UserSerializer();
-        dataFetcher = new WorkoutDataFetcher();
-        this.workoutGenerator = new WorkoutGenerator(dataFetcher);
-
+        this.serializer = new UserSerializer(userFilePath);
+        this.workoutGenerator = new WorkoutGenerator();
     }
 
     /**
