@@ -1,10 +1,6 @@
 {
   "preferences": {
-    "availableDays": [
-      "TUESDAY",
-      "FRIDAY",
-      "SATURDAY"
-    ],
+    "availableDays": [],
     "musclesSelected": [
       "LEGS",
       "ABS",
@@ -13,63 +9,19 @@
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "SATURDAY": {
+      "MONDAY": {
         "exercises": [
           {
-            "name": "Wall Handstand",
-            "description": " Handstand against a wall for support (chest facing wall).",
-            "category": 13,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Wall Squat",
-            "description": " Find a nice flat piece of wall and stand with your back leaning against the wall. Slowly slide down the wall while moving your feet away from it, until your thighs are parallel to the ground and both your knees and your hips are bent at a 90° angle. Cross your arms in front of your chest and hold this position for 30 seconds.\n Variant: put a big inflated rubber ball (like a small basketball) between your knees and squeeze the ball while holding the squat position",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Full Sit Outs",
-            "description": " (A) Get in high plank position on your hands and toes.(B) Shift your weight to your left hand as you turn your body to the right; bend your right leg behind you and extend your right arm up. Return to the center and repeat on the opposite side. Continue, alternating sides.Make it easier: Don’t raise your arm after you bend your leg behind you.Make it harder: Balance with your arm and leg extended for two counts.",
-            "category": 10,
-            "equipment": [
-              7
+              0
             ]
           }
         ]
       },
-      "TUESDAY": {
-        "exercises": [
-          {
-            "name": "Wall Handstand",
-            "description": " Handstand against a wall for support (chest facing wall).",
-            "category": 13,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Cycling",
-            "description": "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as cyclists, bicyclists, or bikers. Apart from two-wheeled bicycles, cycling also includes the riding of unicycles, tricycles, quadracycles, recumbent and similar human-powered vehicles.",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Plank",
-            "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
-            "category": 10,
-            "equipment": [
-              7
-            ]
-          }
-        ]
-      },
-      "WEDNESDAY": {
+      "FRIDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -93,7 +45,7 @@
           }
         ]
       },
-      "MONDAY": {
+      "TUESDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -117,30 +69,26 @@
           }
         ]
       },
-      "FRIDAY": {
+      "WEDNESDAY": {
         "exercises": [
           {
-            "name": "Handstand Pushup",
-            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
-            "category": 13,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
+              0
             ]
-          },
+          }
+        ]
+      },
+      "SATURDAY": {
+        "exercises": [
           {
-            "name": "Forward Lunge",
-            "description": " Start at a standing position. Lift and move one foot forward until your front calf and thigh are at 90 degrees to one another. At the same time, bend your back leg forward while keeping the back foot in place. Return to starting position. Repeat with other leg.",
-            "category": 9,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Plank",
-            "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
-            "category": 10,
-            "equipment": [
-              7
+              0
             ]
           }
         ]

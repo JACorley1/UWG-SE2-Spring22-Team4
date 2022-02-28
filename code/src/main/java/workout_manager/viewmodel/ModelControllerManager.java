@@ -7,7 +7,6 @@ import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
-import workout_manager.model.WorkoutDataFetcher;
 import workout_manager.model.WorkoutGenerator;
 
 /**
@@ -16,7 +15,8 @@ import workout_manager.model.WorkoutGenerator;
  * @author group 4
  */
 public class ModelControllerManager {
-    private static WorkoutDataFetcher dataFetcher;
+
+    private String userFilePath;
     private WorkoutGenerator workoutGenerator;
     private User user;
     private Workout currentWorkout;
@@ -25,15 +25,21 @@ public class ModelControllerManager {
     /**
      * Creates a ModelControllerManager class
      * 
-     * @precondition none
+     * @precondition filepath != null && !filepath.isEmpty()
      * @postcondition none
      * 
+     * @param filepath the filepath
      */
-    public ModelControllerManager() {
-        this.serializer = new UserSerializer();
-        dataFetcher = new WorkoutDataFetcher();
-        this.workoutGenerator = new WorkoutGenerator(dataFetcher);
-
+    public ModelControllerManager(String filepath) {
+        if (filepath == null){
+            throw new IllegalArgumentException("Filepath cannot be null");
+        }
+        if (filepath.isEmpty()){
+            throw new IllegalArgumentException("Filepath cannot be empty");
+        }
+        this.userFilePath = filepath;
+        this.serializer = new UserSerializer(this.userFilePath);
+        this.workoutGenerator = new WorkoutGenerator();
     }
 
     /**

@@ -22,6 +22,7 @@ public class Main extends Application {
     public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
     public static final String WEEKLY_VIEW_PAGE = "view/codebehind/WeeklyView.fxml";
     public static final String DAILY_DETAILS_PAGE = "view/codebehind/DailyDetailsPage.fxml";
+    public static final String USER_FILE_PATH = "src/main/java/workout_manager/model/userFile.json";
     private ModelControllerManager mcm;
 
     /**
@@ -34,7 +35,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
-        this.mcm = new ModelControllerManager();
+        this.mcm = new ModelControllerManager(USER_FILE_PATH);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Main.LOGIN_PAGE));
         Parent parent = loader.load();
 
