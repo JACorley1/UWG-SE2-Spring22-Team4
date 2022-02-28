@@ -1,8 +1,12 @@
 Context - user is logged in and is viewing a sepecific day's workout
 
 Primary Flow 
-1 - user selects an exercise from the workout detail page
+1 - user selects an exercise from the workout detail page from drop-down menu
 2 - exercise detail page is displayed listing text instructions for performing the selected exercise
+
+Alternate Flow
+REST DAY
+a2 - user is informed that it is a rest day
 
 
 

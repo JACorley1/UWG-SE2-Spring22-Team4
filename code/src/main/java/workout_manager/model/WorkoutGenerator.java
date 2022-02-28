@@ -19,8 +19,8 @@ public class WorkoutGenerator {
     /**
      * creates a workout generator object.
      */
-    public WorkoutGenerator(WorkoutDataFetcher dataFetcher) {
-        this.dataFetcher = dataFetcher;
+    public WorkoutGenerator() {
+        this.dataFetcher = new WorkoutDataFetcher();
     }
 
     /**

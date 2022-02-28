@@ -123,6 +123,12 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.7</version>
+				<configuration> 
+					<excludes>
+						<exclude>workout_manager/view/**/</exclude>
+						<exclude>workout_manager/**/Main.class</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -145,18 +151,11 @@
 						<configuration>
 							<rules>
 								<rule>
-									<element>PACKAGE</element>
-									<!--includes>
-										<include>edu.westga.cs3211.hi_low_game.model</include>
-									</includes-->
-									<excludes>
-										<exclude>workout_manager.view</exclude>
-									</excludes>
 									<limits>
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.90</minimum>
+											<minimum>0.95</minimum>
 										</limit>
 									</limits>
 								</rule>

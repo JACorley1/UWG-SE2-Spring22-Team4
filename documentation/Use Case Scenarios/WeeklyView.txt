@@ -3,14 +3,11 @@ Weekly View Use Case Scenario
 Context - User has successfully logged in and is the Weekly View Page is currently displayed
 
 Primary Flow
-1 - System enables circle icons based on preferences
-2 - User selects one of the enabled circle icons.
+1 - System shows days with workouts with green circles, red for rest days.
+2 - User selects one of the circle icons.
 3 - System displays the workout detail view page for the selected day.
 
 Alternative Flow(s)
 VIEW/CHANGE PREFERENCES
 1 - User clicks the gear icon in the upper-right corner.
 2 - System shows the user preferences page.
-
-NO WORKOUTS
-a1 - User preferences are set such that there are no days with workouts associated.

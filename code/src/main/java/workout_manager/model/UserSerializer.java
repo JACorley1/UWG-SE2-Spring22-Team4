@@ -22,7 +22,17 @@ import com.google.gson.reflect.TypeToken;
  */
 public class UserSerializer {
     private User user;
-    private final String USER = "src/main/java/workout_manager/model/userFile.json";
+    private String filepath;
+
+    public UserSerializer(String filepath) {
+        if (filepath == null){
+            throw new IllegalArgumentException("Filepath cannot be null");
+        }
+        if (filepath.isEmpty()){
+            throw new IllegalArgumentException("Filepath cannot be empty");
+        }
+        this.filepath = filepath;
+    }
 
     /**
      * serialize the given user to the USER path file
@@ -31,17 +41,20 @@ public class UserSerializer {
      * @postcondition none
      * 
      * @param user the user to serialize
+     * @return true if the serializer was successful; false otherwise
      */
-    public void serialize(User user) {
+    public boolean serialize(User user) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         try {
-            FileWriter writer = new FileWriter(USER);
+            FileWriter writer = new FileWriter(this.filepath);
             gson.toJson(user, writer);
             writer.flush();
             writer.close();
+            return true;
         } catch (JsonIOException | IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -56,9 +69,10 @@ public class UserSerializer {
     public User deserialize() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser parser = new JsonParser();
+        
         try {
-            JsonElement exerciseInfo = parser.parse(
-                    new FileReader(USER));
+            FileReader reader = new FileReader(this.filepath);
+            JsonElement exerciseInfo = parser.parse(reader);
             this.user = gson.fromJson(exerciseInfo, new TypeToken<User>() {
             }.getType());
 
