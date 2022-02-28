@@ -146,17 +146,15 @@
 							<rules>
 								<rule>
 									<element>PACKAGE</element>
-									<!--includes>
-										<include>edu.westga.cs3211.hi_low_game.model</include>
-									</includes-->
 									<excludes>
-										<exclude>workout_manager.view</exclude>
+										<exclude>workout_manager/view/**/*</exclude>
+										<exclude>src.main.java.workout_manager</exclude>
 									</excludes>
 									<limits>
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.90</minimum>
+											<minimum>0.95</minimum>
 										</limit>
 									</limits>
 								</rule>

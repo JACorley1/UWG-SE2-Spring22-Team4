@@ -1,5 +1,7 @@
 package workout_manager.test.model;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -47,10 +49,18 @@ public class TestUserSerializer {
     }
 
     @Test
-    void TestDeserializeErrorThrown() {
+    void TestDeserializeErrorCaught() {
         UserSerializer userSerializer = new UserSerializer("bad.txt");
-        
-        assertThrows(FileNotFoundException.class, () -> userSerializer.deserialize());
+
+        assertNull(userSerializer.deserialize());
+    }
+
+    @Test
+    void testSerializeErrorCaught() {
+        UserSerializer userSerializer = new UserSerializer("bad.txt");
+        User user = null;
+
+        assertTrue(userSerializer.serialize(user));
     }
 
 }

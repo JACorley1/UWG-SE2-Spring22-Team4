@@ -26,10 +26,9 @@
 <error line="70" column="16" severity="warning" message="Reference to instance variable &apos;workoutCalender&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java">
-<error line="8" column="8" severity="warning" message="Unused import - javax.swing.text.StyledEditorKit.BoldAction." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="29" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="30" column="30" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="33" column="32" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="28" column="30" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="31" column="32" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java">
 </file>
@@ -49,7 +48,7 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java">
-<error line="10" column="8" severity="warning" message="Unused import - workout_manager.model.WorkoutDataFetcher." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="20" column="33" severity="warning" message="Constant name &apos;userFilePath&apos; should be all upper case letters, digits and underscores." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+<error line="34" column="30" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="37" column="32" severity="warning" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 </checkstyle>
