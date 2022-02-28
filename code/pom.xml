@@ -123,6 +123,12 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.7</version>
+				<configuration> 
+					<excludes>
+						<exclude>workout_manager/view/**/</exclude>
+						<exclude>workout_manager/**/Main.class</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -143,13 +149,8 @@
 							<goal>check</goal>
 						</goals>
 						<configuration>
-							<excludes>
-								<exclude>src.main.workout_manager.view*</exclude>
-							</excludes>
 							<rules>
 								<rule>
-									<element>PACKAGE</element>
-									
 									<limits>
 										<limit>
 											<counter>LINE</counter>
