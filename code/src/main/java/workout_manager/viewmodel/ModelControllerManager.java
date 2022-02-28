@@ -31,10 +31,10 @@ public class ModelControllerManager {
      * @param filepath the filepath
      */
     public ModelControllerManager(String filepath) {
-        if (filepath == null){
+        if (filepath == null) {
             throw new IllegalArgumentException("Filepath cannot be null");
         }
-        if (filepath.isEmpty()){
+        if (filepath.isEmpty()) {
             throw new IllegalArgumentException("Filepath cannot be empty");
         }
         this.userFilePath = filepath;

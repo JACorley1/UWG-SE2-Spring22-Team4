@@ -1,14 +1,48 @@
 {
   "preferences": {
-    "availableDays": [],
+    "availableDays": [
+      "WEDNESDAY",
+      "FRIDAY"
+    ],
     "musclesSelected": [
-      "LEGS",
       "ABS",
       "SHOULDERS"
     ]
   },
   "workoutCalender": {
     "workoutCalendar": {
+      "FRIDAY": {
+        "exercises": [
+          {
+            "name": "Plank",
+            "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
+            "category": 10,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Handstand Pushup",
+            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
+            "category": 13,
+            "equipment": [
+              7
+            ]
+          }
+        ]
+      },
+      "SATURDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
       "MONDAY": {
         "exercises": [
           {
@@ -21,7 +55,7 @@
           }
         ]
       },
-      "FRIDAY": {
+      "THURSDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -57,38 +91,22 @@
           }
         ]
       },
-      "THURSDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
       "WEDNESDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
+            "name": "Side Plank",
+            "description": " Works your obliques and helps stabilize your spine. Lie on your side and support your body between your forearm and knee to your feet.",
+            "category": 10,
             "equipment": [
-              0
+              7
             ]
-          }
-        ]
-      },
-      "SATURDAY": {
-        "exercises": [
+          },
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
+            "name": "Wall Handstand",
+            "description": " Handstand against a wall for support (chest facing wall).",
+            "category": 13,
             "equipment": [
-              0
+              7
             ]
           }
         ]

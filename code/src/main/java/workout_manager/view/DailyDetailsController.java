@@ -25,9 +25,10 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class DailyDetailsController {
+
     private ModelControllerManager mcm;
-    private final static String WORKOUT_OVERVIEW = "View Full Workout";
     private ObservableList<String> exercises = FXCollections.observableArrayList();
+    private static final String WORKOUT_OVERVIEW = "View Full Workout";
 
     @FXML
     private TextArea workoutTextArea;

@@ -26,7 +26,9 @@ public class Preferences {
         this.musclesSelected = selectedMuscles;
 
     }
-
+    /**
+     * creates a preferences object
+     */
     public Preferences() {
         this.availableDays = new ArrayList<Days>();
         this.musclesSelected = new ArrayList<MuscleGroup>();

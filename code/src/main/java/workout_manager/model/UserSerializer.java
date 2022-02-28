@@ -24,11 +24,17 @@ public class UserSerializer {
     private User user;
     private String filepath;
 
+    /**
+     * creates a user serializer
+     * 
+     * @precondition filepath cant be null || empty
+     * @param filepath the filePath for the serializer
+     */
     public UserSerializer(String filepath) {
-        if (filepath == null){
+        if (filepath == null) {
             throw new IllegalArgumentException("Filepath cannot be null");
         }
-        if (filepath.isEmpty()){
+        if (filepath.isEmpty()) {
             throw new IllegalArgumentException("Filepath cannot be empty");
         }
         this.filepath = filepath;
@@ -69,7 +75,7 @@ public class UserSerializer {
     public User deserialize() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonParser parser = new JsonParser();
-        
+
         try {
             FileReader reader = new FileReader(this.filepath);
             JsonElement exerciseInfo = parser.parse(reader);
