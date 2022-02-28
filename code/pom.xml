@@ -143,13 +143,13 @@
 							<goal>check</goal>
 						</goals>
 						<configuration>
+							<excludes>
+								<exclude>src.main.workout_manager.view*</exclude>
+							</excludes>
 							<rules>
 								<rule>
 									<element>PACKAGE</element>
-									<excludes>
-										<exclude>workout_manager/view/**/*</exclude>
-										<exclude>src.main.java.workout_manager</exclude>
-									</excludes>
+									
 									<limits>
 										<limit>
 											<counter>LINE</counter>
