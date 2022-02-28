@@ -1,0 +1,11 @@
+Context - user is logged in and on calendar page with a schedule generated
+
+Primary Flow
+1 - user selects the circle for a day of the week
+2 - workout detail page is displayed with list of exercises for the day's workout
+
+Alternative Flow
+a2 - workout not scheduled for the day
+a3 - user is informed that it is a rest day
+a4 - user selects back and returns to calendar page
+

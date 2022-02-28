@@ -1,0 +1,100 @@
+{
+  "preferences": {
+    "availableDays": [],
+    "musclesSelected": [
+      "LEGS",
+      "ABS",
+      "SHOULDERS"
+    ]
+  },
+  "workoutCalender": {
+    "workoutCalendar": {
+      "MONDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "SUNDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "TUESDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "THURSDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "WEDNESDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "SATURDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "userName": "username",
+  "passWord": "password"
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.PreferenceController">
+   <effect>
+      <DropShadow color="#941212" />
+   </effect>
+   <children>
+      <GridPane fx:id="daysGridPane" gridLinesVisible="true" layoutX="169.0" layoutY="85.0" prefHeight="211.0" prefWidth="100.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.20001983642578" minWidth="10.0" prefWidth="159.20001983642578" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="59.59998168945313" minHeight="10.0" prefHeight="29.399981689453128" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="112.4" minHeight="4.799999999999997" prefHeight="26.799993896484374" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.4" minHeight="0.0" prefHeight="31.80001220703126" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.4" minHeight="10.0" prefHeight="31.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.4" minHeight="10.0" prefHeight="27.799999999999997" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.4" minHeight="10.0" prefHeight="33.400000000000006" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="155.4" minHeight="10.0" prefHeight="33.399981689453114" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <CheckBox contentDisplay="CENTER" mnemonicParsing="false" prefHeight="18.0" prefWidth="78.0" text="Monday">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Tuesday" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Wednesday" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Thursday" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Friday" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Saturday" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Sunday" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="50.0" prefHeight="27.0" prefWidth="123.0" text="Preferred Days" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="muscleGridPane" gridLinesVisible="true" layoutX="328.0" layoutY="85.0" prefHeight="211.0" prefWidth="116.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="38.00001220703125" minHeight="10.0" prefHeight="27.600018310546876" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.19998779296875" minHeight="8.000013732910158" prefHeight="29.399981689453124" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="81.79998626708984" minHeight="10.0" prefHeight="33.599987792968754" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.79999389648438" minHeight="10.0" prefHeight="30.400012207031253" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.20000000000002" minHeight="10.0" prefHeight="28.800012207031244" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.59998779296873" minHeight="10.0" prefHeight="32.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="92.4" minHeight="10.0" prefHeight="34.99998779296877" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <CheckBox mnemonicParsing="false" text="Arms">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Legs" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Back" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Abs" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Chest" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Shoulders" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Calves" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></CheckBox>
+         </children>
+      </GridPane>
+      <Label alignment="CENTER" layoutX="317.0" layoutY="50.0" prefHeight="27.0" prefWidth="137.0" text="Preferred Muscle" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="applyPrefButton" layoutX="150.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleApplyPrefButton" prefHeight="26.0" prefWidth="138.0" text="Apply Preferences" />
+      <Button fx:id="cancelButton" layoutX="353.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleCancelButton" prefHeight="26.0" prefWidth="66.0" text="Cancel" />
+   </children>
+</AnchorPane>
