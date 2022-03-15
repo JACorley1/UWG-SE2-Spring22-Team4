@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
+import workout_manager.model.Client;
 import workout_manager.model.LocalLoginAuthenticator;
 import workout_manager.viewmodel.ModelControllerManager;
 
@@ -41,6 +42,10 @@ public class LoginController {
     void handleLogin(ActionEvent event) throws IOException {
         boolean authenticated = this.loginAuthenticator.authenticateLoginCredentials(this.userNameTextfield.getText(),
                 this.passwordTextfield.getText());
+        Client client = Client.getClient();
+        String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
+        client.sendRequest(request);
+        String response = client.receiveResponse();
 
         if (authenticated) {
             this.mcm.deSerialize();

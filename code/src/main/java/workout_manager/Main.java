@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import workout_manager.model.Client;
 import workout_manager.view.LoginController;
 import workout_manager.viewmodel.ModelControllerManager;
 import javafx.scene.Parent;
@@ -35,12 +36,12 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws IOException {
+
         this.mcm = new ModelControllerManager(USER_FILE_PATH);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Main.LOGIN_PAGE));
         Parent parent = loader.load();
 
         LoginController login = loader.<LoginController>getController();
-
         login.initParams(this.mcm);
 
         Scene scene = new Scene(parent);

@@ -1,6 +1,7 @@
 package workout_manager.viewmodel;
 
 import javafx.beans.property.SimpleListProperty;
+import workout_manager.model.Client;
 import workout_manager.model.Days;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
