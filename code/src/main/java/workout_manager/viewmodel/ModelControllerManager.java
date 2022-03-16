@@ -2,6 +2,7 @@ package workout_manager.viewmodel;
 
 import javafx.beans.property.SimpleListProperty;
 import workout_manager.model.Days;
+import workout_manager.model.Intensity;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.User;
@@ -31,10 +32,10 @@ public class ModelControllerManager {
      * @param filepath the filepath
      */
     public ModelControllerManager(String filepath) {
-        if (filepath == null){
+        if (filepath == null) {
             throw new IllegalArgumentException("Filepath cannot be null");
         }
-        if (filepath.isEmpty()){
+        if (filepath.isEmpty()) {
             throw new IllegalArgumentException("Filepath cannot be empty");
         }
         this.userFilePath = filepath;
@@ -80,9 +81,11 @@ public class ModelControllerManager {
      *                muscles
      * @param days    the list of selected days tos set the user's available days
      */
-    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days) {
+    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
+            Intensity intensity) {
 
-        this.user.setPreferences(new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size())));
+        this.user.setPreferences(
+                new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
 
     }

@@ -1,63 +1,18 @@
 {
   "preferences": {
-    "availableDays": [],
+    "availableDays": [
+      "MONDAY"
+    ],
     "musclesSelected": [
       "LEGS",
       "ABS",
       "SHOULDERS"
-    ]
+    ],
+    "intensity": "INTERMEDIATE"
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "MONDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "FRIDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "SUNDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "TUESDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "THURSDAY": {
+      "SATURDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -81,7 +36,71 @@
           }
         ]
       },
-      "SATURDAY": {
+      "MONDAY": {
+        "exercises": [
+          {
+            "name": "Wall Squat",
+            "description": " Find a nice flat piece of wall and stand with your back leaning against the wall. Slowly slide down the wall while moving your feet away from it, until your thighs are parallel to the ground and both your knees and your hips are bent at a 90° angle. Cross your arms in front of your chest and hold this position for 30 seconds.\n Variant: put a big inflated rubber ball (like a small basketball) between your knees and squeeze the ball while holding the squat position",
+            "category": 9,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Russian Twists",
+            "description": " To perform the Russian twist one sits on the floor and bends both knees while feet are be kept together and held slightly above the ground (or put under a stable surface). Ideally, the torso is kept straight with the back kept off the ground at a 45 degree angle with arms held together away from the body in a straight fashion and hands kept locked together like a ball or one can hold a weight to increase the difficulty. Next, the arms should be swung from one side to another in a twisting motion, with each swing to a side counting as one repetition. The slower one moves the arms from side to side, the harder the exercise becomes, working the abdomen that much better. When moving one\u0027s arms during the exercise, it is crucial to not stop between repetitions or else one will lose the effect of working the abdomen. As with all exercise, consistent breathing in and out during the exercise is important as one must ensure proper oxygen flow.",
+            "category": 10,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Handstand Pushup",
+            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
+            "category": 13,
+            "equipment": [
+              7
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "TUESDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "SUNDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "THURSDAY": {
         "exercises": [
           {
             "name": "Rest Day",
