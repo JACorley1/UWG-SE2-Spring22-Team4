@@ -13,10 +13,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import workout_manager.model.Days;
+import workout_manager.model.Intensity;
 import workout_manager.model.MuscleGroup;
 import workout_manager.viewmodel.ModelControllerManager;
 
@@ -32,6 +35,8 @@ public class PreferenceController {
     private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>(FXCollections.observableArrayList());
     private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>(
             FXCollections.observableArrayList());
+    private Intensity selectedIntensity;
+    private ToggleGroup group;
 
     private ModelControllerManager mcm;
 
@@ -45,14 +50,26 @@ public class PreferenceController {
     private GridPane muscleGridPane;
 
     @FXML
+    private GridPane intensityGridPane;
+
+    @FXML
     private Button applyPrefButton;
 
     @FXML
     private Button cancelButton;
 
     @FXML
+    private RadioButton beginnerRadioButton;
+
+    @FXML
+    private RadioButton intermediateRadioButton;
+
+    @FXML
+    private RadioButton advancedRadioButton;
+
+    @FXML
     void handleApplyPrefButton(ActionEvent event) throws IOException {
-        this.mcm.setUserPrefs(this.getSelectedMuscles(), this.getDaysSelected());
+        this.mcm.setUserPrefs(this.getSelectedMuscles(), this.getDaysSelected(), this.getSelectedIntensity());
         this.mcm.serialize();
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
@@ -94,6 +111,14 @@ public class PreferenceController {
         return this.selectedMuscles;
     }
 
+    private Intensity getSelectedIntensity() {
+        Intensity intense = null;
+        RadioButton rdButton = (RadioButton) this.group.getSelectedToggle();
+        intense = Intensity.valueOf(rdButton.getText().toUpperCase());
+        return intense;
+
+    }
+
     @FXML
     void handleCancelButton(ActionEvent event) throws IOException {
         Stage stage = (Stage) this.cancelButton.getScene().getWindow();
@@ -109,6 +134,10 @@ public class PreferenceController {
 
     @FXML
     void initialize() {
+        this.group = new ToggleGroup();
+        this.beginnerRadioButton.setToggleGroup(group);
+        this.intermediateRadioButton.setToggleGroup(group);
+        this.advancedRadioButton.setToggleGroup(group);
     }
 
     private void displayDays() {
@@ -135,6 +164,20 @@ public class PreferenceController {
         }
     }
 
+    private void displayIntensity() {
+        for (Node node : this.intensityGridPane.getChildren()) {
+            if (node instanceof RadioButton) {
+                RadioButton rdButton = (RadioButton) node;
+                Intensity intense = Intensity.valueOf(rdButton.getText().toUpperCase());
+                if (this.mcm.getCurrentPreferences().getIntensity() == null) {
+                    break;
+                } else if (this.mcm.getCurrentPreferences().getIntensity().equals(intense)) {
+                    rdButton.selectedProperty().set(true);
+                }
+            }
+        }
+    }
+
     /**
      * initializes this.mcm to the given mcm
      * 
@@ -146,6 +189,7 @@ public class PreferenceController {
         this.mcm = mcm;
         this.displayDays();
         this.displayMuscles();
+        this.displayIntensity();
     }
 
 }

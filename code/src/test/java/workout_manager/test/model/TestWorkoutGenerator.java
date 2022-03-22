@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import workout_manager.model.Days;
+import workout_manager.model.Intensity;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.WorkoutCalendar;
@@ -22,6 +23,7 @@ public class TestWorkoutGenerator {
 
     private static List<Days> selectedDays;
     private static List<MuscleGroup> selectedMuscles;
+    private static Intensity intensity;
 
     @Test
     void testConstruction() {
@@ -31,10 +33,11 @@ public class TestWorkoutGenerator {
 
     @Test
     void testGenerateCalendarNoDaysSelected() {
+        intensity = Intensity.BEGINNER;
         selectedDays = new ArrayList<Days>();
         selectedMuscles = new ArrayList<MuscleGroup>();
         selectedMuscles.add(MuscleGroup.LEGS);
-        Preferences testPref = new Preferences(selectedMuscles, selectedDays);
+        Preferences testPref = new Preferences(selectedMuscles, selectedDays, intensity);
         WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertAll(
@@ -49,11 +52,12 @@ public class TestWorkoutGenerator {
 
     @Test
     void testGenerateCalendarOneDayOneMuscleSelected() {
+        intensity = Intensity.BEGINNER;
         selectedDays = new ArrayList<Days>();
         selectedMuscles = new ArrayList<MuscleGroup>();
         selectedDays.add(Days.FRIDAY);
         selectedMuscles.add(MuscleGroup.LEGS);
-        Preferences testPref = new Preferences(selectedMuscles, selectedDays);
+        Preferences testPref = new Preferences(selectedMuscles, selectedDays, intensity);
         WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 1);
@@ -61,6 +65,7 @@ public class TestWorkoutGenerator {
 
     @Test
     void testGenerateCalendarThreeDaysThreeMusclesSelected() {
+        intensity = Intensity.BEGINNER;
         selectedDays = new ArrayList<Days>();
         selectedMuscles = new ArrayList<MuscleGroup>();
         selectedDays.add(Days.FRIDAY);
@@ -69,7 +74,7 @@ public class TestWorkoutGenerator {
         selectedMuscles.add(MuscleGroup.ABS);
         selectedMuscles.add(MuscleGroup.LEGS);
         selectedMuscles.add(MuscleGroup.ARMS);
-        Preferences testPref = new Preferences(selectedMuscles, selectedDays);
+        Preferences testPref = new Preferences(selectedMuscles, selectedDays, intensity);
         WorkoutGenerator testGenerator = new WorkoutGenerator();
         WorkoutCalendar testCal = testGenerator.generateWorkouts(testPref);
         assertEquals(testCal.getDaysWorkout(Days.FRIDAY).getExercises().size(), 3);
