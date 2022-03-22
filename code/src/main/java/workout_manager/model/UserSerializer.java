@@ -1,7 +1,4 @@
 package workout_manager.model;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -72,20 +69,21 @@ public class UserSerializer {
      * 
      * @return User
      */
-    public User deserialize() {
+    public User deserialize(String serializedUser) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        JsonParser parser = new JsonParser();
-
+        //JsonParser parser = new JsonParser();
         try {
-            FileReader reader = new FileReader(this.filepath);
-            JsonElement exerciseInfo = parser.parse(reader);
-            this.user = gson.fromJson(exerciseInfo, new TypeToken<User>() {
+            //FileReader reader = new FileReader(this.filepath);
+            //JsonElement exerciseInfo = parser.parse(serializedUser);
+            //System.out.println(exerciseInfo);
+            
+            this.user = gson.fromJson(serializedUser, new TypeToken<User>() {
             }.getType());
 
-        } catch (JsonIOException | JsonSyntaxException | FileNotFoundException e1) {
+
+        } catch (JsonIOException | JsonSyntaxException e1) {
             e1.printStackTrace();
         }
-
         return this.user;
     }
 

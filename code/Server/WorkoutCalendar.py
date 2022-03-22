@@ -1,20 +1,16 @@
+#!/usr/bin/env python3
+
 #*
 # * defines the workoutCalendar class
 # * 
 # * @author group4
 # 
+
+
 class WorkoutCalendar:
 
-
-    #    *
-    #     * constructs a workout calendar object
-    #     
-    def __init__(self):
-        #instance fields found by Java to Python Converter:
-        self.__workoutCalendar = None
-
-        self.__workoutCalendar = {}
-
+    workoutCalendar = {}
+    
     #    *
     #     * adds a workout to a specific day
     #     * 
@@ -23,7 +19,7 @@ class WorkoutCalendar:
     #     
     def addWorkout(self, day, workoutToAdd):
 
-        self.__workoutCalendar[day] = workoutToAdd
+        self.workoutCalendar[day] = workoutToAdd
 
 
     #    *
@@ -32,7 +28,7 @@ class WorkoutCalendar:
     #     * @return the users calendar
     #     
     def getCalendar(self):
-        return self.__workoutCalendar
+        return self.workoutCalendar
 
     #    *
     #     * gets a specified days workout
@@ -41,4 +37,4 @@ class WorkoutCalendar:
     #     * @return the workout scheduled on the day.
     #     
     def getDaysWorkout(self, day):
-        return self.__workoutCalendar[day]
+        return self.workoutCalendar[day.name]

@@ -1,4 +1,14 @@
+#!/usr/bin/env python3
+
+from calendar import calendar
 import random
+import Preferences
+import WorkoutCalendar
+import Days
+import ExerciseAlt
+import dataFetcher
+import MuscleGroup
+
 
 #*
 # * defines the workout generator class.
@@ -6,19 +16,10 @@ import random
 # * @author group4
 # 
 class WorkoutGenerator:
-    __RESTDAY = "Rest Day"
-    __RESTDESCRIPTION = "Enjoy your Rest"
-    __RESTCAT = 0
-    __RESTEQUIP = [0]
-
-    #    *
-    #     * creates a workout generator object.
-    #     
-    def __init__(self):
-        #instance fields found by Java to Python Converter:
-        self.__dataFetcher = None
-
-        self.__dataFetcher = WorkoutDataFetcher()
+    RESTDAY = "Rest Day"
+    RESTDESCRIPTION = "Enjoy your Rest"
+    RESTCAT = 0
+    RESTEQUIP = [0]
 
     #    *
     #     * generates workouts based on the current users selected preferences
@@ -26,38 +27,36 @@ class WorkoutGenerator:
     #     * @param preferences the current users selected preferences.
     #     * @return workoutCalendar the generated calendar
     #     
-    def generateWorkouts(self, preferences):
+    def generateWorkouts(preferences):
 
-        exerciseMap = self.__populateExercises(preferences)
-        workoutCalendar = WorkoutCalendar()
-
-        for currentDay in Days.values():
-            if preferences.getSelectedDays().contains(currentDay):
-                workoutCalendar.addWorkout(currentDay, self.__createBalancedWorkout(exerciseMap))
+        exerciseMap = WorkoutGenerator.populateExercises(preferences)
+        calendar = {}
+        for currentDay in Days.Days:
+            if currentDay in preferences.getSelectedDays():
+                calendar[currentDay.name] = WorkoutGenerator.createBalancedWorkout(exerciseMap)
             else:
-                workoutCalendar.addWorkout(currentDay, self.__addRestDay())
+                calendar[currentDay.name] = WorkoutGenerator.addRestDay()
+        return calendar
 
-        return workoutCalendar
-
-    def __addRestDay(self):
-        restDay = Workout()
-        restDay.addExercise(ExerciseAlt(workout_manager.model.WorkoutGenerator.__RESTDAY, workout_manager.model.WorkoutGenerator.__RESTDESCRIPTION, workout_manager.model.WorkoutGenerator.__RESTCAT, workout_manager.model.WorkoutGenerator.__RESTEQUIP))
+    def addRestDay():
+        restDay = []
+        restDay.append(ExerciseAlt.ExerciseAlt.defineDetails(WorkoutGenerator.RESTDAY, WorkoutGenerator.RESTDESCRIPTION, WorkoutGenerator.RESTCAT, WorkoutGenerator.RESTEQUIP, 0))
         return restDay
 
 
-    def __createBalancedWorkout(self, exerciseMap):
-        workout = Workout()
+    def createBalancedWorkout(exerciseMap):
+        workout = []
         for currentGroup in exerciseMap.keys():
             range = len(exerciseMap[currentGroup])
-            amountToAdd = 1
+            amountToAdd = 3
             while amountToAdd > 0:
                 randomIndex = int((random.random() * range))
-                workout.addExercise(exerciseMap[currentGroup][randomIndex])
+                workout.append(exerciseMap[currentGroup][randomIndex])
                 amountToAdd -= 1
         return workout
 
-    def __populateExercises(self, preferences):
+    def populateExercises(preferences):
         exerciseMap = {}
         for current in preferences.getSelectedMuscles():
-            exerciseMap[current] = self.__dataFetcher.getExercises(current.getCode())
+            exerciseMap[current.value] = dataFetcher.dataFetcher.getExercises(current.value)
         return exerciseMap

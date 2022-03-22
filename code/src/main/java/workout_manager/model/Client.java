@@ -1,6 +1,4 @@
 package workout_manager.model;
-import java.util.ArrayList;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -15,7 +13,7 @@ public class Client {
     private static Client client = null;
 
     private Client() {
-        Context context = ZMQ.context(1);
+        Context context = ZMQ.context(10);
         this.socket = context.socket(ZMQ.REQ);
         this.socket.connect(HOST);
     }

@@ -1,51 +1,45 @@
 {
   "preferences": {
     "availableDays": [
-      "WEDNESDAY",
-      "FRIDAY"
+      "MONDAY"
     ],
     "musclesSelected": [
-      "ABS",
-      "SHOULDERS"
+      "ARMS"
     ]
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "FRIDAY": {
-        "exercises": [
-          {
-            "name": "Plank",
-            "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
-            "category": 10,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Handstand Pushup",
-            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
-            "category": 13,
-            "equipment": [
-              7
-            ]
-          }
-        ]
-      },
-      "SATURDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
       "MONDAY": {
         "exercises": [
           {
+            "name": "Side Plank",
+            "description": "Lie on your right side with your right hand directly underneath your right shoulder./nExtend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor./n Extend your left hand straight up toward the ceiling./nHold here for a set amount of time.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Lateral Plank Walk",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Push-up",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nBend your elbows and lower your chest to the floor. Drop to your knees if needed./nPush through the palms of your hands to straighten your arms./n That\u0027s 1 rep.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
+        "exercises": [
+          {
             "name": "Rest Day",
             "description": "Enjoy your Rest",
             "category": 0,
@@ -55,7 +49,7 @@
           }
         ]
       },
-      "THURSDAY": {
+      "WEDNESDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -91,22 +85,26 @@
           }
         ]
       },
-      "WEDNESDAY": {
+      "THURSDAY": {
         "exercises": [
           {
-            "name": "Side Plank",
-            "description": " Works your obliques and helps stabilize your spine. Lie on your side and support your body between your forearm and knee to your feet.",
-            "category": 10,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
+              0
             ]
-          },
+          }
+        ]
+      },
+      "SATURDAY": {
+        "exercises": [
           {
-            "name": "Wall Handstand",
-            "description": " Handstand against a wall for support (chest facing wall).",
-            "category": 13,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
+              0
             ]
           }
         ]
