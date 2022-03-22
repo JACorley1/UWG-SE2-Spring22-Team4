@@ -20,6 +20,7 @@ public class Preferences {
      * 
      * @param selectedDays    the days selected by the user
      * @param selectedMuscles the muscles selected by the user
+     * @param intensity       the instensity selected by the user
      */
     public Preferences(List<MuscleGroup> selectedMuscles, List<Days> selectedDays, Intensity intensity) {
 
