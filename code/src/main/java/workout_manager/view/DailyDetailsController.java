@@ -9,10 +9,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.ExerciseAlt;
@@ -25,9 +26,8 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class DailyDetailsController {
+
     private ModelControllerManager mcm;
-    private final static String WORKOUT_OVERVIEW = "View Full Workout";
-    private ObservableList<String> exercises = FXCollections.observableArrayList();
 
     @FXML
     private TextArea workoutTextArea;
@@ -39,7 +39,7 @@ public class DailyDetailsController {
     private Button backButton;
 
     @FXML
-    private ComboBox<String> exerciseSelector;
+    private Accordion detailsAccordion;
 
     @FXML
     void handleBackButton(ActionEvent event) throws IOException {
@@ -55,38 +55,17 @@ public class DailyDetailsController {
 
     }
 
-    private void exercizeSelectorListener() {
-        this.exerciseSelector.getSelectionModel().selectedItemProperty().addListener((obs, oldValue, newValue) -> {
-            this.setExcersizeDetails(newValue);
-        });
-
-    }
-
-    private void setExcersizeDetails(String exerciseName) {
-        for (ExerciseAlt currentExcersize : this.mcm.getCurrentWorkout().getExercises()) {
-            if (currentExcersize.getName().equals(exerciseName)) {
-                this.workoutTextArea.setText(currentExcersize.getDescription());
-            }
+    private void setExerciseDetails() {
+        this.detailsAccordion.getPanes().clear();
+        for (ExerciseAlt currentExcercise : this.mcm.getCurrentWorkout().getExercises()) {
+            TitledPane newPane = new TitledPane(currentExcercise.getName(), new TextArea(currentExcercise.getDescription()));
+            this.detailsAccordion.getPanes().add(newPane);
         }
-    }
-
-    @FXML
-    void handleExerciseSelection(ActionEvent event) {
-
-    }
-
-    private void showOverView(String dayName) {
-        String overViewText = "";
-        for (ExerciseAlt currentExercise : this.mcm.getWorkout(dayName).getExercises()) {
-            this.exercises.add(currentExercise.getName());
-            overViewText += currentExercise.getName() + System.lineSeparator();
-        }
-        this.workoutTextArea.setText(overViewText);
     }
 
     @FXML
     void initialize() {
-        this.exercizeSelectorListener();
+        this.setExerciseDetails();
     }
 
     /**
@@ -101,11 +80,6 @@ public class DailyDetailsController {
     public void initParams(ModelControllerManager mcm, String nameClicked) {
         this.mcm = mcm;
         this.dayLabel.setText(nameClicked);
-        this.exercises.add(WORKOUT_OVERVIEW);
-        this.showOverView(nameClicked);
-        this.exerciseSelector.setItems(this.exercises);
-        this.exerciseSelector.getSelectionModel().select(WORKOUT_OVERVIEW);
-
     }
 
 }

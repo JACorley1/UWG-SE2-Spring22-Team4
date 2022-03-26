@@ -39,7 +39,8 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutGenerator.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
-<error line="29" column="19" severity="warning" message="&apos;static&apos; modifier out of order with the JLS suggestions." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="5" column="8" severity="warning" message="Unused import - javafx.collections.FXCollections." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="6" column="8" severity="warning" message="Unused import - javafx.collections.ObservableList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 </file>
