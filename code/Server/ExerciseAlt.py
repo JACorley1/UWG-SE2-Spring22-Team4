@@ -5,9 +5,6 @@
 # * 
 # * 
 # * @author group4
-import string
-
-
 class ExerciseAlt :
     
     # *

@@ -1,13 +1,15 @@
+#!/usr/bin/env python3
 import zmq
-import time
 import json
 import WorkoutGenerator
 import Preferences
-import WorkoutCalendar
-import Days
-import dataFetcher
-import MuscleGroup
 
+#*
+# * server implementation for the workout manager program
+# *
+# * @author Jordan Wagner
+# * @version Spring 2022
+# 
 def runServer():
     context = zmq.Context()
     socket = context.socket(zmq.REP)
@@ -35,6 +37,10 @@ def runServer():
             workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
             jsonRep = json.dumps(workoutCalendar)
             socket.send_string(jsonRep)
+        elif (request[0] == "register"):
+            '''todo'''
+        else: '''error handling'''
+        '''todo'''
                            
 if(__name__ == "__main__"):
    runServer()

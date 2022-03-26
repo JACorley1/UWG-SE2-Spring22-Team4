@@ -5,8 +5,6 @@
 # * 
 # * @author group4
 # 
-
-
 class WorkoutCalendar:
 
     workoutCalendar = {}
