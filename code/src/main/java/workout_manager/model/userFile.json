@@ -1,19 +1,13 @@
 {
   "preferences": {
     "availableDays": [
-      "MONDAY"
+      "TUESDAY"
     ],
-    "musclesSelected": [
-
-      "LEGS",
-      "ABS",
-      "SHOULDERS"
-    ],
-    "intensity": "INTERMEDIATE"
+    "musclesSelected": []
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "SATURDAY": {
+      "TUESDAY": {
         "exercises": [
           {
             "name": "Side Plank",
@@ -41,7 +35,7 @@
           }
         ]
       },
-      "WEDNESDAY": {
+      "SATURDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -82,7 +76,7 @@
           }
         ]
       },
-      "FRIDAY": {
+      "MONDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -94,20 +88,7 @@
           }
         ]
       },
-      "TUESDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-
-      "SUNDAY": {
+      "WEDNESDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -120,6 +101,18 @@
         ]
       },
       "THURSDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
         "exercises": [
           {
             "name": "Rest Day",
