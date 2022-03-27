@@ -23,7 +23,6 @@ public class ExerciseAlt {
      * @param description the description of the exercise
      * @param category    the muscle category
      * @param equipment   int representation of equipment
-     * @param language    int representation of language
      */
     public ExerciseAlt(String name, String description, int category, int[] equipment) {
         if (name == null) {

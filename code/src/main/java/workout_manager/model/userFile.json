@@ -4,6 +4,7 @@
       "MONDAY"
     ],
     "musclesSelected": [
+
       "LEGS",
       "ABS",
       "SHOULDERS"
@@ -15,8 +16,24 @@
       "SATURDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
+            "name": "Side Plank",
+            "description": "Lie on your right side with your right hand directly underneath your right shoulder./nExtend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor./n Extend your left hand straight up toward the ceiling./nHold here for a set amount of time.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Lateral Plank Walk",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Push-up",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nBend your elbows and lower your chest to the floor. Drop to your knees if needed./nPush through the palms of your hands to straighten your arms./n That\u0027s 1 rep.",
             "category": 0,
             "equipment": [
               0
@@ -36,6 +53,7 @@
           }
         ]
       },
+
       "MONDAY": {
         "exercises": [
           {
@@ -88,6 +106,7 @@
           }
         ]
       },
+
       "SUNDAY": {
         "exercises": [
           {

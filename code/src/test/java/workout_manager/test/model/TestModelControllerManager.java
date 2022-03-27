@@ -34,7 +34,7 @@ public class TestModelControllerManager {
         ModelControllerManager manager = new ModelControllerManager(
                 "src/test/java/workout_manager/test/model/testUserFile.json");
         manager.setUser(user);
-        manager.deSerialize();
+        //manager.deSerialize();
         manager.serialize();
 
         assertAll(

@@ -29,7 +29,9 @@ public class Preferences {
         this.intensity = intensity;
 
     }
-
+    /**
+     * creates a preferences object
+     */
     public Preferences() {
         this.availableDays = new ArrayList<Days>();
         this.musclesSelected = new ArrayList<MuscleGroup>();

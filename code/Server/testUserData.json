@@ -1,0 +1,110 @@
+{
+	"username": [{
+		"passWord": "password"
+	}, {
+		"preferences": {
+			"availableDays": [
+				"WEDNESDAY",
+				"FRIDAY"
+			],
+			"musclesSelected": [
+				"ABS",
+				"SHOULDERS"
+			]
+		},
+		"workoutCalender": {
+			"workoutCalendar": {
+				"THURSDAY": {
+					"exercises": [{
+						"name": "Rest Day",
+						"description": "Enjoy your Rest",
+						"category": 0,
+						"equipment": [
+							0
+						]
+					}]
+				},
+				"TUESDAY": {
+					"exercises": [{
+						"name": "Rest Day",
+						"description": "Enjoy your Rest",
+						"category": 0,
+						"equipment": [
+							0
+						]
+					}]
+				},
+				"FRIDAY": {
+					"exercises": [{
+							"name": "Russian Twists",
+							"description": " To perform the Russian twist one sits on the floor and bends both knees while feet are be kept together and held slightly above the ground (or put under a stable surface). Ideally, the torso is kept straight with the back kept off the ground at a 45 degree angle with arms held together away from the body in a straight fashion and hands kept locked together like a ball or one can hold a weight to increase the difficulty. Next, the arms should be swung from one side to another in a twisting motion, with each swing to a side counting as one repetition. The slower one moves the arms from side to side, the harder the exercise becomes, working the abdomen that much better. When moving one\u0027s arms during the exercise, it is crucial to not stop between repetitions or else one will lose the effect of working the abdomen. As with all exercise, consistent breathing in and out during the exercise is important as one must ensure proper oxygen flow.",
+							"category": 10,
+							"equipment": [
+								0
+							]
+						},
+						{
+							"name": "Handstand Pushup",
+							"description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
+							"category": 13,
+							"equipment": [
+								0
+							]
+						}
+					]
+				},
+				"SATURDAY": {
+					"exercises": [{
+						"name": "Rest Day",
+						"description": "Enjoy your Rest",
+						"category": 0,
+						"equipment": [
+							0
+						]
+					}]
+				},
+				"SUNDAY": {
+					"exercises": [{
+						"name": "Rest Day",
+						"description": "Enjoy your Rest",
+						"category": 0,
+						"equipment": [
+							0
+						]
+					}]
+				},
+				"WEDNESDAY": {
+					"exercises": [{
+							"name": "Russian Twists",
+							"description": " To perform the Russian twist one sits on the floor and bends both knees while feet are be kept together and held slightly above the ground (or put under a stable surface). Ideally, the torso is kept straight with the back kept off the ground at a 45 degree angle with arms held together away from the body in a straight fashion and hands kept locked together like a ball or one can hold a weight to increase the difficulty. Next, the arms should be swung from one side to another in a twisting motion, with each swing to a side counting as one repetition. The slower one moves the arms from side to side, the harder the exercise becomes, working the abdomen that much better. When moving one\u0027s arms during the exercise, it is crucial to not stop between repetitions or else one will lose the effect of working the abdomen. As with all exercise, consistent breathing in and out during the exercise is important as one must ensure proper oxygen flow.",
+							"category": 10,
+							"equipment": [
+								0
+							]
+						},
+						{
+							"name": "Wall Handstand",
+							"description": " Handstand against a wall for support (chest facing wall).",
+							"category": 13,
+							"equipment": [
+								0
+							]
+						}
+					]
+				},
+				"MONDAY": {
+					"exercises": [{
+						"name": "Rest Day",
+						"description": "Enjoy your Rest",
+						"category": 0,
+						"equipment": [
+							0
+						]
+					}]
+				}
+			}
+		},
+		"userName": "username",
+		"passWord": "password"
+	}]
+}
