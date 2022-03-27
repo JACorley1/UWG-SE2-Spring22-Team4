@@ -57,6 +57,7 @@ public class DailyDetailsController {
     private void setExerciseDetails() {
         this.detailsAccordion.getPanes().clear();
         for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getExercises()) {
+            System.out.println(currentExcercise.getName());
             TextArea workoutDetailsArea = new TextArea();
             workoutDetailsArea.setText(currentExcercise.getDescription());
             workoutDetailsArea.setWrapText(true);

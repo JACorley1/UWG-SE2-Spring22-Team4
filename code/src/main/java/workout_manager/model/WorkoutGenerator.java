@@ -54,15 +54,20 @@ public class WorkoutGenerator {
 
     private Workout createBalancedWorkout(Map<MuscleGroup, ArrayList<ExerciseAlt>> exerciseMap) {
         Workout workout = new Workout();
-        for (MuscleGroup currentGroup : exerciseMap.keySet()) {
-            int range = exerciseMap.get(currentGroup).size();
-            int amountToAdd = 1;
-            while (amountToAdd > 0) {
-                int randomIndex = (int) (Math.random() * range);
-                workout.addExercise(exerciseMap.get(currentGroup).get(randomIndex));
-                amountToAdd--;
+        if (exerciseMap.keySet().size() < 0) {
+            for (MuscleGroup currentGroup : exerciseMap.keySet()) {
+                int range = exerciseMap.get(currentGroup).size();
+                int amountToAdd = 1;
+                while (amountToAdd > 0) {
+                    int randomIndex = (int) (Math.random() * range);
+                    workout.addExercise(exerciseMap.get(currentGroup).get(randomIndex));
+                    amountToAdd--;
+                }
             }
+        } else {
+            workout = this.addRestDay();
         }
+        
         return workout;
     }
 
