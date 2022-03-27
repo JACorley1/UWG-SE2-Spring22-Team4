@@ -1,4 +1,6 @@
-This document should contain:
- * Title of the project on first line
- * Brief description of the project (statement of purpose)
- * Installation instructions (how to setup a development environment)
+WORKOUT MANAGER
+- Tyler Jones, Jordan Wagner, and Ben Alton
+
+This application is designed to help users create and perform workouts based on their daily availability and desired muscle groups to focus on.
+
+The user is currently hardcoded to username- username and password - password.

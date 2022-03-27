@@ -27,7 +27,7 @@ import workout_manager.viewmodel.ModelControllerManager;
 public class DailyDetailsController {
 
     private ModelControllerManager mcm;
-
+  
     @FXML
     private TextArea workoutTextArea;
 
@@ -69,7 +69,6 @@ public class DailyDetailsController {
 
     @FXML
     void initialize() {
-
     }
 
     /**
@@ -82,7 +81,6 @@ public class DailyDetailsController {
      * @param nameClicked is the name of the day label to be set to
      */
     public void initParams(ModelControllerManager mcm, String nameClicked) {
-
         this.mcm = mcm;
         this.dayLabel.setText(nameClicked);
         this.setExerciseDetails();

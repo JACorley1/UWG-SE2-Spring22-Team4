@@ -13,23 +13,38 @@ public class Preferences {
 
     private List<Days> availableDays;
     private List<MuscleGroup> musclesSelected;
+    private Intensity intensity;
 
     /**
      * preferences object that contains user selected preferences
      * 
      * @param selectedDays    the days selected by the user
      * @param selectedMuscles the muscles selected by the user
+     * @param intensity       the instensity selected by the user
      */
-    public Preferences(List<MuscleGroup> selectedMuscles, List<Days> selectedDays) {
+    public Preferences(List<MuscleGroup> selectedMuscles, List<Days> selectedDays, Intensity intensity) {
 
         this.availableDays = selectedDays;
         this.musclesSelected = selectedMuscles;
+        this.intensity = intensity;
 
     }
-
+    /**
+     * creates a preferences object
+     */
     public Preferences() {
         this.availableDays = new ArrayList<Days>();
         this.musclesSelected = new ArrayList<MuscleGroup>();
+        this.intensity = null;
+    }
+
+    /**
+     * gets the intensity preference of the user
+     * 
+     * @return the intensity
+     */
+    public Intensity getIntensity() {
+        return this.intensity;
     }
 
     /**
