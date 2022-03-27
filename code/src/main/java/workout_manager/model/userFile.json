@@ -5,9 +5,13 @@
       "FRIDAY"
     ],
     "musclesSelected": [
+      "ARMS",
       "LEGS",
+      "BACK",
       "ABS",
-      "SHOULDERS"
+      "CHEST",
+      "SHOULDERS",
+      "CALVES"
     ]
   },
   "workoutCalender": {
@@ -24,20 +28,48 @@
           }
         ]
       },
-      "MONDAY": {
+      "TUESDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
+            "name": "Wall Handstand",
+            "description": " Handstand against a wall for support (chest facing wall).",
+            "category": 13,
             "equipment": [
-              0
+              7
             ]
-          }
-        ]
-      },
-      "FRIDAY": {
-        "exercises": [
+          },
+          {
+            "name": "Hip Raise, Lying",
+            "description": "Lying down on your back, with your feet flat on the floor. Raise your hips up evenly as high as you can and hold for as long as you can.",
+            "category": 12,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Push Ups",
+            "description": " Start with your body streched, your hands are shoulder-wide appart on the ground. Push yourself off the ground till you strech your arms. The back is always straight and as well as the neck (always look to the ground). Lower yourself to the initial position and repeat.",
+            "category": 8,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Decline Pushups",
+            "description": " With your feet raised approximately 30cm on a platform, align your shoulders, elbows and hands, then perform regular pushups. This emphasises the clavicular fibers of the pectoralis major.",
+            "category": 11,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Wall Squat",
+            "description": " Find a nice flat piece of wall and stand with your back leaning against the wall. Slowly slide down the wall while moving your feet away from it, until your thighs are parallel to the ground and both your knees and your hips are bent at a 90° angle. Cross your arms in front of your chest and hold this position for 30 seconds.\n Variant: put a big inflated rubber ball (like a small basketball) between your knees and squeeze the ball while holding the squat position",
+            "category": 9,
+            "equipment": [
+              7
+            ]
+          },
           {
             "name": "Plank",
             "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
@@ -47,47 +79,23 @@
             ]
           },
           {
-            "name": "Cycling",
-            "description": "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as cyclists, bicyclists, or bikers. Apart from two-wheeled bicycles, cycling also includes the riding of unicycles, tricycles, quadracycles, recumbent and similar human-powered vehicles.",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Handstand Pushup",
-            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
-            "category": 13,
+            "name": "Standing Calf Raises",
+            "description": "Stand straight, don\u0027t make a hollow back and don\u0027t bend your legs. Pull yourself up as high as you can. Make a small pause of 1 - 2 seconds and go slowly down.",
+            "category": 14,
             "equipment": [
               7
             ]
           }
         ]
       },
-      "TUESDAY": {
+      "SATURDAY": {
         "exercises": [
           {
-            "name": "Side Plank",
-            "description": " Works your obliques and helps stabilize your spine. Lie on your side and support your body between your forearm and knee to your feet.",
-            "category": 10,
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
             "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Cycling",
-            "description": "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as cyclists, bicyclists, or bikers. Apart from two-wheeled bicycles, cycling also includes the riding of unicycles, tricycles, quadracycles, recumbent and similar human-powered vehicles.",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Wall Handstand",
-            "description": " Handstand against a wall for support (chest facing wall).",
-            "category": 13,
-            "equipment": [
-              7
+              0
             ]
           }
         ]
@@ -104,7 +112,67 @@
           }
         ]
       },
-      "SATURDAY": {
+      "FRIDAY": {
+        "exercises": [
+          {
+            "name": "Handstand Pushup",
+            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
+            "category": 13,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Wall Slides",
+            "description": " Stand with heels, shoulders, back of head, and hips touching the wall. Start with biceps straight out and elbows at a 90 degree angle. Straighten the arms while remaining againstthe wall without arching the back off of the wall, mimicking a shoulder press movement. ",
+            "category": 12,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Pike Push Ups",
+            "description": " Push Up performed from a pike position (optional to have feet elevated).",
+            "category": 8,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Bear Walk",
+            "description": " -Rest your weight on your palms and the balls of your feet, not dissimilar to normal pushup position\n -Move by stepping with your R palm and L foot, then your L palm and R foot. Basically, walk like a lumbering bear.\n -Move as fast as you can. Measure your reps/sets in either distance (i.e. 40 yards) or time (i.e. 45 seconds)\n -Works your Pecs, Deltoids, Triceps, Traps, Lats, Abs and Lower Back, Hip Flexors, Quads, Glutes and Calves",
+            "category": 11,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Cycling",
+            "description": "Cycling, also called bicycling or biking, is the use of bicycles for transport, recreation, exercise or sport. People engaged in cycling are referred to as cyclists, bicyclists, or bikers. Apart from two-wheeled bicycles, cycling also includes the riding of unicycles, tricycles, quadracycles, recumbent and similar human-powered vehicles.",
+            "category": 9,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Plank",
+            "description": " Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder. \n Keep your body straight at all times and hold this position as long as possible. To increase difficulty an arm or leg can be raised while performing this exercise. ",
+            "category": 10,
+            "equipment": [
+              7
+            ]
+          },
+          {
+            "name": "Calf Raises",
+            "description": "Calf raises are a method of exercising the gastrocnemius, tibialis posterior and soleus muscles of the lower leg. The movement performed is plantar flexion, a.k.a. ankle extension.",
+            "category": 14,
+            "equipment": [
+              7
+            ]
+          }
+        ]
+      },
+      "MONDAY": {
         "exercises": [
           {
             "name": "Rest Day",

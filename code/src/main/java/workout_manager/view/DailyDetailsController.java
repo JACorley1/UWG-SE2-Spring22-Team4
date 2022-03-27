@@ -1,9 +1,8 @@
 package workout_manager.view;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,15 +56,19 @@ public class DailyDetailsController {
 
     private void setExerciseDetails() {
         this.detailsAccordion.getPanes().clear();
-        for (ExerciseAlt currentExcercise : this.mcm.getCurrentWorkout().getExercises()) {
-            TitledPane newPane = new TitledPane(currentExcercise.getName(), new TextArea(currentExcercise.getDescription()));
+        for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getExercises()) {
+            TextArea workoutDetailsArea = new TextArea();
+            workoutDetailsArea.setText(currentExcercise.getDescription());
+            workoutDetailsArea.setWrapText(true);
+            workoutDetailsArea.setMaxHeight(100);
+            TitledPane newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
             this.detailsAccordion.getPanes().add(newPane);
         }
     }
 
     @FXML
     void initialize() {
-        this.setExerciseDetails();
+
     }
 
     /**
@@ -78,8 +81,10 @@ public class DailyDetailsController {
      * @param nameClicked is the name of the day label to be set to
      */
     public void initParams(ModelControllerManager mcm, String nameClicked) {
+
         this.mcm = mcm;
         this.dayLabel.setText(nameClicked);
+        this.setExerciseDetails();
     }
 
 }
