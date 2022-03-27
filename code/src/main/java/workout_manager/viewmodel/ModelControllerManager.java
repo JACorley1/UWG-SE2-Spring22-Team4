@@ -13,7 +13,10 @@ import com.google.gson.reflect.TypeToken;
 import javafx.beans.property.SimpleListProperty;
 import workout_manager.model.Client;
 import workout_manager.model.Days;
+
 import workout_manager.model.ExerciseAlt;
+import workout_manager.model.Intensity;
+
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.User;
@@ -91,9 +94,11 @@ public class ModelControllerManager {
      *                muscles
      * @param days    the list of selected days tos set the user's available days
      */
-    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days) {
+    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
+            Intensity intensity) {
 
-        this.user.setPreferences(new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size())));
+        this.user.setPreferences(
+                new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
 
     }
