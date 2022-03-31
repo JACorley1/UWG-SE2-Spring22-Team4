@@ -1,8 +1,6 @@
 package workout_manager.viewmodel;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -23,7 +21,6 @@ import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
 import workout_manager.model.WorkoutCalendar;
-import workout_manager.model.WorkoutGenerator;
 
 /**
  * Creates a ModelControllerManager

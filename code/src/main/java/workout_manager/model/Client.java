@@ -48,7 +48,6 @@ public class Client {
     public String receiveResponse(){
         String response = this.socket.recvStr();
         return response;
-
     }
 
 }
