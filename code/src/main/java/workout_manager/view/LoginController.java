@@ -36,6 +36,9 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
+    private Button registerButton;
+
+    @FXML
     private Label errorLabel;
 
     @FXML
@@ -67,14 +70,25 @@ public class LoginController {
 
     }
 
+    @FXML 
+    void handleRegisterUser(ActionEvent event) {
+        
+    }
+
     @FXML
     void initialize() {
         this.loginAuthenticator = new LocalLoginAuthenticator();
-        this.bindLogin();
+        this.bindLoginButtonVisibility();
+        this.bindRegisterButtonVisibility();
     }
 
-    private void bindLogin() {
+    private void bindLoginButtonVisibility() {
         this.loginButton.disableProperty().bind(
+                this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
+    }
+
+    private void bindRegisterButtonVisibility() {
+        this.registerButton.disableProperty().bind(
                 this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
     }
 

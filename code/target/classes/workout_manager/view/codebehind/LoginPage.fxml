@@ -11,11 +11,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.LoginController">
    <children>
-      <TextField fx:id="userNameTextfield" layoutX="226.0" layoutY="224.0" promptText="Enter Username" />
-      <TextField fx:id="passwordTextfield" layoutX="226.0" layoutY="270.0" promptText="Enter Password" />
+      <TextField fx:id="userNameTextfield" alignment="CENTER" layoutX="226.0" layoutY="224.0" promptText="Enter Username" />
+      <TextField fx:id="passwordTextfield" alignment="CENTER" layoutX="226.0" layoutY="270.0" promptText="Enter Password" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="251.0" layoutY="206.0" prefHeight="18.0" prefWidth="98.0" text="Username" textAlignment="CENTER" underline="true" />
       <Label alignment="CENTER" layoutX="274.0" layoutY="250.0" text="Password" underline="true" />
-      <Button fx:id="loginButton" layoutX="278.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
+      <Button fx:id="loginButton" layoutX="227.0" layoutY="312.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#handleLogin" text="Login" />
       <ImageView fitHeight="129.0" fitWidth="98.0" layoutX="257.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@WeightLifting.png" />
@@ -24,10 +24,11 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <Label fx:id="errorLabel" alignment="CENTER" layoutX="169.0" layoutY="345.0" prefHeight="26.0" prefWidth="262.0" textFill="RED">
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="170.0" layoutY="348.0" prefHeight="26.0" prefWidth="262.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <Button fx:id="registerButton" layoutX="315.0" layoutY="312.0" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onAction="#handleRegisterUser" text="Register" textAlignment="CENTER" />
    </children>
 </AnchorPane>

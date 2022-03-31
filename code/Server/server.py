@@ -38,6 +38,7 @@ def runServer():
             jsonRep = json.dumps(workoutCalendar)
             socket.send_string(jsonRep)
         elif (request[0] == "register"):
+            
             '''todo'''
         else: '''error handling'''
         '''todo'''
