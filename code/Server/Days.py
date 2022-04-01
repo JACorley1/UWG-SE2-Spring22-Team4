@@ -38,3 +38,26 @@ class Days(Enum):
             return Days.SUNDAY
         else:
             raise NotImplementedError
+
+        #*
+    # * Creates a string for the days of the week from an enum
+    # * @param day the day to get the string for
+    # * @returns the appropriate string
+    # 
+    def toString(day):
+        if day == Days.MONDAY:
+            return 'MONDAY'
+        elif day ==  Days.TUESDAY:
+            return 'TUESDAY'
+        elif day == Days.WEDNESDAY:
+            return 'WEDNESDAY'
+        elif day == Days.THURSDAY:
+            return 'THURSDAY'
+        elif day == Days.FRIDAY:
+            return 'FRIDAY'
+        elif day == Days.SATURDAY:
+            return 'SATURDAY'
+        elif day == Days.SUNDAY:
+            return 'SUNDAY'
+        else:
+            raise NotImplementedError

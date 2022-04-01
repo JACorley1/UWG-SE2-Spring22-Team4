@@ -15,13 +15,14 @@ class dataFetcher:
     NOEQUIPMENT = 0
     exerciseData = []
     '''
-        gets the excersises based on category
+        gets the excersises based on category and intensity
     '''
-    def getExercises(category):
+    def getExercises(category, intensity):
         with open('exerciseData.json', encoding="utf8") as json_file:
             dataFetcher.exerciseData = json.load(json_file)
         exercises = []
         for currentExercise in dataFetcher.exerciseData:
-            if category == currentExercise["category"] and currentExercise["equipment"][0] == dataFetcher.NOEQUIPMENT:
+            if category == int(currentExercise["category"]) and int(currentExercise["intensity"]) == intensity and currentExercise["equipment"][0] == dataFetcher.NOEQUIPMENT:
+
                 exercises.append(currentExercise)
         return exercises
