@@ -43,6 +43,7 @@ public class LoginController {
 
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
+        this.errorLabel.setText("");
         Client client = Client.getClient();
         String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
@@ -68,6 +69,7 @@ public class LoginController {
 
     @FXML 
     void handleRegisterUser(ActionEvent event) {
+        this.errorLabel.setText("");
         Client client = Client.getClient();
         String request = "register, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
@@ -75,9 +77,9 @@ public class LoginController {
 
         if (response.equals(ServerErrorMessages.REGISTER_FAILED_USER_EXISTS)) {
             this.errorLabel.setVisible(true);
-            this.errorLabel.setText("An account with the username you specified already exists.\nPlease choose another username.");
+            this.errorLabel.setText("Username already in use.");
         } else {
-
+            System.out.println("registering user");
         }
     }
 

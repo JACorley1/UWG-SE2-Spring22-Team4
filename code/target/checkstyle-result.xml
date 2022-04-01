@@ -42,8 +42,7 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
-<error line="47" column="73" severity="warning" message="The String &quot;, &quot; appears 2 times in the file." source="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck"/>
-<error line="79" column="16" severity="warning" message="Must have at least one statement." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+<error line="48" column="73" severity="warning" message="The String &quot;, &quot; appears 2 times in the file." source="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
 <error line="138" column="49" severity="warning" message="Reference to instance variable &apos;group&apos; needs &quot;this.&quot;." source="com.puppycrawl.tools.checkstyle.checks.coding.RequireThisCheck"/>

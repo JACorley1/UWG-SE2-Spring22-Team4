@@ -17,6 +17,7 @@ def runServer():
     socket.bind("tcp://127.0.0.1:5555")
     with open('testUserData.json') as json_file:
         userData = json.load(json_file)
+        print(userData)
     while True:
         #  Wait for next request from client
         print("waiting for message...")
@@ -43,14 +44,12 @@ def runServer():
             jsonRep = json.dumps(workoutCalendar)
             socket.send_string(jsonRep)
         elif (request[0] == "register"):
-            '''
             newUser = request[1]
             newPassword = request[2]
             if (usernameExists(userData, newUser)):
                 socket.send_string(codes.ServerErrorCodes.REGISTER_FAILED_USER_EXISTS)
             else:
-                userData.setdefault(newUser, newPassword)
-            '''
+                print(200)
         else:
             socket.send_string(codes.ServerErrorCodes.BAD_REQUEST)
             print("ERROR - " + codes.ServerErrorCodes.BAD_REQUEST)
@@ -58,7 +57,6 @@ def runServer():
 def usernameExists(dict, key):
     if (key in dict):
         return True
-
 
 if(__name__ == "__main__"):
    runServer()
