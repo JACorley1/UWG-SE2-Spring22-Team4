@@ -11,6 +11,7 @@ import Preferences
 # * @version Spring 2022
 # 
 def runServer():
+    loggedInUser = ""
     context = zmq.Context()
     socket = context.socket(zmq.REP)
     socket.bind("tcp://127.0.0.1:5555")
@@ -25,22 +26,28 @@ def runServer():
         request = message.split(", ")
         if(request[0] == "login"):
             pw = userData[request[1]][0]["passWord"]
-            print(pw)
             if (request[2] == pw):
-                userData = json.dumps(userData[request[1]][1])
-                socket.send_string(userData)
+                loggedInUser = request[1]
+                dataToSend = json.dumps(userData[request[1]][1])
+                socket.send_string(dataToSend)
         elif (request[0] == "generateWorkout"):
             alist = request[2].replace("\\","")
             alist = alist.replace("[","")
             alist = alist.replace("]","")
             preferences = Preferences.Preferences(alist, request[1])
             workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
+            userData[loggedInUser][1]["preferences"] = preferences.getSelectedDaysStrings(), preferences.getSelectedMuscleStrings()
+            newCalendar = {}
+            newCalendar["workoutCalendar"] = workoutCalendar
+            userData[loggedInUser][1]["workoutCalender"] = newCalendar
+            print(userData[loggedInUser][1])
             jsonRep = json.dumps(workoutCalendar)
             socket.send_string(jsonRep)
         elif (request[0] == "register"):
             '''todo'''
-        else: '''error handling'''
-        '''todo'''
+        else:
+            '''error handling'''
+            socket.send_string("hello")
                            
 if(__name__ == "__main__"):
    runServer()
