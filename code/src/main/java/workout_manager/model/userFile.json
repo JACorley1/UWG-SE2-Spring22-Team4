@@ -1,33 +1,60 @@
 {
   "preferences": {
     "availableDays": [
-      "TUESDAY"
+      "MONDAY"
     ],
-    "musclesSelected": []
+    "musclesSelected": [
+      "SHOULDERS"
+    ],
+    "intensity": "BEGINNER"
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "TUESDAY": {
+      "WEDNESDAY": {
         "exercises": [
           {
-            "name": "Side Plank",
-            "description": "Lie on your right side with your right hand directly underneath your right shoulder./nExtend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor./n Extend your left hand straight up toward the ceiling./nHold here for a set amount of time.",
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
             "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "MONDAY": {
+        "exercises": [
+          {
+            "name": "Bridge push-up",
+            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
+            "category": 5,
             "equipment": [
               0
             ]
           },
           {
-            "name": "Lateral Plank Walk",
-            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
-            "category": 0,
+            "name": "Bridge push-up",
+            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
+            "category": 5,
             "equipment": [
               0
             ]
           },
           {
-            "name": "Push-up",
-            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nBend your elbows and lower your chest to the floor. Drop to your knees if needed./nPush through the palms of your hands to straighten your arms./n That\u0027s 1 rep.",
+            "name": "Shoulder Press with Towel",
+            "description": "Roll the towel into a cylinder./n Hold the towel at both ends so that your hands are shoulder-width apart./n Keep your elbows tucked in and down so that the towel is close to your chest./nPull the towel apart./n Raise your hands and the towel overhead until your arms are fully extended and are above you./n Remember to keep pulling the towel apart./nSlowly lower your arms and repeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
             "category": 0,
             "equipment": [
               0
@@ -47,48 +74,7 @@
           }
         ]
       },
-
-      "MONDAY": {
-        "exercises": [
-          {
-            "name": "Wall Squat",
-            "description": " Find a nice flat piece of wall and stand with your back leaning against the wall. Slowly slide down the wall while moving your feet away from it, until your thighs are parallel to the ground and both your knees and your hips are bent at a 90Â° angle. Cross your arms in front of your chest and hold this position for 30 seconds.\n Variant: put a big inflated rubber ball (like a small basketball) between your knees and squeeze the ball while holding the squat position",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Russian Twists",
-            "description": " To perform the Russian twist one sits on the floor and bends both knees while feet are be kept together and held slightly above the ground (or put under a stable surface). Ideally, the torso is kept straight with the back kept off the ground at a 45 degree angle with arms held together away from the body in a straight fashion and hands kept locked together like a ball or one can hold a weight to increase the difficulty. Next, the arms should be swung from one side to another in a twisting motion, with each swing to a side counting as one repetition. The slower one moves the arms from side to side, the harder the exercise becomes, working the abdomen that much better. When moving one\u0027s arms during the exercise, it is crucial to not stop between repetitions or else one will lose the effect of working the abdomen. As with all exercise, consistent breathing in and out during the exercise is important as one must ensure proper oxygen flow.",
-            "category": 10,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Handstand Pushup",
-            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
-            "category": 13,
-            "equipment": [
-              7
-            ]
-          }
-        ]
-      },
-      "MONDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "WEDNESDAY": {
+      "TUESDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -112,7 +98,7 @@
           }
         ]
       },
-      "FRIDAY": {
+      "SUNDAY": {
         "exercises": [
           {
             "name": "Rest Day",

@@ -1,7 +1,8 @@
 {
 	"username": [{
 		"passWord": "password"
-	}, {
+	}, 
+	{
 		"preferences": {
 			"availableDays": [
 				"WEDNESDAY",

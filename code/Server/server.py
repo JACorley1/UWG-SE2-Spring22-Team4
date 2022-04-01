@@ -36,7 +36,7 @@ def runServer():
             alist = alist.replace("]","")
             preferences = Preferences.Preferences(alist, request[1])
             workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
-            userData[loggedInUser][1]["preferences"] = preferences.getSelectedDaysStrings(), preferences.getSelectedMuscleStrings()
+            userData[loggedInUser][1]["preferences"] = {preferences.getSelectedDaysStrings(), preferences.getSelectedMuscleStrings()}
             newCalendar = {}
             newCalendar["workoutCalendar"] = workoutCalendar
             userData[loggedInUser][1]["workoutCalender"] = newCalendar
@@ -45,9 +45,8 @@ def runServer():
             socket.send_string(jsonRep)
         elif (request[0] == "register"):
             '''todo'''
-        else:
-            '''error handling'''
-            socket.send_string("hello")
+        else: '''error handling'''
+        
                            
 if(__name__ == "__main__"):
    runServer()

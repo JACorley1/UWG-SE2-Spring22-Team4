@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from matplotlib.style import available
 import Days
 import MuscleGroup
 #*
@@ -26,6 +25,7 @@ class Preferences:
             self.processMuscle(Preferences.processString(muscles[i]))
         for j in range(len(days)):
             self.processDays(Preferences.processString(days[j]))
+        
 
     def processString(txt):
         specialChars = "][\\" 
@@ -46,13 +46,29 @@ class Preferences:
     def getSelectedMuscles(self):
         return self.selectedMuscles
 
+    def getSelectedMuscleStrings(self):
+        muscles = {}
+        muscleStrings = []
+        for muscle in self.selectedMuscles:
+            muscleStrings.append(MuscleGroup.MuscleGroup.toString(muscle))
+        muscles["musclesSelected"] = muscleStrings
+        return muscleStrings
+
     #    *
     #     * gets the user's selected days
     #     * 
     #     * @return the array list of selected days
     #     
     def getSelectedDays(self):
-        return self.availableDays
+       return self.availableDays
+
+    def getSelectedDaysStrings(self):
+        days = {}
+        dayStrings = []
+        for day in self.availableDays:
+            dayStrings.append(Days.Days.toString(day))
+        days["availableDays"] = dayStrings
+        return days
 
     def getIntensity(self):
         return self.intensity
