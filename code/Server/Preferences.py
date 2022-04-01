@@ -18,7 +18,10 @@ class Preferences:
     #     * @param selectedDays    the days selected by the user
     #     * @param selectedMuscles the muscles selected by the user
     #     
-    def __init__(self, selectedMuscles, selectedDays):
+    def __init__(self, selectedMuscles, selectedDays, intensity):
+        self.intensity = intensity
+        self.availableDays = []
+        self.selectedMuscles = []
         muscles = selectedMuscles.split(',')
         days = selectedDays.split(',')
         for i in range (len(muscles)):
@@ -38,6 +41,9 @@ class Preferences:
 
     def processDays(self,txt):
         self.availableDays.append(Days.Days.fromString(txt))
+    
+    def getIntensity(self):
+        return self.intensity
     #    *
     #     * gets the list of user selected muscles
     #     * 
@@ -66,9 +72,10 @@ class Preferences:
         days = {}
         dayStrings = []
         for day in self.availableDays:
+            print(day)
             dayStrings.append(Days.Days.toString(day))
         days["availableDays"] = dayStrings
-        return days
+        return dayStrings
 
     def getIntensity(self):
-        return self.intensity
+        return int(self.intensity)

@@ -22,31 +22,37 @@ def runServer():
         print("waiting for message...")
         message = socket.recv_string()
         message = message.replace('"','')
-        print("Received request: %s" % message)
+        print("Received request: %s" % message + "\n")
         request = message.split(", ")
         if(request[0] == "login"):
-            pw = userData[request[1]][0]["passWord"]
-            if (request[2] == pw):
-                loggedInUser = request[1]
-                dataToSend = json.dumps(userData[request[1]][1])
-                socket.send_string(dataToSend)
+            loggedInUser = handleLogin(request, userData, socket)
         elif (request[0] == "generateWorkout"):
-            alist = request[2].replace("\\","")
-            alist = alist.replace("[","")
-            alist = alist.replace("]","")
-            preferences = Preferences.Preferences(alist, request[1])
-            workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
-            userData[loggedInUser][1]["preferences"] = {preferences.getSelectedDaysStrings(), preferences.getSelectedMuscleStrings()}
-            newCalendar = {}
-            newCalendar["workoutCalendar"] = workoutCalendar
-            userData[loggedInUser][1]["workoutCalender"] = newCalendar
-            print(userData[loggedInUser][1])
-            jsonRep = json.dumps(workoutCalendar)
-            socket.send_string(jsonRep)
+            handleGenerate(socket, userData, request, loggedInUser)
         elif (request[0] == "register"):
             '''todo'''
         else: '''error handling'''
-        
-                           
+
+def handleLogin(request, userData, socket):
+    pw = userData[request[1]][0]["passWord"]
+    if (request[2] == pw):
+        dataToSend = json.dumps(userData[request[1]][1])
+        socket.send_string(dataToSend)
+    return request[1]
+    
+def handleGenerate(socket, userData, request, loggedInUser):
+
+    alist = request[2].replace("\\","")
+    alist = alist.replace("[","")
+    alist = alist.replace("]","")
+    preferences = Preferences.Preferences(alist, request[1], request[3])
+    workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
+    userData[loggedInUser][1]["preferences"]["availableDays"] = preferences.getSelectedDaysStrings()
+    userData[loggedInUser][1]["preferences"]["musclesSelected"] = preferences.getSelectedMuscleStrings()
+    newCalendar = {}
+    newCalendar["workoutCalendar"] = workoutCalendar
+    userData[loggedInUser][1]["workoutCalender"] = newCalendar
+    jsonRep = json.dumps(workoutCalendar)
+    socket.send_string(jsonRep)  
+   
 if(__name__ == "__main__"):
    runServer()

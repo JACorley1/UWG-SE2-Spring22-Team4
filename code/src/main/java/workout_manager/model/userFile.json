@@ -1,15 +1,29 @@
 {
   "preferences": {
     "availableDays": [
-      "MONDAY"
+      "MONDAY",
+      "FRIDAY"
     ],
     "musclesSelected": [
+      "BACK",
       "SHOULDERS"
     ],
-    "intensity": "BEGINNER"
+    "intensity": "INTERMEDIATE"
   },
   "workoutCalender": {
     "workoutCalendar": {
+      "TUESDAY": {
+        "exercises": [
+          {
+            "name": "Rest Day",
+            "description": "Enjoy your Rest",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
       "WEDNESDAY": {
         "exercises": [
           {
@@ -22,35 +36,7 @@
           }
         ]
       },
-      "MONDAY": {
-        "exercises": [
-          {
-            "name": "Bridge push-up",
-            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
-            "category": 5,
-            "equipment": [
-              0
-            ]
-          },
-          {
-            "name": "Bridge push-up",
-            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
-            "category": 5,
-            "equipment": [
-              0
-            ]
-          },
-          {
-            "name": "Shoulder Press with Towel",
-            "description": "Roll the towel into a cylinder./n Hold the towel at both ends so that your hands are shoulder-width apart./n Keep your elbows tucked in and down so that the towel is close to your chest./nPull the towel apart./n Raise your hands and the towel overhead until your arms are fully extended and are above you./n Remember to keep pulling the towel apart./nSlowly lower your arms and repeat.",
-            "category": 5,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "FRIDAY": {
+      "SUNDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -74,12 +60,104 @@
           }
         ]
       },
-      "TUESDAY": {
+      "FRIDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
+            "name": "Aquaman",
+            "description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Aquaman",
+            "description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Aquaman",
+            "description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Front Shoulder Raise With Towel",
+            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that it’s sitting at your hips./nSlowly raise the towel until it’s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "MONDAY": {
+        "exercises": [
+          {
+            "name": "Aquaman",
+            "description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": " Kneeling Extension",
+            "description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": " Kneeling Extension",
+            "description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Shoulder Press with Towel",
+            "description": "Roll the towel into a cylinder./n Hold the towel at both ends so that your hands are shoulder-width apart./n Keep your elbows tucked in and down so that the towel is close to your chest./nPull the towel apart./n Raise your hands and the towel overhead until your arms are fully extended and are above you./n Remember to keep pulling the towel apart./nSlowly lower your arms and repeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
             "equipment": [
               0
             ]
@@ -87,18 +165,6 @@
         ]
       },
       "THURSDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "SUNDAY": {
         "exercises": [
           {
             "name": "Rest Day",

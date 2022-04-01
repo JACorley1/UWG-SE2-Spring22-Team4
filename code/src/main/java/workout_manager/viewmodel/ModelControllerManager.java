@@ -108,15 +108,21 @@ public class ModelControllerManager {
         Gson gson = new GsonBuilder().create();
         String daysJson = gson.toJson(this.user.getPreferences().getSelectedDays());
         String muscleJson = gson.toJson(this.user.getPreferences().getSelectedMuscles());
-        client.sendRequest("generateWorkout" + ", " + daysJson + ", " + muscleJson);
+        String intensityJson = gson.toJson(this.user.getPreferences().getIntensity().getCode());
+        client.sendRequest("generateWorkout" + ", " + daysJson + ", " + muscleJson + ", " + intensityJson);
         String response = client.receiveResponse();
+        System.out.print(response);
         var test = gson.fromJson(response, Map.class);
         WorkoutCalendar calendar = new WorkoutCalendar();
         for (Object day: test.keySet()){
             Days currentDay = gson.fromJson((String) day, Days.class);
-            ArrayList<LinkedTreeMap<String, String>> list = (ArrayList<LinkedTreeMap<String, String>>) test.get(day);
-            this.createWorkoutFromString(list);
-            calendar.addWorkout(currentDay, this.createWorkoutFromString(list));
+            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String,ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
+            for (ArrayList<LinkedTreeMap<String, String>> current : list.values()) {
+                System.out.println(this.createWorkoutFromString(current));
+                calendar.addWorkout(currentDay, this.createWorkoutFromString(current));
+
+            }
+            
         }
         this.user.setWorkoutCalender(calendar);
     }
