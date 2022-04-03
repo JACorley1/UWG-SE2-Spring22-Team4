@@ -165,16 +165,14 @@ public class PreferenceController {
     }
 
     private void displayIntensity() {
-        for (Node node : this.intensityGridPane.getChildren()) {
-            if (node instanceof RadioButton) {
-                RadioButton rdButton = (RadioButton) node;
-                Intensity intense = Intensity.valueOf(rdButton.getText().toUpperCase());
-                if (this.mcm.getCurrentPreferences().getIntensity() == null) {
-                    break;
-                } else if (this.mcm.getCurrentPreferences().getIntensity().equals(intense)) {
-                    rdButton.selectedProperty().set(true);
-                }
-            }
+        if (this.mcm.getCurrentPreferences().getIntensity() == null) {
+            this.beginnerRadioButton.selectedProperty().set(true);
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 0) {
+            this.beginnerRadioButton.selectedProperty().set(true);
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 1) {
+            this.intermediateRadioButton.selectedProperty().set(true);
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 2) {
+            this.advancedRadioButton.selectedProperty().set(true);
         }
     }
 

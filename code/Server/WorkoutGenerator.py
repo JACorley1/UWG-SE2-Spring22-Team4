@@ -37,24 +37,29 @@ class WorkoutGenerator:
         return calendar
 
     def addRestDay():
+        test = {}
         restDay = []
         restDay.append(ExerciseAlt.ExerciseAlt.defineDetails(WorkoutGenerator.RESTDAY, WorkoutGenerator.RESTDESCRIPTION, WorkoutGenerator.RESTCAT, WorkoutGenerator.RESTEQUIP, 0))
-        return restDay
+        test["exercises"] = restDay
+        return test
 
 
     def createBalancedWorkout(exerciseMap):
+        test = {}
         workout = []
         for currentGroup in exerciseMap.keys():
             range = len(exerciseMap[currentGroup])
+            print(range)
             amountToAdd = 3
             while amountToAdd > 0:
                 randomIndex = int((random.random() * range))
                 workout.append(exerciseMap[currentGroup][randomIndex])
                 amountToAdd -= 1
-        return workout
+        test["exercises"] = workout
+        return test
 
     def populateExercises(preferences):
         exerciseMap = {}
         for current in preferences.getSelectedMuscles():
-            exerciseMap[current.value] = dataFetcher.dataFetcher.getExercises(current.value)
+            exerciseMap[current.value] = dataFetcher.dataFetcher.getExercises(current.value, preferences.getIntensity())
         return exerciseMap

@@ -47,11 +47,12 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
         this.errorLabel.setText("");
+      
         Client client = Client.getClient();
         String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
+      
         String response = client.receiveResponse();
-        System.out.println(response);
 
         if (!response.equals(ServerErrorMessages.LOGIN_FAILED) && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
             this.mcm.deSerialize(response);
