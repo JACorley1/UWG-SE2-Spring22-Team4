@@ -5,6 +5,7 @@ A class containing possible server error codes
 
 '''
 class ServerErrorCodes:
+    RETURN = "000"
     LOGIN_FAILED = "100"
     REGISTER_FAILED_USER_EXISTS = "200"
     BAD_CONNECTION = "400"

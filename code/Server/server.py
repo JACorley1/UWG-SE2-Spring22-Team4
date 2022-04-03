@@ -17,7 +17,6 @@ def runServer():
     socket.bind("tcp://127.0.0.1:5555")
     with open('testUserData.json') as json_file:
         userData = json.load(json_file)
-        print(userData)
     while True:
         #  Wait for next request from client
         print("waiting for message...")
@@ -49,7 +48,8 @@ def runServer():
             if (usernameExists(userData, newUser)):
                 socket.send_string(codes.ServerErrorCodes.REGISTER_FAILED_USER_EXISTS)
             else:
-                print(200)
+                userData[newUser] = "[{'passWord': '" + newPassword + "'}, {'preferences': {'availableDays': [], 'musclesSelected': []}, 'workoutCalender': {}, 'userName': '" + newUser + "', 'passWord': '" + newPassword + "'}]}"
+                socket.send_string(userData[newUser])
         else:
             socket.send_string(codes.ServerErrorCodes.BAD_REQUEST)
             print("ERROR - " + codes.ServerErrorCodes.BAD_REQUEST)

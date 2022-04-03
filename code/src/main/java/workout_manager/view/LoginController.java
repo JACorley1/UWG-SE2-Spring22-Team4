@@ -68,7 +68,7 @@ public class LoginController {
     }
 
     @FXML 
-    void handleRegisterUser(ActionEvent event) {
+    void handleRegisterUser(ActionEvent event) throws IOException {
         this.errorLabel.setText("");
         Client client = Client.getClient();
         String request = "register, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
@@ -79,7 +79,17 @@ public class LoginController {
             this.errorLabel.setVisible(true);
             this.errorLabel.setText("Username already in use.");
         } else {
-            System.out.println("registering user");
+            this.mcm.deSerialize(response);
+            this.errorLabel.setVisible(false);
+            Stage stage = (Stage) this.loginButton.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.PREFERENCE_PAGE));
+            Parent parent = loader.load();
+            PreferenceController pc = loader.<PreferenceController>getController();
+            pc.initParams(this.mcm);
+            Scene scene = new Scene(parent);
+            stage.setTitle(Main.WINDOW_TITLE);
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
