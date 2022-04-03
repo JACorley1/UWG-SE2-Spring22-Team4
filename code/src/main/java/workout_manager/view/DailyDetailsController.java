@@ -1,7 +1,6 @@
 package workout_manager.view;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,7 +56,6 @@ public class DailyDetailsController {
     private void setExerciseDetails() {
         this.detailsAccordion.getPanes().clear();
         for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getExercises()) {
-            System.out.println(currentExcercise.getName());
             TextArea workoutDetailsArea = new TextArea();
             workoutDetailsArea.setText(currentExcercise.getDescription());
             workoutDetailsArea.setWrapText(true);
