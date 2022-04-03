@@ -17,20 +17,10 @@ import workout_manager.viewmodel.ModelControllerManager;
 public class TestModelControllerManager {
 
     @Test
-    void testShouldNotAllowNullFilePath() {
-        assertThrows(IllegalArgumentException.class, () -> new ModelControllerManager(null));
-    }
-
-    @Test
-    void testShouldNotAllowEmptyFilepath() {
-        assertThrows(IllegalArgumentException.class, () -> new ModelControllerManager(""));
-    }
-
-    @Test
     void testVerifyProperConstruction() {
         User user = new User("BillyBob", "12345");
-        ModelControllerManager manager = new ModelControllerManager(
-                "src/test/java/workout_manager/test/model/testUserFile.json");
+        String filePath = "src/test/java/workout_manager/test/model/testUserFile.json";
+        ModelControllerManager manager = new ModelControllerManager();
         manager.setUser(user);
         //manager.deSerialize();
         manager.serialize();
@@ -44,22 +34,21 @@ public class TestModelControllerManager {
     @Test
     void testSetCurrentWorkout() {
         Workout workout = new Workout();
-        ModelControllerManager manager = new ModelControllerManager(
-                "src/test/java/workout_manager/test/model/testUserFile.json");
+        String fileName = "src/test/java/workout_manager/test/model/testUserFile.json";
+        ModelControllerManager manager = new ModelControllerManager();
 
         manager.setCurrentWOrkout(workout);
 
         assertEquals(0, manager.getCurrentWorkout().getExercises().size());
     }
-
     @Test
     void testSetPrefs() {
-        ModelControllerManager manager = new ModelControllerManager(
-                "src/test/java/workout_manager/test/model/testUserFile.json");
+        ModelControllerManager manager = new ModelControllerManager();
         User user = new User("BillyBob", "12345");
+        String fileName = "src/test/java/workout_manager/test/model/testUserFile.json";
         manager.setUser(user);
         manager.setUserPrefs(new SimpleListProperty<MuscleGroup>(), new SimpleListProperty<Days>(), Intensity.BEGINNER);
-
         assertEquals(0, manager.getCurrentPreferences().getSelectedDays().size());
     }
+
 }

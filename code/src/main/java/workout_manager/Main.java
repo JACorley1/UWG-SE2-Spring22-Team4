@@ -37,7 +37,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        this.mcm = new ModelControllerManager(USER_FILE_PATH);
+        this.mcm = new ModelControllerManager();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Main.LOGIN_PAGE));
         Parent parent = loader.load();
 

@@ -28,8 +28,7 @@ import workout_manager.model.WorkoutCalendar;
  * @author group 4
  */
 public class ModelControllerManager {
-
-    private String userFilePath;
+    
     private User user;
     private Workout currentWorkout;
     private UserSerializer serializer;
@@ -37,19 +36,10 @@ public class ModelControllerManager {
     /**
      * Creates a ModelControllerManager class
      * 
-     * @precondition filepath != null && !filepath.isEmpty()
      * @postcondition none
      * 
-     * @param filepath the filepath
      */
-    public ModelControllerManager(String filepath) {
-        if (filepath == null) {
-            throw new IllegalArgumentException("Filepath cannot be null");
-        }
-        if (filepath.isEmpty()) {
-            throw new IllegalArgumentException("Filepath cannot be empty");
-        }
-        this.userFilePath = filepath;
+    public ModelControllerManager() {
         this.serializer = new UserSerializer();
     }
 

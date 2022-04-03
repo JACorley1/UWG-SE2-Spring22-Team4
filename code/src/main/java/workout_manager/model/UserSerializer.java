@@ -1,7 +1,4 @@
 package workout_manager.model;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -69,7 +66,6 @@ public class UserSerializer {
         String[] intensityString = intensity.split("\"intensity\": ");
         int intensityInt = Integer.parseInt(intensityString[1]);
 		return intensityInt;
-
     }
 
 }
