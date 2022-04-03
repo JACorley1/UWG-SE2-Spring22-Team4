@@ -18,8 +18,6 @@ public enum MuscleGroup {
         this.code = code;
     }
 
-    
-
     /**
      * returns the string value of this muscle
      * 
@@ -34,6 +32,8 @@ public enum MuscleGroup {
     /**
      * returns the int code for the muscle
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int code for the muscle
      */
     public int getCode() {
