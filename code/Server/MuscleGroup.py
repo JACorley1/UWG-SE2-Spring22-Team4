@@ -39,3 +39,26 @@ class MuscleGroup(Enum):
             return MuscleGroup.CALVES
         else:
             raise NotImplementedError
+
+    # *
+    # * takes a string and turns it into the appropriate string
+    # * @param muscle the muscle to turn into a string
+    # * @return the appropriate string 
+    # 
+    def toString(day):
+        if day == MuscleGroup.ARMS:
+            return 'ARMS'
+        elif day == MuscleGroup.LEGS:
+            return 'LEGS'
+        elif day == MuscleGroup.BACK:
+            return 'BACK'
+        elif day == MuscleGroup.ABS:
+            return 'ABS'
+        elif day == MuscleGroup.CHEST:
+            return 'CHEST'
+        elif day == MuscleGroup.SHOULDERS:
+            return 'SHOULDERS'
+        elif day == MuscleGroup.CALVES:
+            return 'CALVES'
+        else:
+            raise NotImplementedError

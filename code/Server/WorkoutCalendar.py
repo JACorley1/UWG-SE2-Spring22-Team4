@@ -16,8 +16,9 @@ class WorkoutCalendar:
     #     * @param workoutToAdd the workout to add
     #     
     def addWorkout(self, day, workoutToAdd):
-
-        self.workoutCalendar[day] = workoutToAdd
+        workout = {}
+        workout["exercises"] = workoutToAdd
+        self.workoutCalendar[day] = workout
 
 
     #    *

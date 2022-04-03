@@ -26,7 +26,7 @@ public class WorkoutCalendar {
      * @param workoutToAdd the workout to add
      */
     public void addWorkout(Days day, Workout workoutToAdd) {
-
+        
         this.workoutCalendar.put(day, workoutToAdd);
 
     }

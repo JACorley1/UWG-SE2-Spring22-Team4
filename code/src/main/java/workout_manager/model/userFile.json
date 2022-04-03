@@ -1,14 +1,7 @@
 {
   "preferences": {
-    "availableDays": [
-      "WEDNESDAY",
-      "FRIDAY"
-    ],
-    "musclesSelected": [
-      "ARMS",
-      "ABS",
-      "SHOULDERS"
-    ],
+    "availableDays": ["WEDNESDAY", "FRIDAY"],
+    "musclesSelected": ["ARMS", "ABS", "SHOULDERS"],
     "intensity": "BEGINNER"
   },
   "workoutCalender": {
@@ -19,9 +12,7 @@
             "name": "Rest Day",
             "description": "Enjoy your Rest",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           }
         ]
       },
@@ -31,73 +22,63 @@
             "name": "Body Saw",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
-            "equipment": [
-              0
-            ]
-          },
+            "equipment": [0]
+          }
+        ]
+      },
+      "WEDNESDAY": {
+        "exercises": [
           {
             "name": "Body Saw",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
-            "equipment": [
-              0
-            ]
-          },
+            "equipment": [0]
+          }
+        ]
+      },
+      "SUNDAY": {
+        "exercises": [
           {
             "name": "Body Saw",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Plank to Downward Dog Tap",
             "description": "Start in a high plank with your wrists under your shoulders and your feet hip-width apart./nPush your hips up and back to move into a Downward Dog with your heels reaching toward the floor./nKeep your core tight and shift your weight forward to come back into a high plank./nContinue for 1 minute.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Forearm Plank Rock",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock your entire body forward a couple inches so your shoulders go past your elbows toward your hands./nRock back a couple inches. That\u0027s 1 rep./nMake sure to keep your core, butt, and quads engaged the entire time.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Forearm Plank to Dolphin",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./n This is the starting position./nPress through your forearms and lift your hips up and back, creating an inverted V shape with your body./n Your head should now be between your shoulders./nPause for a second and then slowly lower back into a forearm plank./nContinue this movement for a set amount of time.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Diving push-up",
             "description": "Start in Downward Dog, with hands and feet on the floor and hips high./n Lower your chest toward the floor, bending at elbows, then pull chest up and extend arms as you bring hips to the floor (similar to Upward Dog)./n Raise hips back up while bringing chest back to the floor, extending arms to return to Down Dog.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Front Shoulder Raise With Towel",
-            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that it’s sitting at your hips./nSlowly raise the towel until it’s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
+            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that itï¿½s sitting at your hips./nSlowly raise the towel until itï¿½s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Front Shoulder Raise With Towel",
-            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that it’s sitting at your hips./nSlowly raise the towel until it’s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
+            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that itï¿½s sitting at your hips./nSlowly raise the towel until itï¿½s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           }
         ]
       },
@@ -107,9 +88,7 @@
             "name": "Rest Day",
             "description": "Enjoy your Rest",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           }
         ]
       },
@@ -119,97 +98,93 @@
             "name": "Downward Dog to Push-Up",
             "description": "Start in a downward dog position./n To get into a downward dog, start from an all-fours position with wrists under your shoulders and knees under your hips./n Engage your core, lift your knees, and straighten both legs as your head drops naturally between your biceps and you come into an inverted V-shape./n In downward dog, your arms and back should be straight and your hips piked up to the ceiling./n Your heels do not need to touch the floor, but you should feel a nice stretch in the back of your legs./nFrom this position, lift your right hand and reach back to tap your left toes./n Allow your torso to naturally rotate open so you can tap your toes./n If you can\u0027t reach your toes, tap your shin or knee./nReturn to downward dog and roll forward into a high plank or modified plank (by gently lowering your knees to the floor)./nFrom your high plank or modified plank, do a push-up by bending both arms at the elbows and lowering your chest toward the floor in a smooth movement./nPush back up to return to your plank, then pike your hips to return to your downward dog./n Now lift your left hand and tap your right toes./nAfter you\u0027ve completed the toe tap, roll forward into a plank and do another push-up./nContinue your downward dog, to toe tap, to push-up progression.",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Body Saw",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Decline Push-up",
             "description": "Place your toes on a box, bench, or step. Then get into a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, core and glutes engaged./nBend your elbows and lower your chest to the floor./nPush through the palms of your hands to straighten your arms. That\u0027s 1 rep.",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Reverse Crunch",
             "description": "Lie on your back with your knees together, legs bent to 90 degrees, and feet planted on the floor./n Place your palms face down beside you./n Brace your core to lift your hips off the floor, pulling your knees inward to your chest./n Pause for a moment, then lower back down while keeping your back pressed against the floor.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Forearm Plank to Dolphin",
             "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./n This is the starting position./nPress through your forearms and lift your hips up and back, creating an inverted V shape with your body./n Your head should now be between your shoulders./nPause for a second and then slowly lower back into a forearm plank./nContinue this movement for a set amount of time.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Bicycle Crunch",
             "description": "Lie down with your lower back pressed to the ground, pulling your belly button toward your spine./n Place your hands behind your head, bring your knees toward your chest, and lift your shoulder blades off the ground./n Straighten your right leg while turning your upper body to the left, bringing your right elbow toward your left knee./n Now switch legs and do the same motion on the other side./n Make sure you are twisting your torso to initiate the motion and that you are not pulling on your neck.",
             "category": 3,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Bridge push-up",
-            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
+            "description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce youï¿½re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. Thatï¿½s 1 rep.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Front Shoulder Raise With Towel",
-            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that it’s sitting at your hips./nSlowly raise the towel until it’s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
+            "description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that itï¿½s sitting at your hips./nSlowly raise the towel until itï¿½s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           },
           {
             "name": "Prone I to Y",
-            "description": "Lie on your stomach with your arms and legs fully extended./n Roll your shoulders down and back, and put your shoelaces on the ground./nEngage your core and, keeping your neck neutral, raise your shoulders and chest off the ground, maintaining an I shape with your body./n Stay here for 1–2 secondsTransition to a Y shape by moving your arms apart to a 45-degree angle./n Stay here for 1–2 seconds./nCome back to an I shape, then slowly lower back down to start./nComplete 6–10 reps.",
+            "description": "Lie on your stomach with your arms and legs fully extended./n Roll your shoulders down and back, and put your shoelaces on the ground./nEngage your core and, keeping your neck neutral, raise your shoulders and chest off the ground, maintaining an I shape with your body./n Stay here for 1ï¿½2 secondsTransition to a Y shape by moving your arms apart to a 45-degree angle./n Stay here for 1ï¿½2 seconds./nCome back to an I shape, then slowly lower back down to start./nComplete 6ï¿½10 reps.",
             "category": 5,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           }
         ]
       },
       "TUESDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
+            "name": " Kneeling Extension",
+            "description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+            "category": 2,
+            "equipment": [0]
           }
         ]
       },
       "MONDAY": {
         "exercises": [
           {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
-            "category": 0,
-            "equipment": [
-              0
-            ]
+            "name": " Kneeling Extension",
+            "description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+            "category": 2,
+            "equipment": [0]
+          },
+          {
+            "name": "Shoulder Press with Towel",
+            "description": "Roll the towel into a cylinder./n Hold the towel at both ends so that your hands are shoulder-width apart./n Keep your elbows tucked in and down so that the towel is close to your chest./nPull the towel apart./n Raise your hands and the towel overhead until your arms are fully extended and are above you./n Remember to keep pulling the towel apart./nSlowly lower your arms and repeat.",
+            "category": 5,
+            "equipment": [0]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and youï¿½re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
+            "equipment": [0]
+          },
+          {
+            "name": "Dolphin Dive",
+            "description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and youï¿½re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+            "category": 5,
+            "equipment": [0]
           }
         ]
       },
@@ -219,9 +194,7 @@
             "name": "Rest Day",
             "description": "Enjoy your Rest",
             "category": 0,
-            "equipment": [
-              0
-            ]
+            "equipment": [0]
           }
         ]
       }

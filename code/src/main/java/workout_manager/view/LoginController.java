@@ -49,7 +49,6 @@ public class LoginController {
         this.mcm.deSerialize(response);
 
         if (authenticated) {
-            //this.mcm.deSerialize();
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
