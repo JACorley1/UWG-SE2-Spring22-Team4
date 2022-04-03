@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from matplotlib.style import available
 import Days
 import MuscleGroup
 #*
