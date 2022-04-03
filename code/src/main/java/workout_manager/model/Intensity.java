@@ -24,4 +24,16 @@ public enum Intensity {
     public int getCode() {
         return this.code;
     }
+
+    public Intensity getEnumFromInt(int toGetEnumFrom){
+        if (toGetEnumFrom == 0 ){
+            return BEGINNER;
+        }
+        else if (toGetEnumFrom == 1){
+            return INTERMEDIATE;
+        }
+        else {
+            return ADVANCED;
+        }
+    }
 }

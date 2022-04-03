@@ -26,7 +26,6 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class LoginController {
-
     private ModelControllerManager mcm;
 
     @FXML

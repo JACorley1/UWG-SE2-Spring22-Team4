@@ -15,6 +15,7 @@ public class Preferences {
     private List<MuscleGroup> musclesSelected;
     private Intensity intensity;
 
+
     /**
      * preferences object that contains user selected preferences
      * 
@@ -29,13 +30,14 @@ public class Preferences {
         this.intensity = intensity;
 
     }
+
     /**
      * creates a preferences object
      */
     public Preferences() {
         this.availableDays = new ArrayList<Days>();
-        this.musclesSelected = new ArrayList<MuscleGroup>();
-        this.intensity = null;
+        this.musclesSelected = new ArrayList<MuscleGroup>(); 
+        
     }
 
     /**
@@ -64,6 +66,10 @@ public class Preferences {
     public List<Days> getSelectedDays() {
         return this.availableDays;
 
+    }
+
+    public void setIntensity(Intensity intensity) {
+        this.intensity = intensity;
     }
 
 }
