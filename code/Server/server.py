@@ -43,13 +43,12 @@ def runServer():
             jsonRep = json.dumps(workoutCalendar)
             socket.send_string(jsonRep)
         elif (request[0] == "register"):
-            newUser = request[1]
-            newPassword = request[2]
-            if (usernameExists(userData, newUser)):
+            if (usernameExists(userData, userName)):
                 socket.send_string(codes.ServerErrorCodes.REGISTER_FAILED_USER_EXISTS)
             else:
-                userData[newUser] = "[{'passWord': '" + newPassword + "'}, {'preferences': {'availableDays': [], 'musclesSelected': []}, 'workoutCalender': {}, 'userName': '" + newUser + "', 'passWord': '" + newPassword + "'}]}"
-                socket.send_string(userData[newUser])
+                formattedUserPrefs = request[2].replace("\\","")
+                userData.update({userName: formattedUserPrefs})
+                socket.send_string(userData[userName])
         else:
             socket.send_string(codes.ServerErrorCodes.BAD_REQUEST)
             print("ERROR - " + codes.ServerErrorCodes.BAD_REQUEST)

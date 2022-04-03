@@ -1,14 +1,142 @@
 {
   "preferences": {
     "availableDays": [
-      "TUESDAY"
+      "THURSDAY",
+      "SATURDAY"
     ],
-    "musclesSelected": []
+    "musclesSelected": [
+      "ARMS"
+    ],
+    "intensity": "ADVANCED"
   },
   "workoutCalender": {
     "workoutCalendar": {
-      "TUESDAY": {
+      "THURSDAY": {
         "exercises": [
+          {
+            "name": "Setu Bandhasana or the Bridge Pose",
+            "description": "Lying on the floor, bend your knees and place your feet on the floor./n Next, sucking in your stomach, lift your pelvis and buttocks as high as possible as you try and grab the back of your feet with your hands. ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Bhujangasana or the Cobra Pose",
+            "description": "Lying in the prone position, place your palms at shoulder level and tightening your stomach, lift you upper body in a stretch with your eyes facing upwards./n Make sure to keep your chest lifted and avoid arching your back.",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Setu Bandhasana or the Bridge Pose",
+            "description": "Lying on the floor, bend your knees and place your feet on the floor./n Next, sucking in your stomach, lift your pelvis and buttocks as high as possible as you try and grab the back of your feet with your hands. ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Reverse Crunch",
+            "description": "Lie on your back with your knees together, legs bent to 90 degrees, and feet planted on the floor./n Place your palms face down beside you./n Brace your core to lift your hips off the floor, pulling your knees inward to your chest./n Pause for a moment, then lower back down while keeping your back pressed against the floor.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Bicycle Crunch",
+            "description": "Lie down with your lower back pressed to the ground, pulling your belly button toward your spine./n Place your hands behind your head, bring your knees toward your chest, and lift your shoulder blades off the ground./n Straighten your right leg while turning your upper body to the left, bringing your right elbow toward your left knee./n Now switch legs and do the same motion on the other side./n Make sure you are twisting your torso to initiate the motion and that you are not pulling on your neck.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Forearm Plank to Dolphin",
+            "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./n This is the starting position./nPress through your forearms and lift your hips up and back, creating an inverted V shape with your body./n Your head should now be between your shoulders./nPause for a second and then slowly lower back into a forearm plank./nContinue this movement for a set amount of time.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Plank Up-Down",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nLower your left arm so that your forearm is on the floor./n Then, do the same with your right so that you\u0027re in a forearm plank./nReverse to return to a high plank. That\u0027s 1 rep./nAs you move, keep your hips as still as possible. To make this easier, try widening your legs a little more.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Forearm Plank Reach Out",
+            "description": "Start in a forearm plank position, with your elbows directly under your shoulders, hands facing forward so your forearms are parallel, core engaged, hips level, and legs extended straight behind you./nFrom this position, reach your right hand forward and tap the floor in front of you./n Return your right hand to your starting position, and then reach forward with your left hand to tap the floor in front of you./nContinue to alternate sides as you focus on keeping your hips steady throughout./n Make it easier: If this exercise feels too challenging, take your feet wider then hip-width apart./n The wider your feet, the easier the move should be.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Plank Up-Down",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nLower your left arm so that your forearm is on the floor./n Then, do the same with your right so that you\u0027re in a forearm plank./nReverse to return to a high plank. That\u0027s 1 rep./nAs you move, keep your hips as still as possible. To make this easier, try widening your legs a little more.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
+      },
+      "MONDAY": {
+        "exercises": [
+          {
+            "name": "Bhujangasana or the Cobra Pose",
+            "description": "Lying in the prone position, place your palms at shoulder level and tightening your stomach, lift you upper body in a stretch with your eyes facing upwards./n Make sure to keep your chest lifted and avoid arching your back.",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": " Kneeling Extension",
+            "description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Cat Stretch",
+            "description": "Come down on all fours and take a deep breath./n As you exhale, push your belly towards your spine, curving your back to the ceiling./n Hold this position for a few seconds and then, slowly bring your back down to normal.",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Forearm Plank to Dolphin",
+            "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./n This is the starting position./nPress through your forearms and lift your hips up and back, creating an inverted V shape with your body./n Your head should now be between your shoulders./nPause for a second and then slowly lower back into a forearm plank./nContinue this movement for a set amount of time.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Plank With Spinal Rotation",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nRotate your entire body to the right into a side plank, so that your right shoulder is stacked above your right wrist and your left hand is extended toward the ceiling./n Pause here for a second, then return to start./n That\u0027s 1 rep.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Bird Dog Crunch",
+            "description": "Start on your hands and knees in tabletop position with your wrists stacked under your shoulders and your knees stacked under your hips./nExtend your right arm forward and left leg back, maintaining a flat back and keeping your hips in line with the floor./n Think about driving your foot toward the wall behind you./nSqueeze your abs and draw your right elbow and left knee in to meet near the center of your body./nReverse the movement and extend your arm and leg back out./nContinue this movement for a set amount of time, then repeat with the other arm and leg.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
           {
             "name": "Side Plank",
             "description": "Lie on your right side with your right hand directly underneath your right shoulder./nExtend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor./n Extend your left hand straight up toward the ceiling./nHold here for a set amount of time.",
@@ -18,28 +146,16 @@
             ]
           },
           {
-            "name": "Lateral Plank Walk",
-            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
+            "name": "Body Saw",
+            "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
             "equipment": [
               0
             ]
           },
           {
-            "name": "Push-up",
-            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nBend your elbows and lower your chest to the floor. Drop to your knees if needed./nPush through the palms of your hands to straighten your arms./n That\u0027s 1 rep.",
-            "category": 0,
-            "equipment": [
-              0
-            ]
-          }
-        ]
-      },
-      "SATURDAY": {
-        "exercises": [
-          {
-            "name": "Rest Day",
-            "description": "Enjoy your Rest",
+            "name": "Body Saw",
+            "description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
             "category": 0,
             "equipment": [
               0
@@ -47,36 +163,7 @@
           }
         ]
       },
-
-      "MONDAY": {
-        "exercises": [
-          {
-            "name": "Wall Squat",
-            "description": " Find a nice flat piece of wall and stand with your back leaning against the wall. Slowly slide down the wall while moving your feet away from it, until your thighs are parallel to the ground and both your knees and your hips are bent at a 90Â° angle. Cross your arms in front of your chest and hold this position for 30 seconds.\n Variant: put a big inflated rubber ball (like a small basketball) between your knees and squeeze the ball while holding the squat position",
-            "category": 9,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Russian Twists",
-            "description": " To perform the Russian twist one sits on the floor and bends both knees while feet are be kept together and held slightly above the ground (or put under a stable surface). Ideally, the torso is kept straight with the back kept off the ground at a 45 degree angle with arms held together away from the body in a straight fashion and hands kept locked together like a ball or one can hold a weight to increase the difficulty. Next, the arms should be swung from one side to another in a twisting motion, with each swing to a side counting as one repetition. The slower one moves the arms from side to side, the harder the exercise becomes, working the abdomen that much better. When moving one\u0027s arms during the exercise, it is crucial to not stop between repetitions or else one will lose the effect of working the abdomen. As with all exercise, consistent breathing in and out during the exercise is important as one must ensure proper oxygen flow.",
-            "category": 10,
-            "equipment": [
-              7
-            ]
-          },
-          {
-            "name": "Handstand Pushup",
-            "description": "The handstand push-up (press-up) - also called the vertical push-up (press-up) or the inverted push-up (press-up) also called commandos- is a type of push-up exercise where the body is positioned in a handstand. For a true handstand, the exercise is performed free-standing, held in the air. To prepare the strength until one has built adequate balance, the feet are often placed against a wall, held by a partner, or secured in some other way from falling. Handstand pushups require significant strength, as well as balance and control if performed free-standing.",
-            "category": 13,
-            "equipment": [
-              7
-            ]
-          }
-        ]
-      },
-      "MONDAY": {
+      "SUNDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -100,7 +187,7 @@
           }
         ]
       },
-      "THURSDAY": {
+      "TUESDAY": {
         "exercises": [
           {
             "name": "Rest Day",
@@ -123,9 +210,85 @@
             ]
           }
         ]
+      },
+      "SATURDAY": {
+        "exercises": [
+          {
+            "name": "Floor Pull-Up",
+            "description": "Lie facedown on top of a towel (if needed) on a smooth floor with your legs together./n Place your forearms, elbows bent, underneath your shoulders, and make your hands into fists./n Keep your body tight and your head neutral as you push backward, sliding your body away from your elbows./n When you’ve gone as far as you can, drive down into the floor with your elbows and pull yourself back to the start.",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Cat Stretch",
+            "description": "Come down on all fours and take a deep breath./n As you exhale, push your belly towards your spine, curving your back to the ceiling./n Hold this position for a few seconds and then, slowly bring your back down to normal.",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Aquaman",
+            "description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+            "category": 2,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Bird Dog Crunch",
+            "description": "Start on your hands and knees in tabletop position with your wrists stacked under your shoulders and your knees stacked under your hips./nExtend your right arm forward and left leg back, maintaining a flat back and keeping your hips in line with the floor./n Think about driving your foot toward the wall behind you./nSqueeze your abs and draw your right elbow and left knee in to meet near the center of your body./nReverse the movement and extend your arm and leg back out./nContinue this movement for a set amount of time, then repeat with the other arm and leg.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Mountain Climber",
+            "description": "Start in high plank, with your palms flat on the floor, hands shoulder-width apart, shoulders stacked above your wrists, legs extended, and core engaged. This is the starting position./nKeeping your core tight, draw your right knee to your chest./nReturn to the starting position and immediately draw your left knee to your chest./nReturn your left leg to the starting position./n That\u0027s 1 rep./nContinue to alternate./n The quicker you move your legs, the more of a cardio challenge this will become./nMake sure to keep your core engaged and back flat throughout./n If you have to slow down to maintain form, that\u0027s fine.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Lateral Plank Walk",
+            "description": "Start in a high plank position with your palms flat on the floor, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nTake a step to the right starting with your right hand and right foot and following with your left hand and foot, maintaining a plank position as you move./n This is 1 rep./nDo a set amount of reps in one direction, and then repeat the same amount moving in the opposite direction.",
+            "category": 3,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Lateral Plank Walk",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Plank Up-Down",
+            "description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nLower your left arm so that your forearm is on the floor./n Then, do the same with your right so that you\u0027re in a forearm plank./nReverse to return to a high plank. That\u0027s 1 rep./nAs you move, keep your hips as still as possible. To make this easier, try widening your legs a little more.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          },
+          {
+            "name": "Forearm Plank Reach Out",
+            "description": "Start in a forearm plank position, with your elbows directly under your shoulders, hands facing forward so your forearms are parallel, core engaged, hips level, and legs extended straight behind you./nFrom this position, reach your right hand forward and tap the floor in front of you./n Return your right hand to your starting position, and then reach forward with your left hand to tap the floor in front of you./nContinue to alternate sides as you focus on keeping your hips steady throughout./n Make it easier: If this exercise feels too challenging, take your feet wider then hip-width apart./n The wider your feet, the easier the move should be.",
+            "category": 0,
+            "equipment": [
+              0
+            ]
+          }
+        ]
       }
     }
   },
-  "userName": "username",
-  "passWord": "password"
+  "userName": "johnny",
+  "passWord": "getLify"
 }

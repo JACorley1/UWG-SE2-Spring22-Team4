@@ -2,6 +2,8 @@ package workout_manager.view;
 
 import java.io.IOException;
 
+import com.google.gson.Gson;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +16,7 @@ import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
 import workout_manager.model.ServerErrorMessages;
+import workout_manager.model.User;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
@@ -48,6 +51,7 @@ public class LoginController {
         String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
         String response = client.receiveResponse();
+        System.out.println(response);
 
         if (!response.equals(ServerErrorMessages.LOGIN_FAILED) && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
             this.mcm.deSerialize(response);
@@ -69,9 +73,17 @@ public class LoginController {
 
     @FXML 
     void handleRegisterUser(ActionEvent event) throws IOException {
+        String newUsername = this.userNameTextfield.getText();
+        String newPassword = this.passwordTextfield.getText();
+        User newUser = new User(newUsername, newPassword);
+
+        Gson serializer = new Gson();
+        String userData = serializer.toJson(newUser);
+
         this.errorLabel.setText("");
         Client client = Client.getClient();
-        String request = "register, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
+
+        String request = "register, " + newUsername + ", " + userData;
         client.sendRequest(request);
         String response = client.receiveResponse();
 
