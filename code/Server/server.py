@@ -26,6 +26,7 @@ def runServer():
         print("Received request: %s" % message + "\n")
         request = message.split(", ")
         userName = request[1]
+        print(userData)
         if(request[0] == "login" and (usernameExists(userData, userName))):
             loggedInUser = handleLogin(request, userData, socket)
         elif (request[0] == "generateWorkout"):
