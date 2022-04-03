@@ -52,6 +52,11 @@ public class TestExerciseAlt {
         assertThrows(IllegalArgumentException.class, () -> {
             new ExerciseAlt("name", "", 0, new int[] { 7 });
         });
+    }
 
+    @Test
+    void testNoEquipmentForExercise() {
+        ExerciseAlt testExercise = new ExerciseAlt("name test", "description test", 0, new int[0]);
+        assertEquals(0, testExercise.getEquipment());
     }
 }

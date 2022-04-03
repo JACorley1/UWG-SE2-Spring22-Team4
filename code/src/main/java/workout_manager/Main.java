@@ -5,7 +5,6 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import kong.unirest.Client;
 import workout_manager.view.LoginController;
 import workout_manager.viewmodel.ModelControllerManager;
 import javafx.scene.Parent;
@@ -37,7 +36,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        this.mcm = new ModelControllerManager(USER_FILE_PATH);
+        this.mcm = new ModelControllerManager();
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Main.LOGIN_PAGE));
         Parent parent = loader.load();
 

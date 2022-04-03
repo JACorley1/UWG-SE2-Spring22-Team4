@@ -131,6 +131,7 @@
 					<excludes>
 						<exclude>workout_manager/view/**/</exclude>
 						<exclude>workout_manager/**/Main.class</exclude>
+						<exclude>workout_manager/utils/**/</exclude>
 					</excludes>
 				</configuration>
 				<executions>

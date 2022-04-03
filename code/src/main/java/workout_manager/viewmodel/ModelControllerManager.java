@@ -29,7 +29,6 @@ import workout_manager.model.WorkoutCalendar;
  */
 public class ModelControllerManager {
 
-    private String userFilePath;
     private User user;
     private Workout currentWorkout;
     private UserSerializer serializer;
@@ -42,14 +41,7 @@ public class ModelControllerManager {
      * 
      * @param filepath the filepath
      */
-    public ModelControllerManager(String filepath) {
-        if (filepath == null) {
-            throw new IllegalArgumentException("Filepath cannot be null");
-        }
-        if (filepath.isEmpty()) {
-            throw new IllegalArgumentException("Filepath cannot be empty");
-        }
-        this.userFilePath = filepath;
+    public ModelControllerManager() {
         this.serializer = new UserSerializer();
     }
 
@@ -96,7 +88,6 @@ public class ModelControllerManager {
         this.user.setPreferences(
                 new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
-
     }
 
     private void generateWorkoutCalendar() {
@@ -141,7 +132,6 @@ public class ModelControllerManager {
      */
     public void setUser(User user) {
         this.user = user;
-        
     }
 
     /**

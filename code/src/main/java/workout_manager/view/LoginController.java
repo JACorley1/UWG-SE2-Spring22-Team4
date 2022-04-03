@@ -15,8 +15,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
-import workout_manager.model.ServerErrorMessages;
+
 import workout_manager.model.User;
+import workout_manager.utils.ServerErrorMessages;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
