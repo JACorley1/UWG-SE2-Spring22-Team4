@@ -18,8 +18,6 @@ public enum MuscleGroup {
         this.code = code;
     }
 
-    
-
     /**
      * returns the string value of this muscle
      * 
