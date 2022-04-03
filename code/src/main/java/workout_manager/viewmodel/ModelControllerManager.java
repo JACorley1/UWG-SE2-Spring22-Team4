@@ -28,7 +28,7 @@ import workout_manager.model.WorkoutCalendar;
  * @author group 4
  */
 public class ModelControllerManager {
-
+    
     private User user;
     private Workout currentWorkout;
     private UserSerializer serializer;
@@ -36,10 +36,8 @@ public class ModelControllerManager {
     /**
      * Creates a ModelControllerManager class
      * 
-     * @precondition filepath != null && !filepath.isEmpty()
      * @postcondition none
      * 
-     * @param filepath the filepath
      */
     public ModelControllerManager() {
         this.serializer = new UserSerializer();

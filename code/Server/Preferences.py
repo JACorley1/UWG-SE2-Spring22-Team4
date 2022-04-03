@@ -30,18 +30,42 @@ class Preferences:
             self.processDays(Preferences.processString(days[j]))
         
 
+    
+    #    *
+    #     * processes the string
+    #     * 
+    #     * @return the processed string
+    #   
     def processString(txt):
         specialChars = "][\\" 
         for specialChar in specialChars:
             txt = txt.replace(specialChar, '')
         return txt
 
+
+    #    *
+    #     * processed the muscles
+    #     * 
+    #     * param - txt the muscle string
+    #     * sets the muscles from string
+    #   
     def processMuscle(self,txt):
        self.selectedMuscles.append(MuscleGroup.MuscleGroup.fromString(txt))
 
+
+    #    *
+    #     * processes the day
+    #     * param - txt the days string
+    #     * sets the days
+    #     *
     def processDays(self,txt):
         self.availableDays.append(Days.Days.fromString(txt))
-    
+
+    #    *
+    #     * gets the intensity
+    #     * 
+    #     * @return the intensity
+    #   
     def getIntensity(self):
         return self.intensity
     #    *
@@ -68,6 +92,12 @@ class Preferences:
     def getSelectedDays(self):
        return self.availableDays
 
+
+    #    *
+    #     * gets the selected days as a string
+    #     * 
+    #     * @return the string of selected days
+    #   
     def getSelectedDaysStrings(self):
         days = {}
         dayStrings = []
