@@ -32,6 +32,8 @@ public enum MuscleGroup {
     /**
      * returns the int code for the muscle
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int code for the muscle
      */
     public int getCode() {

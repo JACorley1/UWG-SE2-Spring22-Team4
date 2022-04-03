@@ -9,6 +9,9 @@ import org.zeromq.ZMQ.Socket;
 
 /**
  * singleton client for workout manager program.
+ * 
+ * @author Jordan Wagner
+ * @version Spring 2022
  */
 public class Client {
 
@@ -24,16 +27,21 @@ public class Client {
 
     /**
      * gets the client for the system to connect to the server
+     * 
+     * @precondition none
+     * @postcondition none
      * @return the client
      */
-    public static Client getClient(){
+    public static Client getClient() {
         client = new Client();
         return client;
     }
 
-
     /**
      * sends a request to the server from the client
+     * 
+     * @precondition none
+     * @postcondition none
      * @param request the request in json string form being sent
      */
     public void sendRequest(String request) {
@@ -44,14 +52,23 @@ public class Client {
 
     /**
      * recieves the response from the client.
+     * 
+     * @precondition none
+     * @postcondition none
      * @return the response as a string.
      */
-    public String receiveResponse(){
+    public String receiveResponse() {
         String response = this.socket.recvStr();
         return response;
     }
 
-    public void closeSocket(){
+    /**
+     * closes the socket
+     * 
+     * @precondition none
+     * @postcondition none
+     */
+    public void closeSocket() {
         this.socket.close();
     }
 

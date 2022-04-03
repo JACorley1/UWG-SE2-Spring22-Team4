@@ -15,10 +15,11 @@ public class Preferences {
     private List<MuscleGroup> musclesSelected;
     private Intensity intensity;
 
-
     /**
      * preferences object that contains user selected preferences
      * 
+     * @precondition none
+     * @postcondition none
      * @param selectedDays    the days selected by the user
      * @param selectedMuscles the muscles selected by the user
      * @param intensity       the instensity selected by the user
@@ -33,16 +34,21 @@ public class Preferences {
 
     /**
      * creates a preferences object
+     * 
+     * @precondition none
+     * @postcondition none
      */
     public Preferences() {
         this.availableDays = new ArrayList<Days>();
-        this.musclesSelected = new ArrayList<MuscleGroup>(); 
-        
+        this.musclesSelected = new ArrayList<MuscleGroup>();
+
     }
 
     /**
      * gets the intensity preference of the user
      * 
+     * @precondition none
+     * @postcondition none
      * @return the intensity
      */
     public Intensity getIntensity() {
@@ -52,6 +58,8 @@ public class Preferences {
     /**
      * gets the list of user selected muscles
      * 
+     * @precondition none
+     * @postcondition none
      * @return the list of muscles
      */
     public List<MuscleGroup> getSelectedMuscles() {
@@ -61,6 +69,8 @@ public class Preferences {
     /**
      * gets the user's selected days
      * 
+     * @precondition none
+     * @postcondition none
      * @return the array list of selected days
      */
     public List<Days> getSelectedDays() {
@@ -68,6 +78,13 @@ public class Preferences {
 
     }
 
+    /**
+     * sets the intensity for the user with the selected intensity
+     * 
+     * @precondition intensity != null
+     * @postcondition none
+     * @param intensity the intensity to set the user's intensity to
+     */
     public void setIntensity(Intensity intensity) {
         this.intensity = intensity;
     }

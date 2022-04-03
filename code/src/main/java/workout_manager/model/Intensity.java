@@ -19,20 +19,28 @@ public enum Intensity {
     /**
      * returns the int code for the Intensity
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int code for the Intensity
      */
     public int getCode() {
         return this.code;
     }
 
-    public Intensity getEnumFromInt(int toGetEnumFrom){
-        if (toGetEnumFrom == 0 ){
+    /**
+     * gets the enum that has the code value of the given int
+     * 
+     * @precondition none
+     * @postcondition none
+     * @param toGetEnumFrom is the int to search for in the intensity enum class
+     * @return the enum that has the code value of the given int
+     */
+    public Intensity getEnumFromInt(int toGetEnumFrom) {
+        if (toGetEnumFrom == 0) {
             return BEGINNER;
-        }
-        else if (toGetEnumFrom == 1){
+        } else if (toGetEnumFrom == 1) {
             return INTERMEDIATE;
-        }
-        else {
+        } else {
             return ADVANCED;
         }
     }

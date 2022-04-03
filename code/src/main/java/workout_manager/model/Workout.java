@@ -36,6 +36,8 @@ public class Workout {
     /**
      * gets the collection of exercises in the workout
      * 
+     * @precondition none
+     * @postcondition none
      * @return the collection of exercises
      */
     public ArrayList<ExerciseAlt> getExercises() {
