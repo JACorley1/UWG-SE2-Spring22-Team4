@@ -47,13 +47,13 @@ public class UserSerializer {
         try {
             this.user = gson.fromJson(serializedUser, new TypeToken<User>() {
             }.getType());
-
+            Intensity intensityToSet = Intensity.ADVANCED;
+            intensityToSet = intensityToSet.getEnumFromInt(this.getIntensityFromString(serializedUser));
+            this.user.getPreferences().setIntensity(intensityToSet);
         } catch (JsonIOException | JsonSyntaxException e1) {
             e1.printStackTrace();
         }
-        Intensity intensityToSet = Intensity.ADVANCED;
-        intensityToSet = intensityToSet.getEnumFromInt(getIntensityFromString(serializedUser));
-        this.user.getPreferences().setIntensity(intensityToSet);
+        
         return this.user;
     }
 
@@ -62,12 +62,12 @@ public class UserSerializer {
         Matcher matcher = intensityPattern.matcher(serializedUser);
         String intensity = "";
         if (matcher.find()){
-         
             intensity = matcher.group(0);
+            String[] intensityString = intensity.split("\"intensity\": ");
+            int intensityInt = Integer.parseInt(intensityString[1]);
+            return intensityInt;
+        } else {
+            return 0;
         }
-        String[] intensityString = intensity.split("\"intensity\": ");
-        int intensityInt = Integer.parseInt(intensityString[1]);
-		return intensityInt;
     }
-
 }

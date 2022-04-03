@@ -1,12 +1,12 @@
-package workout_manager.model;
+package workout_manager.utils;
 
 /**
  * a class of static server error messages
  * 
- * @author Ben Alon
+ * @author Ben Alton
  * @version Spring 2022 
  */
-public class ServerErrorMessages {
+public abstract class ServerErrorMessages {
 
     public static final String LOGIN_FAILED = "100";
 

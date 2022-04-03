@@ -86,7 +86,6 @@ public class ModelControllerManager {
         this.user.setPreferences(
                 new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
-
     }
 
     private void generateWorkoutCalendar() {
@@ -131,7 +130,6 @@ public class ModelControllerManager {
      */
     public void setUser(User user) {
         this.user = user;
-        
     }
 
     /**
