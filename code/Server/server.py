@@ -28,9 +28,6 @@ def runServer():
         userName = request[1]
         if(request[0] == "login" and (usernameExists(userData, userName))):
             loggedInUser = handleLogin(request, userData, socket)
-            else: 
-                socket.send_string(codes.ServerErrorCodes.LOGIN_FAILED)
-                print("ERROR - " + codes.ServerErrorCodes.LOGIN_FAILED)
         elif (request[0] == "generateWorkout"):
             handleGenerate(socket, userData, request, loggedInUser)
         elif (request[0] == "register"):
@@ -53,6 +50,9 @@ def handleLogin(request, userData, socket):
     if (request[2] == pw):
         dataToSend = json.dumps(userData[request[1]][1])
         socket.send_string(dataToSend)
+    else: 
+        socket.send_string(codes.ServerErrorCodes.LOGIN_FAILED)
+        print("ERROR - " + codes.ServerErrorCodes.LOGIN_FAILED)
     return request[1]
     
 def handleGenerate(socket, userData, request, loggedInUser):
