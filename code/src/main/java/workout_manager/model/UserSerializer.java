@@ -1,6 +1,9 @@
 package workout_manager.model;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,23 +22,6 @@ import com.google.gson.reflect.TypeToken;
  */
 public class UserSerializer {
     private User user;
-    private String filepath;
-
-    /**
-     * creates a user serializer
-     * 
-     * @precondition filepath cant be null || empty
-     * @param filepath the filePath for the serializer
-     */
-    public UserSerializer(String filepath) {
-        if (filepath == null) {
-            throw new IllegalArgumentException("Filepath cannot be null");
-        }
-        if (filepath.isEmpty()) {
-            throw new IllegalArgumentException("Filepath cannot be empty");
-        }
-        this.filepath = filepath;
-    }
 
     /**
      * serialize the given user to the USER path file
@@ -46,19 +32,9 @@ public class UserSerializer {
      * @param user the user to serialize
      * @return true if the serializer was successful; false otherwise
      */
-    public boolean serialize(User user) {
+    public String serialize(User user) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
-        try {
-            FileWriter writer = new FileWriter(this.filepath);
-            gson.toJson(user, writer);
-            writer.flush();
-            writer.close();
-            return true;
-        } catch (JsonIOException | IOException e) {
-            e.printStackTrace();
-            return false;
-        }
+            return gson.toJson(user);
     }
 
     /**
@@ -71,20 +47,31 @@ public class UserSerializer {
      */
     public User deserialize(String serializedUser) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        //JsonParser parser = new JsonParser();
         try {
-            //FileReader reader = new FileReader(this.filepath);
-            //JsonElement exerciseInfo = parser.parse(serializedUser);
-            //System.out.println(exerciseInfo);
-            
             this.user = gson.fromJson(serializedUser, new TypeToken<User>() {
             }.getType());
-
 
         } catch (JsonIOException | JsonSyntaxException e1) {
             e1.printStackTrace();
         }
+        Intensity intensityToSet = Intensity.ADVANCED;
+        intensityToSet = intensityToSet.getEnumFromInt(getIntensityFromString(serializedUser));
+        this.user.getPreferences().setIntensity(intensityToSet);
         return this.user;
+    }
+
+    private int getIntensityFromString(String serializedUser) {
+        Pattern intensityPattern = Pattern.compile("\"intensity\": [0-9]");
+        Matcher matcher = intensityPattern.matcher(serializedUser);
+        String intensity = "";
+        if (matcher.find()){
+         
+            intensity = matcher.group(0);
+        }
+        String[] intensityString = intensity.split("\"intensity\": ");
+        int intensityInt = Integer.parseInt(intensityString[1]);
+		return intensityInt;
+
     }
 
 }

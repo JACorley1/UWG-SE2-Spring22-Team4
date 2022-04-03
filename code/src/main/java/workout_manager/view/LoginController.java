@@ -13,7 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
-import workout_manager.model.LocalLoginAuthenticator;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
@@ -23,7 +22,6 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class LoginController {
-    private LocalLoginAuthenticator loginAuthenticator;
     private ModelControllerManager mcm;
 
     @FXML
@@ -40,15 +38,13 @@ public class LoginController {
 
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
-        boolean authenticated = this.loginAuthenticator.authenticateLoginCredentials(this.userNameTextfield.getText(),
-                this.passwordTextfield.getText());
         Client client = Client.getClient();
         String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
         String response = client.receiveResponse();
         this.mcm.deSerialize(response);
 
-        if (authenticated) {
+       // if (authenticated) {
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
@@ -59,16 +55,15 @@ public class LoginController {
             stage.setTitle(Main.WINDOW_TITLE);
             stage.setScene(scene);
             stage.show();
-        } else {
-            this.errorLabel.setVisible(true);
-            this.errorLabel.setText("Username or Password Not found");
-        }
+       // } else {
+           // this.errorLabel.setVisible(true);
+            //this.errorLabel.setText("Username or Password Not found");
+       // }
 
     }
 
     @FXML
     void initialize() {
-        this.loginAuthenticator = new LocalLoginAuthenticator();
         this.bindLogin();
     }
 

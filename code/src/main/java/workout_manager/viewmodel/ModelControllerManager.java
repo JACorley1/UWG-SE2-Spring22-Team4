@@ -1,8 +1,6 @@
 package workout_manager.viewmodel;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -23,7 +21,6 @@ import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
 import workout_manager.model.WorkoutCalendar;
-import workout_manager.model.WorkoutGenerator;
 
 /**
  * Creates a ModelControllerManager
@@ -53,7 +50,7 @@ public class ModelControllerManager {
             throw new IllegalArgumentException("Filepath cannot be empty");
         }
         this.userFilePath = filepath;
-        this.serializer = new UserSerializer(this.userFilePath);
+        this.serializer = new UserSerializer();
     }
 
     /**
@@ -96,7 +93,6 @@ public class ModelControllerManager {
      */
     public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
             Intensity intensity) {
-
         this.user.setPreferences(
                 new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
@@ -111,16 +107,13 @@ public class ModelControllerManager {
         String intensityJson = gson.toJson(this.user.getPreferences().getIntensity().getCode());
         client.sendRequest("generateWorkout" + ", " + daysJson + ", " + muscleJson + ", " + intensityJson);
         String response = client.receiveResponse();
-        System.out.print(response);
         var test = gson.fromJson(response, Map.class);
         WorkoutCalendar calendar = new WorkoutCalendar();
         for (Object day: test.keySet()){
             Days currentDay = gson.fromJson((String) day, Days.class);
             LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String,ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
             for (ArrayList<LinkedTreeMap<String, String>> current : list.values()) {
-                System.out.println(this.createWorkoutFromString(current));
                 calendar.addWorkout(currentDay, this.createWorkoutFromString(current));
-
             }
             
         }
@@ -148,6 +141,7 @@ public class ModelControllerManager {
      */
     public void setUser(User user) {
         this.user = user;
+        
     }
 
     /**

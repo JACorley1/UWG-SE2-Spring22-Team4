@@ -48,6 +48,7 @@ def handleGenerate(socket, userData, request, loggedInUser):
     workoutCalendar = WorkoutGenerator.WorkoutGenerator.generateWorkouts(preferences)
     userData[loggedInUser][1]["preferences"]["availableDays"] = preferences.getSelectedDaysStrings()
     userData[loggedInUser][1]["preferences"]["musclesSelected"] = preferences.getSelectedMuscleStrings()
+    userData[loggedInUser][1]["preferences"]["intensity"] = preferences.getIntensity()
     newCalendar = {}
     newCalendar["workoutCalendar"] = workoutCalendar
     userData[loggedInUser][1]["workoutCalender"] = newCalendar

@@ -1,4 +1,5 @@
 package workout_manager.model;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -49,6 +50,10 @@ public class Client {
         String response = this.socket.recvStr();
         return response;
 
+    }
+
+    public void closeSocket(){
+        this.socket.close();
     }
 
 }

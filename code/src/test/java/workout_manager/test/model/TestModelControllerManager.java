@@ -11,7 +11,6 @@ import javafx.beans.property.SimpleListProperty;
 import workout_manager.model.Days;
 import workout_manager.model.Intensity;
 import workout_manager.model.MuscleGroup;
-import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.model.Workout;
 import workout_manager.viewmodel.ModelControllerManager;
