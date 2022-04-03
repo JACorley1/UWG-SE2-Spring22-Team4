@@ -29,7 +29,9 @@ public class UserSerializer {
      */
     public String serialize(User user) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-            return gson.toJson(user);
+        System.out.println(gson.toJson(user));
+        return gson.toJson(user);
+
     }
 
     /**

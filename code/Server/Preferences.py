@@ -102,7 +102,6 @@ class Preferences:
         days = {}
         dayStrings = []
         for day in self.availableDays:
-            print(day)
             dayStrings.append(Days.Days.toString(day))
         days["availableDays"] = dayStrings
         return dayStrings
