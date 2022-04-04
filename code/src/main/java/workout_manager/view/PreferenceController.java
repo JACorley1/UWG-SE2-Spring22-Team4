@@ -35,7 +35,6 @@ public class PreferenceController {
     private SimpleListProperty<Days> selectedDays = new SimpleListProperty<Days>(FXCollections.observableArrayList());
     private SimpleListProperty<MuscleGroup> selectedMuscles = new SimpleListProperty<MuscleGroup>(
             FXCollections.observableArrayList());
-    private Intensity selectedIntensity;
     private ToggleGroup group;
 
     private ModelControllerManager mcm;

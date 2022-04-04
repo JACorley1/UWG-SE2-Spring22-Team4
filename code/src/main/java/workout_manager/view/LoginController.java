@@ -1,6 +1,8 @@
 package workout_manager.view;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -15,7 +17,10 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
-
+import workout_manager.model.Days;
+import workout_manager.model.Intensity;
+import workout_manager.model.MuscleGroup;
+import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.utils.ServerErrorMessages;
 import workout_manager.viewmodel.ModelControllerManager;
@@ -49,14 +54,18 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
         this.errorLabel.setText("");
-      
+
         Client client = Client.getClient();
         String request = "login, " + this.userNameTextfield.getText() + this.commaSeparator + this.passwordTextfield.getText();
         client.sendRequest(request);
-      
+
         String response = client.receiveResponse();
 
-        if (!response.equals(ServerErrorMessages.LOGIN_FAILED) && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
+        if (response == null) {
+            this.errorLabel.setVisible(true);
+            this.errorLabel.setText("Failed to connect to server");
+        } else if (!response.equals(ServerErrorMessages.LOGIN_FAILED)
+                && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
             this.mcm.deSerialize(response);
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
@@ -75,22 +84,21 @@ public class LoginController {
         client.closeSocket();
     }
 
-    @FXML 
+    @FXML
     void handleRegisterUser(ActionEvent event) throws IOException {
         String newUsername = this.userNameTextfield.getText();
         String newPassword = this.passwordTextfield.getText();
-        User newUser = new User(newUsername, newPassword);
-
+        User newUser = new User(newUsername, newPassword);      
         Gson serializer = new Gson();
         String userData = serializer.toJson(newUser);
 
         this.errorLabel.setText("");
         Client client = Client.getClient();
 
-        String request = "register, " + newUsername + this.commaSeparator + userData;
+        String request = "register, " + newUsername + this.commaSeparator + userData + this.commaSeparator + newPassword;
+
         client.sendRequest(request);
         String response = client.receiveResponse();
-
         if (response.equals(ServerErrorMessages.REGISTER_FAILED_USER_EXISTS)) {
             this.errorLabel.setVisible(true);
             this.errorLabel.setText("Username already in use.");
@@ -107,6 +115,7 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
         }
+        client.closeSocket();
     }
 
     @FXML

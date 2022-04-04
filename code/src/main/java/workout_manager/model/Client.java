@@ -24,6 +24,7 @@ public final class Client {
         this.context = ZMQ.context(1);
         this.socket = this.context.socket(ZMQ.REQ);
         this.socket.connect(this.host);
+        this.socket.setReceiveTimeOut(5000);
     }
 
     /**
