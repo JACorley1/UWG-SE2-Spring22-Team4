@@ -39,6 +39,8 @@ public class UserSerializer {
      * @precondition none
      * @postcondition none
      * 
+     * @param serializedUser the serialized form of the user to deserialize
+     * 
      * @return User
      */
     public User deserialize(String serializedUser) {
@@ -60,7 +62,7 @@ public class UserSerializer {
         Pattern intensityPattern = Pattern.compile("\"intensity\": [0-9]");
         Matcher matcher = intensityPattern.matcher(serializedUser);
         String intensity = "";
-        if (matcher.find()){
+        if (matcher.find()) {
             intensity = matcher.group(0);
             String[] intensityString = intensity.split("\"intensity\": ");
             int intensityInt = Integer.parseInt(intensityString[1]);

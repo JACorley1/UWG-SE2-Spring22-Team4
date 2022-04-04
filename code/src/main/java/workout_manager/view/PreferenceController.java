@@ -135,9 +135,9 @@ public class PreferenceController {
     @FXML
     void initialize() {
         this.group = new ToggleGroup();
-        this.beginnerRadioButton.setToggleGroup(group);
-        this.intermediateRadioButton.setToggleGroup(group);
-        this.advancedRadioButton.setToggleGroup(group);
+        this.beginnerRadioButton.setToggleGroup(this.group);
+        this.intermediateRadioButton.setToggleGroup(this.group);
+        this.advancedRadioButton.setToggleGroup(this.group);
     }
 
     private void displayDays() {
