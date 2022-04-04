@@ -20,15 +20,15 @@
 			<version>4.4</version>
 		</dependency>
 		<dependency>
-  			<groupId>com.google.code.gson</groupId>
-  			<artifactId>gson</artifactId>
-  			<version>2.8.5</version>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.5</version>
 		</dependency>
 		<!-- https://kong.github.io/unirest-java/ -->
 		<dependency>
-    		<groupId>com.konghq</groupId>
-    		<artifactId>unirest-java</artifactId>
-    		<version>3.13.6</version>
+			<groupId>com.konghq</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>3.13.6</version>
 		</dependency>
 		<!-- JavaFX -->
 		<dependency>
@@ -55,10 +55,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-   			<groupId>org.zeromq</groupId>
-    		<artifactId>jeromq</artifactId>
-    		<version>0.3.4</version>
+			<groupId>org.zeromq</groupId>
+			<artifactId>jeromq</artifactId>
+			<version>0.3.4</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -126,7 +127,7 @@
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.7</version>
-				<configuration> 
+				<configuration>
 					<excludes>
 						<exclude>workout_manager/view/**/</exclude>
 						<exclude>workout_manager/**/Main.class</exclude>
@@ -169,7 +170,8 @@
 
 				</executions>
 			</plugin>
-			<plugin> <!-- checks code styling -->
+			<plugin>
+				<!-- checks code styling -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.2</version>
@@ -189,7 +191,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>	
+			</plugin>
 		</plugins>
 	</build>
 </project>

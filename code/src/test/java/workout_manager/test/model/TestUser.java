@@ -10,12 +10,10 @@ import workout_manager.model.Preferences;
 
 import org.junit.jupiter.api.Test;
 
-import javafx.concurrent.WorkerStateEvent;
 import workout_manager.model.Days;
 import workout_manager.model.Intensity;
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.User;
-import workout_manager.model.Workout;
 import workout_manager.model.WorkoutCalendar;
 
 /**
@@ -68,7 +66,7 @@ public class TestUser {
         WorkoutCalendar testWorkout = new WorkoutCalendar();
         user.setWorkoutCalender(testWorkout);
         testWorkout.getCalendar().size();
-        assertEquals(0,  testWorkout.getCalendar().size());
+        assertEquals(0, testWorkout.getCalendar().size());
     }
 
     @Test
