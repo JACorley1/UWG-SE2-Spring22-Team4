@@ -22,6 +22,8 @@ public class WorkoutCalendar {
     /**
      * adds a workout to a specific day
      * 
+     * @precondition none
+     * @postcondition none
      * @param day          the day the workout is scheduled on
      * @param workoutToAdd the workout to add
      */
@@ -34,6 +36,8 @@ public class WorkoutCalendar {
     /**
      * gets the map of days and workouts.
      * 
+     * @precondition none
+     * @postcondition none
      * @return the users calendar
      */
     public Map<Days, Workout> getCalendar() {
@@ -43,6 +47,8 @@ public class WorkoutCalendar {
     /**
      * gets a specified days workout
      * 
+     * @precondition day != null
+     * @postcondition none
      * @param day the day to get the workout for
      * @return the workout scheduled on the day.
      */

@@ -1,13 +1,6 @@
 package workout_manager.test.model;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.io.FileNotFoundException;
-
-import com.google.gson.JsonIOException;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,52 +8,33 @@ import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 
 public class TestUserSerializer {
-
-    private String filePath = "src/test/java/workout_manager/test/model/testUserFile.json";
     
     @Test
-    void testShouldNotAllowNullFilepath() {
-        assertThrows(IllegalArgumentException.class, () -> new UserSerializer(null));
-    }
-
-    @Test
-    void testShouldNotAllowEmptyFilepath() {
-        assertThrows(IllegalArgumentException.class, () -> new UserSerializer(""));
-    }
-
-    @Test
-    void testSerialize() {
-        UserSerializer serializer = new UserSerializer(this.filePath);
-        User user = new User("BillyBob", "12345");
-
-        boolean result = serializer.serialize(user);
-
-        assertTrue(result);
-    }
-
-    @Test 
-    void testDeserialize() {
-        UserSerializer serializer = new UserSerializer(this.filePath);
-        User user = new User("BillyBob", "12345");
+    void testValidSerializationAndDeserialization() {
+        UserSerializer serializer = new UserSerializer();
+        String userString = "{\"preferences\": {\"availableDays\": [\"WEDNESDAY\",\"FRIDAY\"],\"musclesSelected\": [],\"intensity\": 0},\"workoutCalender\": {\"workoutCalendar\": {}},\"userName\": \"username\",\"passWord\": \"password\"}";
+        User newUser = serializer.deserialize(userString);
+        String result = serializer.serialize(newUser);
         
-        User deserialized = serializer.deserialize();
-
-        assertEquals(user.getUserName(), deserialized.getUserName());
+        assertEquals(0, newUser.getWorkoutCalender().getCalendar().size());
+        assertEquals('{', result.charAt(0));
     }
 
     @Test
-    void TestDeserializeErrorCaught() {
-        UserSerializer userSerializer = new UserSerializer("bad.txt");
+    void handlesExceptions() {
+        UserSerializer serializer = new UserSerializer();
+        String userString = "\"preferences\": {\"availableDays\": [\"WEDNESDAY\",\"FRIDAY\"],\"musclesSelected\": [],\"intensity\": 0},\"workoutCalender\": {\"workoutCalendar\": {}},\"userName\": \"username\",\"passWord\": \"password\"}";
+        User newUser = serializer.deserialize(userString);
 
-        assertNull(userSerializer.deserialize());
+        assertEquals(null, newUser);
     }
 
     @Test
-    void testSerializeErrorCaught() {
-        UserSerializer userSerializer = new UserSerializer("bad.txt");
-        User user = null;
+    void patternHasNoMatches() {
+        UserSerializer serializer = new UserSerializer();
+        String userString = "{\"preferences\": {\"availableDays\": [\"WEDNESDAY\",\"FRIDAY\"],\"musclesSelected\": []},\"workoutCalender\": {\"workoutCalendar\": {}},\"userName\": \"username\",\"passWord\": \"password\"}";
+        User newUser = serializer.deserialize(userString);
 
-        assertTrue(userSerializer.serialize(user));
+        assertEquals(0, newUser.getPreferences().getIntensity().getCode());
     }
-
 }

@@ -23,7 +23,6 @@ public class ExerciseAlt {
      * @param description the description of the exercise
      * @param category    the muscle category
      * @param equipment   int representation of equipment
-     * @param language    int representation of language
      */
     public ExerciseAlt(String name, String description, int category, int[] equipment) {
         if (name == null) {
@@ -48,6 +47,8 @@ public class ExerciseAlt {
     /**
      * gets the name of the exercise
      * 
+     * @precondition none
+     * @postcondition none
      * @return the name
      */
     public String getName() {
@@ -57,6 +58,8 @@ public class ExerciseAlt {
     /**
      * gets the text description of the exercise
      * 
+     * @precondition none
+     * @postcondition none
      * @return the description of the exercise
      */
     public String getDescription() {
@@ -66,6 +69,8 @@ public class ExerciseAlt {
     /**
      * returns the int representation of the muscle category defined by the data
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int representation of the muscle category
      */
     public int getCategory() {
@@ -75,6 +80,8 @@ public class ExerciseAlt {
     /**
      * returns the int representation of the muscle category defined by the data
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int representation for equipment
      */
     public int getEquipment() {

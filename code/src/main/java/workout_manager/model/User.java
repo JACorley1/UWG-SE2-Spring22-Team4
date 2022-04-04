@@ -1,10 +1,6 @@
 package workout_manager.model;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
- * creates a user class fro the application
+ * creates a user class from the application
  * 
  * @version Spring 2022
  * @author wtjracer
@@ -67,11 +63,11 @@ public class User {
      * @return this.workoutCalender
      */
     public WorkoutCalendar getWorkoutCalender() {
-        return workoutCalender;
+        return this.workoutCalender;
     }
 
     /**
-     * Setss the workout Calender from the user
+     * Sets the workout Calender from the user
      * 
      * @precondition none
      * @postcondition none

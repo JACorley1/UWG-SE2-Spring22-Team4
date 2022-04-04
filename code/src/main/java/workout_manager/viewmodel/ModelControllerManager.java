@@ -1,13 +1,26 @@
 package workout_manager.viewmodel;
 
+import java.util.ArrayList;
+import java.util.Map;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.reflect.TypeToken;
+
 import javafx.beans.property.SimpleListProperty;
+import workout_manager.model.Client;
 import workout_manager.model.Days;
+
+import workout_manager.model.ExerciseAlt;
+import workout_manager.model.Intensity;
+
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
-import workout_manager.model.WorkoutGenerator;
+import workout_manager.model.WorkoutCalendar;
 
 /**
  * Creates a ModelControllerManager
@@ -15,9 +28,7 @@ import workout_manager.model.WorkoutGenerator;
  * @author group 4
  */
 public class ModelControllerManager {
-
-    private String userFilePath;
-    private WorkoutGenerator workoutGenerator;
+    
     private User user;
     private Workout currentWorkout;
     private UserSerializer serializer;
@@ -25,21 +36,11 @@ public class ModelControllerManager {
     /**
      * Creates a ModelControllerManager class
      * 
-     * @precondition filepath != null && !filepath.isEmpty()
      * @postcondition none
      * 
-     * @param filepath the filepath
      */
-    public ModelControllerManager(String filepath) {
-        if (filepath == null){
-            throw new IllegalArgumentException("Filepath cannot be null");
-        }
-        if (filepath.isEmpty()){
-            throw new IllegalArgumentException("Filepath cannot be empty");
-        }
-        this.userFilePath = filepath;
-        this.serializer = new UserSerializer(this.userFilePath);
-        this.workoutGenerator = new WorkoutGenerator();
+    public ModelControllerManager() {
+        this.serializer = new UserSerializer();
     }
 
     /**
@@ -78,19 +79,49 @@ public class ModelControllerManager {
      * 
      * @param muscles the list of selected muscles to set for the user's preferred
      *                muscles
-     * @param days    the list of selected days tos set the user's available days
+     * @param days    the list of selected days to set the user's available days
+     * @param intensity the intensity at which the user wishes to work out
      */
-    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days) {
-
-        this.user.setPreferences(new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size())));
+    public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
+            Intensity intensity) {
+        this.user.setPreferences(
+                new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
-
     }
 
     private void generateWorkoutCalendar() {
-        this.user.setWorkoutCalender(this.workoutGenerator.generateWorkouts(this.user.getPreferences()));
+        Client client = Client.getClient();
+        Gson gson = new GsonBuilder().create();
+        String daysJson = gson.toJson(this.user.getPreferences().getSelectedDays());
+        String muscleJson = gson.toJson(this.user.getPreferences().getSelectedMuscles());
+        String intensityJson = gson.toJson(this.user.getPreferences().getIntensity().getCode());
+        client.sendRequest("generateWorkout" + ", " + daysJson + ", " + muscleJson + ", " + intensityJson);
+        String response = client.receiveResponse();
+        var test = gson.fromJson(response, Map.class);
+        WorkoutCalendar calendar = new WorkoutCalendar();
+        for (Object day: test.keySet()) {
+            Days currentDay = gson.fromJson((String) day, Days.class);
+            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
+            for (ArrayList<LinkedTreeMap<String, String>> current : list.values()) {
+                calendar.addWorkout(currentDay, this.createWorkoutFromString(current));
+            }
+            
+        }
+        this.user.setWorkoutCalender(calendar);
+        client.closeSocket();
     }
 
+    private Workout createWorkoutFromString(ArrayList<LinkedTreeMap<String, String>> excerciseList) {
+        Workout createdWorkout = new Workout();
+        Gson gson = new GsonBuilder().create();
+        for (LinkedTreeMap<String, String> current : excerciseList) {
+            String jsonString = gson.toJson(current);
+            ExerciseAlt currentExcercise = gson.fromJson(jsonString, new TypeToken<ExerciseAlt>() {
+            }.getType());
+            createdWorkout.addExercise(currentExcercise);
+        }
+        return createdWorkout;
+    }
     /**
      * sets this.user to the given user
      * 
@@ -132,9 +163,11 @@ public class ModelControllerManager {
      * @precondition none
      * @postcondition none
      * 
+     * @param serializedUser the serialized string representation of a User object
+     * 
      */
-    public void deSerialize() {
-        this.user = this.serializer.deserialize();
+    public void deSerialize(String serializedUser) {
+        this.user = this.serializer.deserialize(serializedUser);
     }
 
     /**
