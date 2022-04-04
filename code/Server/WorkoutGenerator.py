@@ -49,7 +49,6 @@ class WorkoutGenerator:
         workout = []
         for currentGroup in exerciseMap.keys():
             range = len(exerciseMap[currentGroup])
-            print(range)
             amountToAdd = 3
             while amountToAdd > 0:
                 randomIndex = int((random.random() * range))

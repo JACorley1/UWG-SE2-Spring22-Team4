@@ -70,6 +70,7 @@ public class LoginController {
             this.errorLabel.setVisible(true);
             this.errorLabel.setText("Invalid username/password combination.");
         }
+        client.closeSocket();
     }
 
     @FXML 
