@@ -15,6 +15,10 @@ return to step 1
 NO INPUT
 a1 - user does not enter credentials, login button remains disabled
 
+WRONG PASSWORD
+a3 - user is informed that the password is incorrect
+return to step 1
+
 BAD CONNECTION
 a4 - system fails to connect to server
 a5 - system informs user of error and prompts to retry later.
