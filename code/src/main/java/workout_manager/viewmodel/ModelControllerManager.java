@@ -107,6 +107,7 @@ public class ModelControllerManager {
             
         }
         this.user.setWorkoutCalender(calendar);
+        client.closeSocket();
     }
 
     private Workout createWorkoutFromString(ArrayList<LinkedTreeMap<String, String>> excerciseList){

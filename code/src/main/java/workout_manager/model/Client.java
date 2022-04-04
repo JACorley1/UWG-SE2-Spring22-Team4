@@ -18,9 +18,10 @@ public class Client {
     private final String HOST = "tcp://127.0.0.1:5555";
     private final Socket socket;
     private static Client client = null;
+    private Context context = null;
 
     private Client() {
-        Context context = ZMQ.context(10);
+        this.context = ZMQ.context(1);
         this.socket = context.socket(ZMQ.REQ);
         this.socket.setReceiveTimeOut(5000);
         this.socket.connect(HOST);
@@ -71,6 +72,8 @@ public class Client {
      */
     public void closeSocket() {
         this.socket.close();
+        this.context.close();
+        
     }
 
 }
