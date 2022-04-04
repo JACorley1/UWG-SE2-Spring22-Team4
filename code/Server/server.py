@@ -25,18 +25,20 @@ def runServer():
         message = message.replace('"','')
         print("Received request: %s" % message + "\n")
         request = message.split(", ")
-        userName = request[1]
-        if(request[0] == "login" and (usernameExists(userData, userName))):
+        if(request[0] == "login" and (usernameExists(userData, request[1]))):
             loggedInUser = handleLogin(request, userData, socket)
         elif (request[0] == "generateWorkout"):
             handleGenerate(socket, userData, request, loggedInUser)
         elif (request[0] == "register"):
-            if (usernameExists(userData, userName)):
+            loggedInUser = request[1]
+            if (usernameExists(userData, loggedInUser)):
                 socket.send_string(codes.ServerErrorCodes.REGISTER_FAILED_USER_EXISTS)
             else:
-                formattedUserPrefs = request[2].replace("\\","")
-                userData.update({userName: formattedUserPrefs})
-                socket.send_string(userData[userName])
+                formattedUserPrefs = request[2].replace("\\","\"")
+                jsonString = json.loads(formattedUserPrefs)
+                userData[loggedInUser] = [{"passWord": request[3]}, jsonString]
+                socket.send_string(json.dumps(userData[loggedInUser][1]))
+                
         else:
             socket.send_string(codes.ServerErrorCodes.BAD_REQUEST)
             print("ERROR - " + codes.ServerErrorCodes.BAD_REQUEST)
