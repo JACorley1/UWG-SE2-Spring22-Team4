@@ -52,13 +52,18 @@ public class LoginController {
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
         this.errorLabel.setText("");
-      
+
         Client client = Client.getClient();
         String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
         client.sendRequest(request);
-      
+
         String response = client.receiveResponse();
-        if (!response.equals(ServerErrorMessages.LOGIN_FAILED) && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
+
+        if (response == null) {
+            this.errorLabel.setVisible(true);
+            this.errorLabel.setText("Failed to connect to server");
+        } else if (!response.equals(ServerErrorMessages.LOGIN_FAILED)
+                && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
             this.mcm.deSerialize(response);
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
@@ -77,7 +82,7 @@ public class LoginController {
         client.closeSocket();
     }
 
-    @FXML 
+    @FXML
     void handleRegisterUser(ActionEvent event) throws IOException {
         String newUsername = this.userNameTextfield.getText();
         String newPassword = this.passwordTextfield.getText();
