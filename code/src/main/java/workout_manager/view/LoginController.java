@@ -1,6 +1,10 @@
 package workout_manager.view;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.google.gson.Gson;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +16,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
-import workout_manager.model.LocalLoginAuthenticator;
+import workout_manager.model.Client;
+import workout_manager.model.Days;
+import workout_manager.model.Intensity;
+import workout_manager.model.MuscleGroup;
+import workout_manager.model.Preferences;
+import workout_manager.model.User;
+import workout_manager.utils.ServerErrorMessages;
 import workout_manager.viewmodel.ModelControllerManager;
 
 /**
@@ -22,8 +32,9 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class LoginController {
-    private LocalLoginAuthenticator loginAuthenticator;
+
     private ModelControllerManager mcm;
+    private final String commaSeparator = ", ";
 
     @FXML
     private TextField userNameTextfield;
@@ -35,15 +46,27 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
+    private Button registerButton;
+
+    @FXML
     private Label errorLabel;
 
     @FXML
     void handleLogin(ActionEvent event) throws IOException {
-        boolean authenticated = this.loginAuthenticator.authenticateLoginCredentials(this.userNameTextfield.getText(),
-                this.passwordTextfield.getText());
+        this.errorLabel.setText("");
 
-        if (authenticated) {
-            this.mcm.deSerialize();
+        Client client = Client.getClient();
+        String request = "login, " + this.userNameTextfield.getText() + this.commaSeparator + this.passwordTextfield.getText();
+        client.sendRequest(request);
+
+        String response = client.receiveResponse();
+
+        if (response == null) {
+            this.errorLabel.setVisible(true);
+            this.errorLabel.setText("Failed to connect to server");
+        } else if (!response.equals(ServerErrorMessages.LOGIN_FAILED)
+                && !response.equals(ServerErrorMessages.BAD_REQUEST)) {
+            this.mcm.deSerialize(response);
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
@@ -56,19 +79,58 @@ public class LoginController {
             stage.show();
         } else {
             this.errorLabel.setVisible(true);
-            this.errorLabel.setText("Username or Password Not found");
+            this.errorLabel.setText("Invalid username/password combination.");
         }
+        client.closeSocket();
+    }
 
+    @FXML
+    void handleRegisterUser(ActionEvent event) throws IOException {
+        String newUsername = this.userNameTextfield.getText();
+        String newPassword = this.passwordTextfield.getText();
+        User newUser = new User(newUsername, newPassword);      
+        Gson serializer = new Gson();
+        String userData = serializer.toJson(newUser);
+
+        this.errorLabel.setText("");
+        Client client = Client.getClient();
+
+        String request = "register, " + newUsername + this.commaSeparator + userData + this.commaSeparator + newPassword;
+
+        client.sendRequest(request);
+        String response = client.receiveResponse();
+        if (response.equals(ServerErrorMessages.REGISTER_FAILED_USER_EXISTS)) {
+            this.errorLabel.setVisible(true);
+            this.errorLabel.setText("Username already in use.");
+        } else {
+            this.mcm.deSerialize(response);
+            this.errorLabel.setVisible(false);
+            Stage stage = (Stage) this.loginButton.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.PREFERENCE_PAGE));
+            Parent parent = loader.load();
+            PreferenceController pc = loader.<PreferenceController>getController();
+            pc.initParams(this.mcm);
+            Scene scene = new Scene(parent);
+            stage.setTitle(Main.WINDOW_TITLE);
+            stage.setScene(scene);
+            stage.show();
+        }
+        client.closeSocket();
     }
 
     @FXML
     void initialize() {
-        this.loginAuthenticator = new LocalLoginAuthenticator();
-        this.bindLogin();
+        this.bindLoginButtonVisibility();
+        this.bindRegisterButtonVisibility();
     }
 
-    private void bindLogin() {
+    private void bindLoginButtonVisibility() {
         this.loginButton.disableProperty().bind(
+                this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
+    }
+
+    private void bindRegisterButtonVisibility() {
+        this.registerButton.disableProperty().bind(
                 this.userNameTextfield.textProperty().isEmpty().or(this.passwordTextfield.textProperty().isEmpty()));
     }
 

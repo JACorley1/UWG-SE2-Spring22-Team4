@@ -1,12 +1,17 @@
-Context - user is logged in and is viewing a sepecific day's workout
+Context - user is logged in and is viewing a specific day's workout
 
 Primary Flow 
-1 - user selects an exercise from the workout detail page from drop-down menu
-2 - exercise detail page is displayed listing text instructions for performing the selected exercise
+1 - The user is shown the detail view page.
+2 - The user clicks on one of the exercises shown onscreen.
+3 - The control expands, showing the instructions of how to perform the selected workout.
 
-Alternate Flow
+Alternate Flow(s)
 REST DAY
 a2 - user is informed that it is a rest day
+
+BACK BUTTON
+a2/a3 - the user clicks the back button.
+a4 - the user is shown the weekly view page
 
 
 

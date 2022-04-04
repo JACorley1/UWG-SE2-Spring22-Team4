@@ -7,8 +7,8 @@ package workout_manager.model;
  * @author wtjracer
  */
 public enum MuscleGroup {
-    ARMS("arms", 8), LEGS("legs", 9), BACK("back", 12), ABS("abs", 10), CHEST("chest", 11), SHOULDERS("shoulders", 13),
-    CALVES("calves", 14);
+    ARMS("arms", 0), LEGS("legs", 1), BACK("back", 2), ABS("abs", 3), CHEST("chest", 4), SHOULDERS("shoulders", 5),
+    CALVES("calves", 6);
 
     private final String value;
     private final int code;
@@ -32,6 +32,8 @@ public enum MuscleGroup {
     /**
      * returns the int code for the muscle
      * 
+     * @precondition none
+     * @postcondition none
      * @return the int code for the muscle
      */
     public int getCode() {
