@@ -5,7 +5,6 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import kong.unirest.Client;
 import workout_manager.view.LoginController;
 import workout_manager.viewmodel.ModelControllerManager;
 import javafx.scene.Parent;
