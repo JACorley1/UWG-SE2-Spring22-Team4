@@ -4,13 +4,14 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.DailyDetailsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.DailyDetailsController">
    <children>
       <Label fx:id="dayLabel" alignment="CENTER" contentDisplay="TOP" layoutX="199.0" layoutY="51.0" prefHeight="30.0" prefWidth="207.0" text="Wednesday's Workout" textAlignment="CENTER" textFill="RED">
          <font>
@@ -49,5 +50,10 @@
           </TitledPane>
         </panes>
       </Accordion>
+      <Label layoutX="29.0" layoutY="302.0" prefHeight="18.0" prefWidth="106.0" text=" Daily Weigh-In:" />
+      <TextField fx:id="weightTextField" layoutX="30.0" layoutY="328.0" prefHeight="26.0" prefWidth="68.0" />
+      <Label layoutX="98.0" layoutY="332.0" text="LBS." />
+      <Button fx:id="enterWeightButton" layoutX="30.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleEnterWeightButton" text="Enter Weight" />
+      <Button fx:id="completedWorkoutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleCompletedWorkoutButton" prefHeight="43.0" prefWidth="126.0" text="Completed Daily Workout" textAlignment="CENTER" wrapText="true" />
    </children>
 </AnchorPane>

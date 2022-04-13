@@ -37,6 +37,9 @@ public class WeeklyViewController {
     private Rectangle preferencesPageButton;
 
     @FXML
+    private Rectangle statsPageButton;
+
+    @FXML
     void initialize() {
 
     }
@@ -55,6 +58,11 @@ public class WeeklyViewController {
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void handleNavigateToStatsPage(MouseEvent event) {
+
     }
 
     @FXML

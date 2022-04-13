@@ -11,6 +11,7 @@ import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 import workout_manager.Main;
@@ -26,7 +27,7 @@ import workout_manager.viewmodel.ModelControllerManager;
 public class DailyDetailsController {
 
     private ModelControllerManager mcm;
-  
+
     @FXML
     private TextArea workoutTextArea;
 
@@ -38,6 +39,22 @@ public class DailyDetailsController {
 
     @FXML
     private Accordion detailsAccordion;
+
+    @FXML
+    private Button enterWeightButton;
+
+    @FXML
+    private TextField weightTextField;
+
+    @FXML
+    void handleCompletedWorkoutButton(ActionEvent event) {
+        // TODO
+    }
+
+    @FXML
+    void handleEnterWeightButton(ActionEvent event) {
+        // TODO
+    }
 
     @FXML
     void handleBackButton(ActionEvent event) throws IOException {
