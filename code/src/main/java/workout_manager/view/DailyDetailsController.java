@@ -82,8 +82,10 @@ public class DailyDetailsController {
             TitledPane newPane;
             if (setsDetermined.get(currentExcercise.getName()) > 1) {
                 newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " sets of " + currentExcercise.getName() + "s", workoutDetailsArea);
-            } else {
+            } else if (!currentExcercise.getName().equals("Rest Day")) {
                 newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " set of " + currentExcercise.getName(), workoutDetailsArea);
+            } else {
+                newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
             }
    
             this.detailsAccordion.getPanes().add(newPane);

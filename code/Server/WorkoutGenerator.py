@@ -63,7 +63,6 @@ class WorkoutGenerator:
                 exercise = currentGroup[randomIndex]
                 workout.append(exercise)
                 amountToAdd -= exercise["intensity"]
-        '''WorkoutGenerator.createSets(intensityThreshold, workout)'''
         test["exercises"] = workout
         return test
 
