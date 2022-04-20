@@ -9,9 +9,12 @@ public class User {
 
     private Preferences preferences;
     private WorkoutCalendar workoutCalender;
+    private Stats userStats;
 
     private String userName;
     private String passWord;
+
+    
 
     /**
      * default constructor just to create a user with no preferences
@@ -25,6 +28,7 @@ public class User {
     public User(String userName, String passWord) {
 
         this.preferences = new Preferences();
+        this.userStats = new Stats();
         this.setUserName(userName);
         this.setPassWord(passWord);
         this.workoutCalender = new WorkoutCalendar();
@@ -64,6 +68,22 @@ public class User {
      */
     public WorkoutCalendar getWorkoutCalender() {
         return this.workoutCalender;
+    }
+
+    /**
+     * gets the user's stats
+     * @return the user's stats
+     */
+    public Stats getUserStats() {
+        return this.userStats;
+    }
+
+    /**
+     * sets the users stats
+     * @param userStates the stats to set
+     */
+    public void setUserStats(Stats userStates) {
+        this.userStats = userStates;
     }
 
     /**

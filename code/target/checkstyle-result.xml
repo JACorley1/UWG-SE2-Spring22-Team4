@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Client.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Client.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Intensity.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Intensity.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Stats.java">
+<error line="6" column="8" severity="warning" message="Unused import - java.util.List." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="30" column="28" severity="warning" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="30" column="58" severity="warning" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java">
+</file>
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
+<error line="51" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
+<error line="56" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
 </file>
 <file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 <error line="4" column="8" severity="warning" message="Unused import - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
@@ -33,12 +40,13 @@
 <error line="21" column="8" severity="warning" message="Unused import - workout_manager.model.Intensity." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="22" column="8" severity="warning" message="Unused import - workout_manager.model.MuscleGroup." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="23" column="8" severity="warning" message="Unused import - workout_manager.model.Preferences." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="57" column="73" severity="warning" message="The String &quot;, &quot; appears 3 times in the file." source="com.puppycrawl.tools.checkstyle.checks.coding.MultipleStringLiteralsCheck"/>
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\StatsController.java">
 </file>
-<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java">
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
+</file>
+<file name="C:\Users\jorda\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java">
 </file>
 </checkstyle>
