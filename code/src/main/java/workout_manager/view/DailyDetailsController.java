@@ -48,13 +48,17 @@ public class DailyDetailsController {
     private TextField weightTextField;
 
     @FXML
+    private TextField dailyTimeTextField;
+
+    @FXML
     void handleCompletedWorkoutButton(ActionEvent event) {
         // TODO
     }
 
     @FXML
     void handleEnterWeightButton(ActionEvent event) {
-        // TODO
+        double weight = Double.parseDouble(this.weightTextField.getText());
+        this.mcm.updateUserWeight(weight);
     }
 
     @FXML
@@ -81,13 +85,17 @@ public class DailyDetailsController {
             workoutDetailsArea.setMaxHeight(100);
             TitledPane newPane;
             if (setsDetermined.get(currentExcercise.getName()) > 1) {
-                newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " sets of " + currentExcercise.getName() + "s", workoutDetailsArea);
+                newPane = new TitledPane(
+                        setsDetermined.get(currentExcercise.getName()) + " sets of " + currentExcercise.getName() + "s",
+                        workoutDetailsArea);
             } else if (!currentExcercise.getName().equals("Rest Day")) {
-                newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " set of " + currentExcercise.getName(), workoutDetailsArea);
+                newPane = new TitledPane(
+                        setsDetermined.get(currentExcercise.getName()) + " set of " + currentExcercise.getName(),
+                        workoutDetailsArea);
             } else {
                 newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
             }
-   
+
             this.detailsAccordion.getPanes().add(newPane);
         }
     }
