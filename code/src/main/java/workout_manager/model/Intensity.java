@@ -8,7 +8,7 @@ package workout_manager.model;
  * 
  */
 public enum Intensity {
-    BEGINNER(0), INTERMEDIATE(1), ADVANCED(2);
+    BEGINNER(30), INTERMEDIATE(45), ADVANCED(60);
 
     private final int code;
 
