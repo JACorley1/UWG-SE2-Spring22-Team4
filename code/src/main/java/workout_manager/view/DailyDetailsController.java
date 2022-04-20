@@ -1,6 +1,7 @@
 package workout_manager.view;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -72,12 +73,19 @@ public class DailyDetailsController {
 
     private void setExerciseDetails() {
         this.detailsAccordion.getPanes().clear();
-        for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getExercises()) {
+        Map<String, Integer> setsDetermined = this.mcm.getWorkout(this.dayLabel.getText()).transformForDisplay();
+        for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getDisplayExercises()) {
             TextArea workoutDetailsArea = new TextArea();
             workoutDetailsArea.setText(currentExcercise.getDescription());
             workoutDetailsArea.setWrapText(true);
             workoutDetailsArea.setMaxHeight(100);
-            TitledPane newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
+            TitledPane newPane;
+            if (setsDetermined.get(currentExcercise.getName()) > 1) {
+                newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " sets of " + currentExcercise.getName() + "s", workoutDetailsArea);
+            } else {
+                newPane = new TitledPane(setsDetermined.get(currentExcercise.getName()) + " set of " + currentExcercise.getName(), workoutDetailsArea);
+            }
+   
             this.detailsAccordion.getPanes().add(newPane);
         }
     }
