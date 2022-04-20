@@ -3,7 +3,6 @@ package workout_manager.model;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -17,8 +16,6 @@ public class Stats {
     private Map<String, Double> weightOverTime;
     private Map<String, Double> workoutCompletion;
     private Map<String, Integer> fitnessPointsOverTime;
-
-
 
     /**
      * Creates a stat object that contains user stats
