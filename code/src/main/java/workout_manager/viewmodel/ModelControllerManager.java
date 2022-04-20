@@ -79,7 +79,8 @@ public class ModelControllerManager {
      * 
      * @param muscles the list of selected muscles to set for the user's preferred
      *                muscles
-     * @param days    the list of selected days tos set the user's available days
+     * @param days    the list of selected days to set the user's available days
+     * @param intensity the intensity at which the user wishes to work out
      */
     public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
             Intensity intensity) {
@@ -98,9 +99,9 @@ public class ModelControllerManager {
         String response = client.receiveResponse();
         var test = gson.fromJson(response, Map.class);
         WorkoutCalendar calendar = new WorkoutCalendar();
-        for (Object day: test.keySet()){
+        for (Object day: test.keySet()) {
             Days currentDay = gson.fromJson((String) day, Days.class);
-            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String,ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
+            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
             for (ArrayList<LinkedTreeMap<String, String>> current : list.values()) {
                 calendar.addWorkout(currentDay, this.createWorkoutFromString(current));
             }
@@ -110,7 +111,7 @@ public class ModelControllerManager {
         client.closeSocket();
     }
 
-    private Workout createWorkoutFromString(ArrayList<LinkedTreeMap<String, String>> excerciseList){
+    private Workout createWorkoutFromString(ArrayList<LinkedTreeMap<String, String>> excerciseList) {
         Workout createdWorkout = new Workout();
         Gson gson = new GsonBuilder().create();
         for (LinkedTreeMap<String, String> current : excerciseList) {
@@ -161,6 +162,8 @@ public class ModelControllerManager {
      * 
      * @precondition none
      * @postcondition none
+     * 
+     * @param serializedUser the serialized string representation of a User object
      * 
      */
     public void deSerialize(String serializedUser) {

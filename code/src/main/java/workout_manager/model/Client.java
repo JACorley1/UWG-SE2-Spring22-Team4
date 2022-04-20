@@ -13,18 +13,18 @@ import org.zeromq.ZMQ.Socket;
  * @author Jordan Wagner
  * @version Spring 2022
  */
-public class Client {
+public final class Client {
 
-    private final String HOST = "tcp://127.0.0.1:5555";
+    private final String host = "tcp://127.0.0.1:5555";
     private final Socket socket;
     private static Client client = null;
     private Context context = null;
 
     private Client() {
         this.context = ZMQ.context(1);
-        this.socket = context.socket(ZMQ.REQ);
+        this.socket = this.context.socket(ZMQ.REQ);
+        this.socket.connect(this.host);
         this.socket.setReceiveTimeOut(5000);
-        this.socket.connect(HOST);
     }
 
     /**

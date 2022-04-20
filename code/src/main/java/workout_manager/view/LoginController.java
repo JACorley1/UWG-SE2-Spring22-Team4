@@ -32,7 +32,9 @@ import workout_manager.viewmodel.ModelControllerManager;
  * @version Spring 2022
  */
 public class LoginController {
+
     private ModelControllerManager mcm;
+    private final String commaSeparator = ", ";
 
     @FXML
     private TextField userNameTextfield;
@@ -54,7 +56,7 @@ public class LoginController {
         this.errorLabel.setText("");
 
         Client client = Client.getClient();
-        String request = "login, " + this.userNameTextfield.getText() + ", " + this.passwordTextfield.getText();
+        String request = "login, " + this.userNameTextfield.getText() + this.commaSeparator + this.passwordTextfield.getText();
         client.sendRequest(request);
 
         String response = client.receiveResponse();
@@ -93,7 +95,8 @@ public class LoginController {
         this.errorLabel.setText("");
         Client client = Client.getClient();
 
-        String request = "register, " + newUsername + ", " + userData + ", " + newPassword;
+        String request = "register, " + newUsername + this.commaSeparator + userData + this.commaSeparator + newPassword;
+
         client.sendRequest(request);
         String response = client.receiveResponse();
         if (response.equals(ServerErrorMessages.REGISTER_FAILED_USER_EXISTS)) {

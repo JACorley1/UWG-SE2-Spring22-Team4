@@ -1,1 +1,11 @@
-We could put some notes in here...
+Sprint 2 Planning Meeting - 3/1/22
+
+- Integrate everything with server
+	- Figure out server design details (data structures, error codes, etc)
+- Set intensity for workouts (novice, intermediate, advanced)
+	- Update GUI
+	- Update backend
+- Registration functionality
+	- Update GUI
+	- Update backend
+- Build workouts with new intensity functionality

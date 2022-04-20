@@ -1,0 +1,29 @@
+- Exercise duplication
+	> use sets if duplicated
+	
+- More settings
+	> workout volume to indicate sets needed
+		> low: 10, mod: 15, high: 20
+		> volume split evenly across days selected
+	
+- Progess tracking?
+	> Time to complete workout
+	> Reps performed (max effort during workout)
+	> Body weight changes
+	
+- Workout generation?
+	> Reps/set specification
+		
+- Show day's workout immediately on login
+	> Also show current day as different from others in weekly view
+	> Add notes input to daily workout view
+		- Should be different based on type of workout (reps/time)
+		- Enter weight on each day with graph showing overall progress
+	
+- System refactoring
+	> Change workout generation to incorporate more-smart programming (muscles on different days)
+	
+- Main focuses
+	> User stats tracking (body weight, avg. reps per day)
+	> Refactor UI - stats page, daily view for user input, reps per exercise
+	> Refactor workout generation
