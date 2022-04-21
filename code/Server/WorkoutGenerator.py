@@ -31,10 +31,18 @@ class WorkoutGenerator:
         calendar = {}
         for currentDay in Days.Days:
             if currentDay in preferences.getSelectedDays():
-                calendar[currentDay.name] = WorkoutGenerator.createBalancedWorkout(exerciseMap)
+                calendar[currentDay.name] = WorkoutGenerator.createBalancedWorkout(exerciseMap, preferences.getIntensity())
             else:
                 calendar[currentDay.name] = WorkoutGenerator.addRestDay()
         return calendar
+
+    def createSets(intensityThreshold, workout):
+        intensity = 0;
+        for exercise in workout:
+            if (intensity < intensityThreshold):
+                workout.append(exercise)
+                intensity += exercise["intensity"]
+        return workout
 
     def addRestDay():
         test = {}
@@ -44,21 +52,22 @@ class WorkoutGenerator:
         return test
 
 
-    def createBalancedWorkout(exerciseMap):
+    def createBalancedWorkout(exerciseMap, intensityThreshold):
         test = {}
         workout = []
-        for currentGroup in exerciseMap.keys():
-            range = len(exerciseMap[currentGroup])
-            amountToAdd = 3
+        amountToAdd = intensityThreshold
+        for currentGroup in exerciseMap.values():
+            range = len(currentGroup)
             while amountToAdd > 0:
                 randomIndex = int((random.random() * range))
-                workout.append(exerciseMap[currentGroup][randomIndex])
-                amountToAdd -= 1
+                exercise = currentGroup[randomIndex]
+                workout.append(exercise)
+                amountToAdd -= exercise["intensity"]
         test["exercises"] = workout
         return test
 
     def populateExercises(preferences):
         exerciseMap = {}
         for current in preferences.getSelectedMuscles():
-            exerciseMap[current.value] = dataFetcher.dataFetcher.getExercises(current.value, preferences.getIntensity())
+            exerciseMap[current.value] = dataFetcher.dataFetcher.getExercises(current.value)
         return exerciseMap

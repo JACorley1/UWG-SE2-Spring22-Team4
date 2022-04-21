@@ -1,6 +1,7 @@
 package workout_manager.view;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,13 +52,17 @@ public class DailyDetailsController {
     private TextField weightTextField;
 
     @FXML
+    private TextField dailyTimeTextField;
+
+    @FXML
     void handleCompletedWorkoutButton(ActionEvent event) {
         // TODO
     }
 
     @FXML
     void handleEnterWeightButton(ActionEvent event) {
-        // TODO
+        double weight = Double.parseDouble(this.weightTextField.getText());
+        this.mcm.updateUserWeight(weight);
     }
 
     @FXML
@@ -76,12 +81,24 @@ public class DailyDetailsController {
 
     private void setExerciseDetails() {
         this.detailsAccordion.getPanes().clear();
-        for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getExercises()) {
+        Map<String, Integer> setsDetermined = this.mcm.getWorkout(this.dayLabel.getText()).transformForDisplay();
+        for (ExerciseAlt currentExcercise : this.mcm.getWorkout(this.dayLabel.getText()).getDisplayExercises()) {
             TextArea workoutDetailsArea = new TextArea();
             workoutDetailsArea.setText(currentExcercise.getDescription());
             workoutDetailsArea.setWrapText(true);
             workoutDetailsArea.setMinHeight(110);
-            TitledPane newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
+            TitledPane newPane;
+            if (setsDetermined.get(currentExcercise.getName()) > 1) {
+                newPane = new TitledPane(
+                        setsDetermined.get(currentExcercise.getName()) + " sets of " + currentExcercise.getName() + "s",
+                        workoutDetailsArea);
+            } else if (!currentExcercise.getName().equals("Rest Day")) {
+                newPane = new TitledPane(
+                        setsDetermined.get(currentExcercise.getName()) + " set of " + currentExcercise.getName(),
+                        workoutDetailsArea);
+            } else {
+                newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
+            }
             this.detailsAccordion.getPanes().add(newPane);
         }
         

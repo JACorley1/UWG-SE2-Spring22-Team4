@@ -54,7 +54,6 @@ public class UserSerializer {
         } catch (JsonIOException | JsonSyntaxException e1) {
             e1.printStackTrace();
         }
-        
         return this.user;
     }
 

@@ -1,9 +1,7 @@
 package workout_manager.view;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 import com.google.gson.Gson;
 
@@ -18,10 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
-import workout_manager.model.Days;
-import workout_manager.model.Intensity;
-import workout_manager.model.MuscleGroup;
-import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.utils.ServerErrorMessages;
 import workout_manager.viewmodel.ModelControllerManager;
