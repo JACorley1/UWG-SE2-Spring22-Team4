@@ -14,6 +14,10 @@
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java">
 </file>
+<file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Stats.java">
+<error line="27" column="28" severity="warning" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="27" column="58" severity="warning" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java">
@@ -25,16 +29,9 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
-<error line="55" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
-<error line="60" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
+<error line="59" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
-<error line="4" column="8" severity="warning" message="Unused import - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="6" column="8" severity="warning" message="Unused import - java.util.List." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="21" column="8" severity="warning" message="Unused import - workout_manager.model.Days." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="22" column="8" severity="warning" message="Unused import - workout_manager.model.Intensity." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="23" column="8" severity="warning" message="Unused import - workout_manager.model.MuscleGroup." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="24" column="8" severity="warning" message="Unused import - workout_manager.model.Preferences." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
 </file>
@@ -43,5 +40,8 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java">
+<error line="4" column="8" severity="warning" message="Unused import - java.util.Calendar." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="22" column="8" severity="warning" message="Unused import - workout_manager.model.Stats." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="165" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 </file>
 </checkstyle>
