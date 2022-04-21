@@ -29,19 +29,18 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
-<error line="59" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\StatsController.java">
+<error line="6" column="8" severity="warning" message="Unused import - javafx.beans.property.ObjectProperty." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="7" column="8" severity="warning" message="Unused import - javafx.collections.ObservableList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java">
-<error line="4" column="8" severity="warning" message="Unused import - java.util.Calendar." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="22" column="8" severity="warning" message="Unused import - workout_manager.model.Stats." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
-<error line="165" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="208" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 </file>
 </checkstyle>

@@ -1,7 +1,6 @@
 package workout_manager.viewmodel;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
@@ -162,10 +161,25 @@ public class ModelControllerManager {
         this.currentWorkout = workoutToSet;
     }
 
-    public void updateUserWeight(double weight) {
+    /**
+     * Adds the specified weight and current date to the user's
+     * stats
+     * @param weight the user's weight
+     */
+    public void addUserWeightEntry(double weight) {
         Date date = new Date();
-
         this.user.getUserStats().addWeight(date, weight);
+    }
+
+    /**
+     * Adds the specifed time duration and current date to the user's
+     * stats
+     * @param workoutDuration the number of minutes it took the user to
+     * finish the workout 
+     */
+    public void addUserWorkoutCompletionTimeEntry(double workoutDuration) {
+        Date today = new Date();
+        this.user.getUserStats().addExerciseCompletiton(today, workoutDuration);
     }
 
     /**
@@ -191,4 +205,7 @@ public class ModelControllerManager {
         this.serializer.serialize(this.user);
     }
 
+    public Stats getUserStats() {
+        return this.user.getUserStats();
+    }
 }

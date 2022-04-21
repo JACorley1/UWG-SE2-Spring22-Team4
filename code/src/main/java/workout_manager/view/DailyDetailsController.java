@@ -11,7 +11,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
@@ -40,9 +39,6 @@ public class DailyDetailsController {
     private Button backButton;
 
     @FXML
-    private ScrollPane detailsPane;
-
-    @FXML
     private Accordion detailsAccordion;
 
     @FXML
@@ -52,17 +48,23 @@ public class DailyDetailsController {
     private TextField weightTextField;
 
     @FXML
-    private TextField dailyTimeTextField;
+    private TextField workoutDurationTextField;
+
+    @FXML
+    private Button completedWorkoutButton;
 
     @FXML
     void handleCompletedWorkoutButton(ActionEvent event) {
-        // TODO
+        double duration = Double.valueOf(this.workoutDurationTextField.getText());
+        this.mcm.addUserWorkoutCompletionTimeEntry(duration);
+        this.workoutDurationTextField.setText("");
     }
 
     @FXML
     void handleEnterWeightButton(ActionEvent event) {
         double weight = Double.parseDouble(this.weightTextField.getText());
-        this.mcm.updateUserWeight(weight);
+        this.mcm.addUserWeightEntry(weight);
+        this.weightTextField.setText("");
     }
 
     @FXML
@@ -76,7 +78,6 @@ public class DailyDetailsController {
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
-
     }
 
     private void setExerciseDetails() {
@@ -104,6 +105,11 @@ public class DailyDetailsController {
         
     }
 
+    private void bindButtonVisibility() {
+        this.completedWorkoutButton.disableProperty().bind(this.workoutDurationTextField.textProperty().isEmpty());
+        this.enterWeightButton.disableProperty().bind(this.weightTextField.textProperty().isEmpty());
+    }
+
     @FXML
     void initialize() {
     }
@@ -121,6 +127,6 @@ public class DailyDetailsController {
         this.mcm = mcm;
         this.dayLabel.setText(nameClicked);
         this.setExerciseDetails();
+        this.bindButtonVisibility();
     }
-
 }
