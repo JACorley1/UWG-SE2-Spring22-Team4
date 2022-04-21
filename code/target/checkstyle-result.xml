@@ -25,8 +25,8 @@
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java">
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java">
-<error line="51" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
-<error line="56" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
+<error line="55" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
+<error line="60" severity="warning" message="Comment matches to-do format &apos;TODO&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
 </file>
 <file name="C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java">
 <error line="4" column="8" severity="warning" message="Unused import - java.util.ArrayList." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>

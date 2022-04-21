@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
@@ -36,6 +37,9 @@ public class DailyDetailsController {
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private ScrollPane detailsPane;
 
     @FXML
     private Accordion detailsAccordion;
@@ -76,10 +80,11 @@ public class DailyDetailsController {
             TextArea workoutDetailsArea = new TextArea();
             workoutDetailsArea.setText(currentExcercise.getDescription());
             workoutDetailsArea.setWrapText(true);
-            workoutDetailsArea.setMaxHeight(100);
+            workoutDetailsArea.setMinHeight(110);
             TitledPane newPane = new TitledPane(currentExcercise.getName(), workoutDetailsArea);
             this.detailsAccordion.getPanes().add(newPane);
         }
+        
     }
 
     @FXML
