@@ -1,17 +1,18 @@
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Client.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Intensity.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java
-C:\Users\Ben\Desktop\CS Courses\CS3212\SE2 Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\UserSerializer.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\DailyDetailsController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\ExerciseAlt.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\StatsController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Client.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Preferences.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\utils\ServerErrorMessages.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\WeeklyViewController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\WorkoutCalendar.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\User.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\LoginController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Intensity.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\Main.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Days.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\Workout.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\view\PreferenceController.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\model\MuscleGroup.java
+C:\Users\Ben\Desktop\CS Courses\CS3212\SE2Project\UWG-SE2-Spring22-Team4\code\src\main\java\workout_manager\viewmodel\ModelControllerManager.java

@@ -2,6 +2,7 @@ package workout_manager.view;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -69,10 +70,10 @@ public class LoginController {
             this.mcm.deSerialize(response);
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
             Parent parent = loader.load();
-            WeeklyViewController wvc = loader.<WeeklyViewController>getController();
-            wvc.initParams(this.mcm);
+            DailyDetailsController ddc = loader.<DailyDetailsController>getController();
+            ddc.initParams(this.mcm, this.getDay());
             Scene scene = new Scene(parent);
             stage.setTitle(Main.WINDOW_TITLE);
             stage.setScene(scene);
@@ -122,6 +123,12 @@ public class LoginController {
     void initialize() {
         this.bindLoginButtonVisibility();
         this.bindRegisterButtonVisibility();
+    }
+
+    private String getDay() {
+        Calendar calendar = Calendar.getInstance();
+        String[] weekDays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+        return weekDays[calendar.get(Calendar.DAY_OF_WEEK) - 1];
     }
 
     private void bindLoginButtonVisibility() {
