@@ -5,7 +5,7 @@ Primary Flow
 2 - user enters their password
 3 - user selects login
 4 - User name and password are authenticated by server
-5 - System displays calendar page with any saved workouts displayed
+5 - System displays a page showing the workout for the current day of the week.
 
 Alternative Flow
 a4 - user name or password not authenticated by server
