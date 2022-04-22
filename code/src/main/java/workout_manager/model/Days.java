@@ -17,15 +17,10 @@ public enum Days {
 
     public static Date getDate(Date day, String daySelected){
         int dayToFind = Days.stringToEnum(daySelected);
-        System.out.println(daySelected);
-        System.out.println(dayToFind);
         Calendar calendar = Calendar.getInstance();
         int difference =  dayToFind - calendar.get(Calendar.DAY_OF_WEEK);
-        System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
-        System.out.println(difference);
         calendar.setTime(day); 
         calendar.add(Calendar.DATE, difference);
-        System.out.print(calendar.getTime());
         return calendar.getTime();
     }
     private static int stringToEnum(String day){
