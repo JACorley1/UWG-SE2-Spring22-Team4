@@ -1,0 +1,23 @@
+Context - User is currently on the daily workout detail page.
+
+Primary flow
+1 - User enters the duration of the workout into the input field.
+2 - System enables the "completed workout" button.
+3 - User clicks "completed workout" button.
+4 - System stores the information, clears the field, and disables the button.
+
+Alternative flow
+NO INPUT
+a1 - User does not enter any weight data.
+a2 - "Enter weight" remains disabled.
+-Return to step 1
+
+BAD DATA
+a4 - System informs the user that they have entered invalid data.
+a5 - System clears the field and disables the button.
+-Return to step 1
+
+BAD CONNECTION
+a4 - System cannot connect to server.
+a5 - System informs user of error.
+-Return to step 1

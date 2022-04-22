@@ -54,17 +54,32 @@ public class DailyDetailsController {
     private Button completedWorkoutButton;
 
     @FXML
+    private Label userInputErrorLabel;
+
+    @FXML
     void handleCompletedWorkoutButton(ActionEvent event) {
-        double duration = Double.valueOf(this.workoutDurationTextField.getText());
-        this.mcm.addUserWorkoutCompletionTimeEntry(duration);
-        this.workoutDurationTextField.setText("");
+        this.userInputErrorLabel.setVisible(false);
+        try {
+            double duration = Double.valueOf(this.workoutDurationTextField.getText());
+            this.mcm.addUserWorkoutCompletionTimeEntry(duration);
+        } catch (Exception exc) {
+            this.userInputErrorLabel.setVisible(true);
+        } finally {
+            this.workoutDurationTextField.setText("");  
+        }       
     }
 
     @FXML
     void handleEnterWeightButton(ActionEvent event) {
-        double weight = Double.parseDouble(this.weightTextField.getText());
-        this.mcm.addUserWeightEntry(weight);
-        this.weightTextField.setText("");
+        this.userInputErrorLabel.setVisible(false);
+        try {
+            double weight = Double.parseDouble(this.weightTextField.getText());
+            this.mcm.addUserWeightEntry(weight);    
+        } catch (Exception exc) {
+            this.userInputErrorLabel.setVisible(true);
+        } finally {
+            this.weightTextField.setText("");    
+        }
     }
 
     @FXML
@@ -128,5 +143,6 @@ public class DailyDetailsController {
         this.dayLabel.setText(nameClicked);
         this.setExerciseDetails();
         this.bindButtonVisibility();
+        this.userInputErrorLabel.setVisible(false);
     }
 }

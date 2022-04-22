@@ -67,5 +67,6 @@
       <Label alignment="CENTER" layoutX="447.0" layoutY="277.0" text="Completed workout in:" />
       <TextField fx:id="workoutDurationTextField" layoutX="452.0" layoutY="297.0" prefHeight="25.0" prefWidth="83.0" />
       <Label layoutX="543.0" layoutY="301.0" text="min" />
+      <Label fx:id="userInputErrorLabel" alignment="CENTER" layoutX="188.0" layoutY="374.0" prefHeight="17.0" prefWidth="221.0" text="Please enter a number greater than zero" textFill="RED" />
    </children>
 </AnchorPane>

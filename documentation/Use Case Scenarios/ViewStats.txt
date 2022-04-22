@@ -1,0 +1,10 @@
+Context - User has clicked on the stats button and is viewing the page.
+
+Primary flow
+1 - User is shown two graphs which visualize their fitness progress data.
+
+Alternative flow:
+
+BACK BUTTON
+a2 - the user clicks the back button.
+a3 - the user is shown the weekly view page
