@@ -29,6 +29,8 @@ def runServer():
             loggedInUser = handleLogin(request, userData, socket)
         elif (request[0] == "generateWorkout"):
             handleGenerate(socket, userData, request, loggedInUser)
+        elif (request[0] == "update"):
+            handleUpdate(socket, userData, request, loggedInUser)
         elif (request[0] == "register"):
             loggedInUser = request[1]
             if (usernameExists(userData, loggedInUser)):
@@ -56,7 +58,14 @@ def handleLogin(request, userData, socket):
         socket.send_string(codes.ServerErrorCodes.LOGIN_FAILED)
         print("ERROR - " + codes.ServerErrorCodes.LOGIN_FAILED)
     return request[1]
-    
+
+def handleUpdate(socket, userData, request, loggedInUser):
+    alist = request[1].replace("\\","\"")
+    alist = request[1].replace("\\","\"")
+    userData[loggedInUser][1]["userStats"] = json.loads(alist)
+    print( userData[loggedInUser][1]["userStats"])
+    socket.send_string("updated")
+
 def handleGenerate(socket, userData, request, loggedInUser):
 
     alist = request[2].replace("\\","")

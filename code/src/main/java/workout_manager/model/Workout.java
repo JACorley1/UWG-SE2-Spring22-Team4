@@ -13,6 +13,7 @@ public class Workout {
 
     private ArrayList<ExerciseAlt> exercises;
     private ArrayList<ExerciseAlt> exercisesForDisplay;
+    private int totalPoints;
 
     /**
      * constucts a workout object
@@ -54,6 +55,18 @@ public class Workout {
      */
     public ArrayList<ExerciseAlt> getDisplayExercises() {
         return this.exercisesForDisplay;
+    }
+
+   /**
+     * gets the total points in the workout
+     * @return the total fitness points
+     */
+    public int getTotalPoints(){
+        this.totalPoints = 0;
+        for (ExerciseAlt current: this.exercises) {
+            this.totalPoints += current.getIntensity();
+        }
+        return this.totalPoints;
     }
 
     /**

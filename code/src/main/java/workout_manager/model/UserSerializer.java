@@ -58,7 +58,7 @@ public class UserSerializer {
     }
 
     private int getIntensityFromString(String serializedUser) {
-        Pattern intensityPattern = Pattern.compile("\"intensity\": [0-9]");
+        Pattern intensityPattern = Pattern.compile("\"intensity\": [0-9][0-9]");
         Matcher matcher = intensityPattern.matcher(serializedUser);
         String intensity = "";
         if (matcher.find()) {
@@ -67,7 +67,7 @@ public class UserSerializer {
             int intensityInt = Integer.parseInt(intensityString[1]);
             return intensityInt;
         } else {
-            return 0;
+            return 30;
         }
     }
 }

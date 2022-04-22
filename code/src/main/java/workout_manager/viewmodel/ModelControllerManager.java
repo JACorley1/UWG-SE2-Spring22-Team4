@@ -91,6 +91,16 @@ public class ModelControllerManager {
         this.generateWorkoutCalendar();
     }
 
+    private void updateStats() {
+        Client client = Client.getClient();
+        Gson gson = new GsonBuilder().create();
+        String statsJson = gson.toJson(this.user.getUserStats());
+        client.sendRequest("update" + ", " + statsJson);
+        String response = client.receiveResponse();
+        client.closeSocket();
+        System.out.println(response);
+    }
+
     private void generateWorkoutCalendar() {
         Client client = Client.getClient();
         Gson gson = new GsonBuilder().create();
@@ -170,6 +180,7 @@ public class ModelControllerManager {
     public void addUserWeightEntry(double weight) {
         Date date = new Date();
         this.user.getUserStats().addWeight(date, weight);
+        this.updateStats();
     }
 
     /**
@@ -181,8 +192,10 @@ public class ModelControllerManager {
      */
     public void addUserWorkoutCompletionTimeEntry(double workoutDuration) {
         Date today = new Date();
-        double fitnessPoints = this.user.getPreferences().getIntensity().getCode() / workoutDuration;
-        this.user.getUserStats().addExerciseCompletiton(today, fitnessPoints);
+        int fitnessPoints = this.currentWorkout.getTotalPoints();
+        this.user.getUserStats().addFitnessPoints(today, (int) fitnessPoints);
+        this.user.getUserStats().addExerciseCompletiton(today, workoutDuration);
+        this.updateStats();
     }
 
     /**
@@ -195,6 +208,7 @@ public class ModelControllerManager {
      * 
      */
     public void deSerialize(String serializedUser) {
+        
         this.user = this.serializer.deserialize(serializedUser);
     }
 

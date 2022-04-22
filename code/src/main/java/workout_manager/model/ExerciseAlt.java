@@ -12,6 +12,7 @@ public class ExerciseAlt {
     private String description;
     private int category;
     private int[] equipment;
+    private int intensity;
 
     /**
      * creates an exerciseAlt object
@@ -92,6 +93,16 @@ public class ExerciseAlt {
         }
 
     }
-    
+
+    /**
+     * returns the int representation of the exercise intensity
+     * 
+     * @precondition none
+     * @postcondition none
+     * @return the int representation for intensity
+     */
+    public int getIntensity() {
+        return this.intensity;
+    }
 
 }
