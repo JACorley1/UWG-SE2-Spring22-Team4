@@ -61,7 +61,7 @@ public class DailyDetailsController {
         this.userInputErrorLabel.setVisible(false);
         try {
             double duration = Double.valueOf(this.workoutDurationTextField.getText());
-            this.mcm.addUserWorkoutCompletionTimeEntry(duration);
+            this.mcm.addUserWorkoutCompletionTimeEntry(duration, this.dayLabel.getText());
         } catch (Exception exc) {
             this.userInputErrorLabel.setVisible(true);
         } finally {
@@ -74,7 +74,7 @@ public class DailyDetailsController {
         this.userInputErrorLabel.setVisible(false);
         try {
             double weight = Double.parseDouble(this.weightTextField.getText());
-            this.mcm.addUserWeightEntry(weight);    
+            this.mcm.addUserWeightEntry(weight, this.dayLabel.getText());    
         } catch (Exception exc) {
             this.userInputErrorLabel.setVisible(true);
         } finally {
