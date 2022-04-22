@@ -20,11 +20,11 @@
          </font>
       </Label>
       <Button fx:id="backButton" layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
-      <ImageView fitHeight="187.0" fitWidth="118.0" layoutX="29.0" layoutY="96.0" pickOnBounds="true">
+      <ImageView fitHeight="177.0" fitWidth="118.0" layoutX="29.0" layoutY="96.0" pickOnBounds="true">
          <image>
             <Image url="@Arnold-Schwarzenegger-Workout-Quotes.jpg" />
          </image></ImageView>
-      <ImageView fitHeight="187.0" fitWidth="118.0" layoutX="448.0" layoutY="96.0" pickOnBounds="true">
+      <ImageView fitHeight="177.0" fitWidth="118.0" layoutX="448.0" layoutY="96.0" pickOnBounds="true">
          <image>
             <Image url="@quote.png" />
          </image>
@@ -32,16 +32,15 @@
             <Rectangle2D height="300.0" />
          </viewport>
       </ImageView>
-      <Label alignment="CENTER" layoutX="36.0" layoutY="285.0" prefHeight="18.0" prefWidth="106.0" text=" Daily Weigh-In:" />
-      <TextField fx:id="weightTextField" layoutX="30.0" layoutY="307.0" prefHeight="26.0" prefWidth="83.0" />
-      <Label alignment="CENTER" layoutX="116.0" layoutY="311.0" prefHeight="17.0" prefWidth="32.0" text="LBS." />
-      <Button fx:id="enterWeightButton" layoutX="30.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleEnterWeightButton" prefHeight="25.0" prefWidth="118.0" text="Enter Weight" />
-      <Button fx:id="completedWorkoutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="448.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleCompletedWorkoutButton" prefHeight="43.0" prefWidth="118.0" text="Completed Daily Workout" textAlignment="CENTER" wrapText="true" />
-      <ScrollPane fx:id="detailsPane" hbarPolicy="NEVER" layoutX="189.0" layoutY="95.0" pannable="true" prefHeight="270.0" prefWidth="221.0" vbarPolicy="ALWAYS">
+      <Label alignment="CENTER" layoutX="35.0" layoutY="277.0" prefHeight="18.0" prefWidth="106.0" text=" Daily Weigh-In:" />
+      <TextField fx:id="weightTextField" layoutX="35.0" layoutY="298.0" prefHeight="26.0" prefWidth="83.0" />
+      <Label alignment="CENTER" layoutX="121.0" layoutY="302.0" prefHeight="17.0" prefWidth="32.0" text="LBS." />
+      <Button fx:id="enterWeightButton" layoutX="29.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleEnterWeightButton" prefHeight="30.0" prefWidth="118.0" text="Enter Weight" />
+      <ScrollPane fx:id="detailsPane" hbarPolicy="NEVER" layoutX="171.0" layoutY="96.0" pannable="true" prefHeight="270.0" prefWidth="256.0" vbarPolicy="ALWAYS">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="350.0" prefWidth="221.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="241.0">
                <children>
-                  <Accordion fx:id="detailsAccordion" maxWidth="221.0" prefHeight="225.0" prefWidth="207.0">
+                  <Accordion fx:id="detailsAccordion" maxWidth="239.0" prefHeight="225.0" prefWidth="239.0">
                     <panes>
                       <TitledPane animated="false" maxWidth="207.0" text="untitled 2">
                         <content>
@@ -53,7 +52,7 @@
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                         </content>
                       </TitledPane>
-                      <TitledPane animated="false" text="untitled 1">
+                      <TitledPane animated="false" prefWidth="242.0" text="untitled 1">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                         </content>
@@ -64,5 +63,10 @@
             </AnchorPane>
         </content>
       </ScrollPane>
+      <Label alignment="CENTER" layoutX="447.0" layoutY="277.0" text="Completed workout in:" />
+      <Button fx:id="completedWorkoutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="443.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleCompletedWorkoutButton" prefHeight="30.0" prefWidth="129.0" text="Completed Workout" textAlignment="CENTER" wrapText="true" />
+      <TextField fx:id="workoutDurationTextField" layoutX="452.0" layoutY="297.0" prefHeight="25.0" prefWidth="83.0" />
+      <Label layoutX="543.0" layoutY="301.0" text="min" />
+      <Label fx:id="userInputErrorLabel" alignment="CENTER" layoutX="188.0" layoutY="374.0" prefHeight="17.0" prefWidth="221.0" text="Please enter a number greater than zero" textFill="RED" />
    </children>
 </AnchorPane>

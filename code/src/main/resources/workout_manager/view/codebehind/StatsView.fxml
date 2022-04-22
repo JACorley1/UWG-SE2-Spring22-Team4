@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
@@ -8,29 +9,37 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.StatsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.StatsController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="32.0" prefHeight="38.0" prefWidth="268.0" text="Your Progress" textAlignment="CENTER" textFill="#06fc0a" underline="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="32.0" prefHeight="38.0" prefWidth="268.0" text="Your Progress" textAlignment="CENTER" textFill="RED" underline="true">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
       <Button fx:id="backButton" layoutX="29.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
-      <LineChart fx:id="weightTrackingChart" layoutX="28.0" layoutY="70.0" prefHeight="266.0" prefWidth="258.0" title="Weight Monitoring">
+      <LineChart fx:id="weightTrackingChart" alternativeColumnFillVisible="true" layoutX="23.0" layoutY="91.0" legendVisible="false" prefHeight="266.0" prefWidth="258.0" title="Weight Tracking">
          <xAxis>
-            <CategoryAxis label="Time" prefHeight="34.0" prefWidth="219.0" side="BOTTOM" />
+            <CategoryAxis animated="false" label="Time" prefHeight="34.0" prefWidth="219.0">
+               <tickLabelFont>
+                  <Font size="5.0" />
+               </tickLabelFont></CategoryAxis>
          </xAxis>
          <yAxis>
-            <NumberAxis label="Weight" side="LEFT" upperBound="200.0" />
+            <NumberAxis animated="false" label="Weight (lbs.)" side="LEFT" upperBound="200.0" />
          </yAxis>
       </LineChart>
-      <LineChart fx:id="fitnessTrackingChart" layoutX="308.0" layoutY="67.0" prefHeight="266.0" prefWidth="258.0" title="Fitness Tracking">
+      <LineChart fx:id="fitnessTrackingChart" alternativeColumnFillVisible="true" layoutX="300.0" layoutY="91.0" legendVisible="false" prefHeight="266.0" prefWidth="258.0" title="Fitness Tracking">
          <xAxis>
-            <CategoryAxis label="Time" prefHeight="34.0" prefWidth="219.0" side="BOTTOM" />
+            <CategoryAxis animated="false" label="Time" prefHeight="34.0" prefWidth="219.0" side="BOTTOM">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <tickLabelFont>
+                  <Font size="5.0" />
+               </tickLabelFont></CategoryAxis>
          </xAxis>
          <yAxis>
-            <NumberAxis label="Workout Points" minorTickCount="10" side="LEFT" tickUnit="10.0" upperBound="400.0" />
+            <NumberAxis animated="false" label="Workout Points" minorTickCount="10" side="LEFT" tickUnit="10.0" upperBound="400.0" />
          </yAxis>
       </LineChart>
    </children>
