@@ -79,7 +79,6 @@ public class PreferenceController {
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
-
     }
 
     private SimpleListProperty<Days> getDaysSelected() {
