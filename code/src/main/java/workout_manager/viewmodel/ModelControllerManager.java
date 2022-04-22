@@ -1,6 +1,7 @@
 package workout_manager.viewmodel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
@@ -177,11 +178,13 @@ public class ModelControllerManager {
      * 
      * @param weight the user's weight
      */
-    public void addUserWeightEntry(double weight) {
+    public void addUserWeightEntry(double weight, String day) {
         Date date = new Date();
+        date = Days.getDate(date, day);
         this.user.getUserStats().addWeight(date, weight);
         this.updateStats();
     }
+
 
     /**
      * Adds the specifed time duration and current date to the user's
@@ -190,8 +193,9 @@ public class ModelControllerManager {
      * @param workoutDuration the number of minutes it took the user to
      *                        finish the workout
      */
-    public void addUserWorkoutCompletionTimeEntry(double workoutDuration) {
+    public void addUserWorkoutCompletionTimeEntry(double workoutDuration, String day) {
         Date today = new Date();
+        today = Days.getDate(today, day);
         int fitnessPoints = this.currentWorkout.getTotalPoints();
         this.user.getUserStats().addFitnessPoints(today, (int) fitnessPoints);
         this.user.getUserStats().addExerciseCompletiton(today, workoutDuration);
