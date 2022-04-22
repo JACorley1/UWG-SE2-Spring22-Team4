@@ -164,6 +164,7 @@ public class ModelControllerManager {
     /**
      * Adds the specified weight and current date to the user's
      * stats
+     * 
      * @param weight the user's weight
      */
     public void addUserWeightEntry(double weight) {
@@ -174,12 +175,14 @@ public class ModelControllerManager {
     /**
      * Adds the specifed time duration and current date to the user's
      * stats
+     * 
      * @param workoutDuration the number of minutes it took the user to
-     * finish the workout 
+     *                        finish the workout
      */
     public void addUserWorkoutCompletionTimeEntry(double workoutDuration) {
         Date today = new Date();
-        this.user.getUserStats().addExerciseCompletiton(today, workoutDuration);
+        double fitnessPoints = this.user.getPreferences().getIntensity().getCode() / workoutDuration;
+        this.user.getUserStats().addExerciseCompletiton(today, fitnessPoints);
     }
 
     /**
