@@ -12,7 +12,7 @@ public class TestIntensity {
     @Test
     void testGetCode() {
         Intensity inTents = Intensity.ADVANCED;
-        assertEquals(2, inTents.getCode());
+        assertEquals(60, inTents.getCode());
     }
 
     @Test
@@ -20,9 +20,9 @@ public class TestIntensity {
         Intensity inTents = Intensity.ADVANCED;
 
         assertAll(
-            () -> assertEquals(Intensity.BEGINNER, inTents.getEnumFromInt(0)),
-            () -> assertEquals(Intensity.INTERMEDIATE, inTents.getEnumFromInt(1)),
-            () -> assertEquals(Intensity.ADVANCED, inTents.getEnumFromInt(2))
+            () -> assertEquals(Intensity.BEGINNER, inTents.getEnumFromInt(30)),
+            () -> assertEquals(Intensity.INTERMEDIATE, inTents.getEnumFromInt(45)),
+            () -> assertEquals(Intensity.ADVANCED, inTents.getEnumFromInt(60))
         );  
     }
 }

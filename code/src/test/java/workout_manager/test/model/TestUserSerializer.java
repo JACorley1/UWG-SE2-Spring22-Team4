@@ -35,6 +35,15 @@ public class TestUserSerializer {
         String userString = "{\"preferences\": {\"availableDays\": [\"WEDNESDAY\",\"FRIDAY\"],\"musclesSelected\": []},\"workoutCalender\": {\"workoutCalendar\": {}},\"userName\": \"username\",\"passWord\": \"password\"}";
         User newUser = serializer.deserialize(userString);
 
-        assertEquals(0, newUser.getPreferences().getIntensity().getCode());
+        assertEquals(30, newUser.getPreferences().getIntensity().getCode());
+    }
+
+    @Test
+    void patternMatches() {
+        UserSerializer serializer = new UserSerializer();
+        String userString = "{\"preferences\": {\"availableDays\": [\"WEDNESDAY\",\"FRIDAY\"],\"musclesSelected\": []},\"workoutCalender\": {\"workoutCalendar\": {}},\"intensity\": 45,\"userName\": \"username\",\"passWord\": \"password\"}";
+        User newUser = serializer.deserialize(userString);
+
+        assertEquals(45, newUser.getPreferences().getIntensity().getCode());
     }
 }

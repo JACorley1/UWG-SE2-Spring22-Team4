@@ -1,7 +1,5 @@
 package workout_manager.model;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -23,7 +21,8 @@ public enum Days {
         calendar.add(Calendar.DATE, difference);
         return calendar.getTime();
     }
-    private static int stringToEnum(String day){
+
+    public static int stringToEnum(String day){
         if (day.toUpperCase().equals(Days.SUNDAY.toString())) {
             return 1;
         }

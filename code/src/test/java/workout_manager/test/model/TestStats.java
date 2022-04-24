@@ -27,7 +27,8 @@ public class TestStats {
         assertAll(
                 () -> assertEquals(stats.getWeightOverTime().size(), weightMap.size()),
                 () -> assertEquals(stats.getWorkoutCompletionOverTime().size(), completionMap.size()),
-                () -> assertEquals(stats.getFitnessPointsOverTime().size(), pointsMap.size()));
+                () -> assertEquals(stats.getFitnessPointsOverTime().size(), pointsMap.size())
+            );
     }
 
     @Test
@@ -56,6 +57,15 @@ public class TestStats {
         stats.addExerciseCompletiton(date, 2.0);  
 
         assertEquals(stats.getAverageWorkoutTime(), 2.0);
+    }
 
+    @Test
+    void testAddWeight() {
+        Stats stats = new Stats();
+        Date date = new Date();
+        Instant now = Instant.now();
+        stats.addWeight(date, 189);
+
+        assertEquals(1, stats.getWeightOverTime().size());
     }
 }
