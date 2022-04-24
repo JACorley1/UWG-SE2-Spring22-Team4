@@ -41,7 +41,6 @@ public class WeeklyViewController {
 
     @FXML
     void initialize() {
-
     }
 
     @FXML

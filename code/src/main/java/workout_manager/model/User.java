@@ -82,8 +82,8 @@ public class User {
      * sets the users stats
      * @param userStates the stats to set
      */
-    public void setUserStats(Stats userStates) {
-        this.userStats = userStates;
+    public void setUserStats(Stats userStats) {
+        this.userStats = userStats;
     }
 
     /**
