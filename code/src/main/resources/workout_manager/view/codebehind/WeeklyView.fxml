@@ -11,11 +11,16 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="weeklyViewAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.WeeklyViewController">
+<AnchorPane fx:id="weeklyViewAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workout_manager.view.WeeklyViewController">
    <children>
       <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="547.0" layoutY="19.0">
          <image>
             <Image url="@settings.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="495.0" layoutY="20.0">
+         <image>
+            <Image url="@stats.png" />
          </image>
       </ImageView>
       <GridPane fx:id="weeklyViewGridPane" alignment="CENTER" gridLinesVisible="true" layoutX="14.0" layoutY="155.0" prefHeight="90.0" prefWidth="572.0">
@@ -55,5 +60,6 @@
          </font>
       </Label>
       <Rectangle fx:id="preferencesPageButton" arcHeight="20.0" arcWidth="20.0" fill="#ff212100" height="43.0" layoutX="543.0" layoutY="14.0" onMouseClicked="#handleNavigateToPreferencesPage" stroke="RED" strokeType="INSIDE" width="43.0" />
+      <Rectangle fx:id="statsPageButton" arcHeight="20.0" arcWidth="20.0" fill="#ff212100" height="43.0" layoutX="491.0" layoutY="14.0" onMouseClicked="#handleNavigateToStatsPage" stroke="RED" strokeType="INSIDE" width="43.0" />
    </children>
 </AnchorPane>

@@ -37,8 +37,10 @@ public class WeeklyViewController {
     private Rectangle preferencesPageButton;
 
     @FXML
-    void initialize() {
+    private Rectangle statsPageButton;
 
+    @FXML
+    void initialize() {
     }
 
     @FXML
@@ -52,6 +54,20 @@ public class WeeklyViewController {
         ddc.initParams(this.mcm, clickedDay.getId().toString());
         Scene scene = new Scene(parent);
 
+        stage.setTitle(Main.WINDOW_TITLE);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void handleNavigateToStatsPage(MouseEvent event) throws IOException {
+        Stage stage = (Stage) this.weeklyViewGridPane.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.STATS_VIEW_PAGE));
+        Parent parent = loader.load();
+
+        StatsController sc = loader.<StatsController>getController();
+        sc.initParams(this.mcm);
+        Scene scene = new Scene(parent);
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();

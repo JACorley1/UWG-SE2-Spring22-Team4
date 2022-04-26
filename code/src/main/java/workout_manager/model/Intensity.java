@@ -8,7 +8,7 @@ package workout_manager.model;
  * 
  */
 public enum Intensity {
-    BEGINNER(0), INTERMEDIATE(1), ADVANCED(2);
+    BEGINNER(30), INTERMEDIATE(45), ADVANCED(60);
 
     private final int code;
 
@@ -36,9 +36,9 @@ public enum Intensity {
      * @return the enum that has the code value of the given int
      */
     public Intensity getEnumFromInt(int toGetEnumFrom) {
-        if (toGetEnumFrom == 0) {
+        if (toGetEnumFrom == 30) {
             return BEGINNER;
-        } else if (toGetEnumFrom == 1) {
+        } else if (toGetEnumFrom == 45) {
             return INTERMEDIATE;
         } else {
             return ADVANCED;

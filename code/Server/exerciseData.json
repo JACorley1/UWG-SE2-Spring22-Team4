@@ -1,445 +1,569 @@
 [
 	{
 		"name": "Plank Tap",
-		"description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nTap your right hand to your left shoulder while engaging your core and glutes to keep your hips as still as possible./nDo the same thing with your left hand to right shoulder. That's 1 rep./nContinue, alternating sides./nTo make this easier, try separating your legs a little more.",
+		"description": "Do 15 to 20 repetitions per set. Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged. Tap your right hand to your left shoulder while engaging your core and glutes to keep your hips as still as possible. Do the same thing with your left hand to right shoulder. Continue, alternating sides. To make this easier, try separating your legs a little more.",
 		"category": 0,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Plank Up-Down",
-		"description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nLower your left arm so that your forearm is on the floor./n Then, do the same with your right so that you're in a forearm plank./nReverse to return to a high plank. That's 1 rep./nAs you move, keep your hips as still as possible. To make this easier, try widening your legs a little more.",
+		"description": "Do 15 to 20 repetitions per set. Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged.  Place your feet hip-width apart. Lower your left arm so that your forearm is on the floor.  Then, do the same with your right so that you're in a forearm plank. Reverse to return to a high plank. That's 6 rep. As you move, keep your hips as still as possible. To make this easier, try widening your legs a little more.",
 		"category": 0,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Side Plank",
-		"description": "Lie on your right side with your right hand directly underneath your right shoulder./nExtend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor./n Extend your left hand straight up toward the ceiling./nHold here for a set amount of time.",
+		"description": "10 to 15 repetitions each side per set. Lie on your right side with your right hand directly underneath your right shoulder. Extend your legs and stack your left foot on top of your right, and then squeeze your abs and glutes to lift your hips off the floor.  Extend your left hand straight up toward the ceiling. Hold here up to 30 seconds.",
 		"category": 0,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Forearm Plank Reach Out",
-		"description": "Start in a forearm plank position, with your elbows directly under your shoulders, hands facing forward so your forearms are parallel, core engaged, hips level, and legs extended straight behind you./nFrom this position, reach your right hand forward and tap the floor in front of you./n Return your right hand to your starting position, and then reach forward with your left hand to tap the floor in front of you./nContinue to alternate sides as you focus on keeping your hips steady throughout./n Make it easier: If this exercise feels too challenging, take your feet wider then hip-width apart./n The wider your feet, the easier the move should be.",
+		"description": "10 to 15 repetitions per set. Start in a forearm plank position, with your elbows directly under your shoulders, hands facing forward so your forearms are parallel, core engaged, hips level, and legs extended straight behind you. From this position, reach your right hand forward and tap the floor in front of you.  Return your right hand to your starting position, and then reach forward with your left hand to tap the floor in front of you. Continue to alternate sides as you focus on keeping your hips steady throughout.  Make it easier: If this exercise feels too challenging, take your feet wider then hip-width apart.  The wider your feet, the easier the move should be.",
+		"category": 0,
+		"intensity": 9,
+		"equipment": [
+			0
+		]
+	},
+	{
+		"name": "Lateral Plank Walk",
+		"description": "Do 5 repetitions per set each direction. Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged. Step right, leading with your right hand and right foot, maintaining a plank as you move.  This is 1 rep. Do your reps in one direction, and then repeat in the opposite direction.",
 		"category": 0,
 		"intensity": 2,
-		"equipment": [0]
-		
-	},
-		{
-		"name": "Lateral Plank Walk",
-		"description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders directly above your wrists, legs extended behind you, and your core and glutes engaged./nStep right, leading with your right hand and right foot, maintaining a plank as you move./n This is 1 rep./nDo your reps in one direction, and then repeat in the opposite direction.",
-		"category": 0,
-		"intensity": 0,
-		"equipment": [0]
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Push-up",
-		"description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nBend your elbows and lower your chest to the floor. Drop to your knees if needed./nPush through the palms of your hands to straighten your arms./n That's 1 rep.",
+		"description": "Do 10 repetitions per set. Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged. Bend your elbows and lower your chest to the floor. Drop to your knees if needed. Push through the palms of your hands to straighten your arms.  That's 1 rep.",
 		"category": 0,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
-		{
+	{
 		"name": "Downward Dog to Push-Up",
-		"description": "Start in a downward dog position./n To get into a downward dog, start from an all-fours position with wrists under your shoulders and knees under your hips./n Engage your core, lift your knees, and straighten both legs as your head drops naturally between your biceps and you come into an inverted V-shape./n In downward dog, your arms and back should be straight and your hips piked up to the ceiling./n Your heels do not need to touch the floor, but you should feel a nice stretch in the back of your legs./nFrom this position, lift your right hand and reach back to tap your left toes./n Allow your torso to naturally rotate open so you can tap your toes./n If you can't reach your toes, tap your shin or knee./nReturn to downward dog and roll forward into a high plank or modified plank (by gently lowering your knees to the floor)./nFrom your high plank or modified plank, do a push-up by bending both arms at the elbows and lowering your chest toward the floor in a smooth movement./nPush back up to return to your plank, then pike your hips to return to your downward dog./n Now lift your left hand and tap your right toes./nAfter you've completed the toe tap, roll forward into a plank and do another push-up./nContinue your downward dog, to toe tap, to push-up progression.",
+		"description": "Do 15 repetitions per set. Start in a downward dog position.  To get into a downward dog, start from an all-fours position with wrists under your shoulders and knees under your hips.  Engage your core, lift your knees, and straighten both legs as your head drops naturally between your biceps and you come into an inverted V-shape.  In downward dog, your arms and back should be straight and your hips piked up to the ceiling.  Your heels do not need to touch the floor, but you should feel a nice stretch in the back of your legs. From this position, lift your right hand and reach back to tap your left toes.  Allow your torso to naturally rotate open so you can tap your toes.  If you can't reach your toes, tap your shin or knee. Return to downward dog and roll forward into a high plank or modified plank (by gently lowering your knees to the floor). From your high plank or modified plank, do a push-up by bending both arms at the elbows and lowering your chest toward the floor in a smooth movement. Push back up to return to your plank, then pike your hips to return to your downward dog.  Now lift your left hand and tap your right toes. After you've completed the toe tap, roll forward into a plank and do another push-up. Continue your downward dog, to toe tap, to push-up progression.",
 		"category": 0,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Decline Push-up",
-		"description": "Place your toes on a box, bench, or step. Then get into a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, core and glutes engaged./nBend your elbows and lower your chest to the floor./nPush through the palms of your hands to straighten your arms. That's 1 rep.",
+		"description": "Do 15 repetitions per set. Place your toes on a box, bench, or step. Then get into a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, core and glutes engaged. Bend your elbows and lower your chest to the floor. Push through the palms of your hands to straighten your arms. That's 1 rep.",
 		"category": 0,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Body Saw",
-		"description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes./n Focus on moving as far forward as you can without piking your hips or losing your core engagement./nNow push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet./n Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
+		"description": "Do 8-15 repetitions per set. Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you.  Tuck your tailbone and engage your core, butt, and quads. Rock forward on your forearms so your shoulders come in front of your elbows, and you come to the very tips of your toes.  Focus on moving as far forward as you can without piking your hips or losing your core engagement. Now push in the other direction, rocking as far back as possible straightening your forearms slightly, and rolling onto the balls of your feet.  Again, focus on maintaining core engagement and not piking your hips.Continue to rock forward and back.",
 		"category": 0,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Bodyweight Squat",
-		"description": "Stand with your feet slightly wider than hip-width apart, toes slightly turned out, arms at your sides, palms in./nEngage your core and keep your chest lifted and back flat as you shift your weight into your heels, push your hips back, and bend your knees to lower into a squat./n Bend your elbows and bring your palms together in front of your chest. (You can also just hold your hands in front of your chest the entire time.)/nDrive through your heels to stand and squeeze your glutes at the top for one rep.",
+		"description": "Do 20 repetitions per set. Stand with your feet slightly wider than hip-width apart, toes slightly turned out, arms at your sides, palms in. Engage your core and keep your chest lifted and back flat as you shift your weight into your heels, push your hips back, and bend your knees to lower into a squat.  Bend your elbows and bring your palms together in front of your chest. (You can also just hold your hands in front of your chest the entire time.) Drive through your heels to stand and squeeze your glutes at the top for one rep.",
 		"category": 1,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Squat Jumps",
-		"description": "Stand with your feet slightly wider than hip-width apart./nHinge forward at your hips and sit your butt back into a squat./n Bend your knees until your thighs are parallel to the ground./nJump up into the air as high as you can and straighten out your legs./n Swing your arms down by your sides for momentum, and keep your back straight and chest lifted./nLand back on the floor with soft knees. Go directly into another squat.",
+		"description": "Do 15 repetitions per set. Stand with your feet slightly wider than hip-width apart. Hinge forward at your hips and sit your butt back into a squat.  Bend your knees until your thighs are parallel to the ground. Jump up into the air as high as you can and straighten out your legs.  Swing your arms down by your sides for momentum, and keep your back straight and chest lifted. Land back on the floor with soft knees. Go directly into another squat.",
 		"category": 1,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-		{
+	{
 		"name": "Frog Pump",
-		"description": "Lie faceup on the floor or a mat, your knees bent, and feet hip-width apart./nPress your heels together so your legs make a diamond shape./n This is the starting position. (To find the proper position, start with your heels as close to your butt as you can, though you may need to move them out farther as pictured to really feel the move in your glutes.)/nSqueezing your glutes, lift your butt off the mat, making a straight line to your knees./n Pause one to two seconds at the top./nLower your hips down to starting position./n This is one rep",
+		"description": "Do 20 repetitions per set. Lie faceup on the floor or a mat, your knees bent, and feet hip-width apart. Press your heels together so your legs make a diamond shape.  This is the starting position. (To find the proper position, start with your heels as close to your butt as you can, though you may need to move them out farther as pictured to really feel the move in your glutes.) Squeezing your glutes, lift your butt off the mat, making a straight line to your knees.  Pause one to two seconds at the top. Lower your hips down to starting position.  This is one rep",
 		"category": 1,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Inner Thigh Leg Raises",
-		"description": "Lie on one side with legs out straight and stacked on top of each other and your torso flat on the mat or propped up on your forearm./nCross your top leg over the bottom leg, bending at the knee so that your top foot is in front of your bottom knee./nLift your bottom leg toward the ceiling in a slow and controlled movement./n Keep your torso stable throughout./nReturn to start and repeat./n When you are done with all your reps, repeat on the other side.",
+		"description": "Do 15 repetitions per set. Lie on one side with legs out straight and stacked on top of each other and your torso flat on the mat or propped up on your forearm. Cross your top leg over the bottom leg, bending at the knee so that your top foot is in front of your bottom knee. Lift your bottom leg toward the ceiling in a slow and controlled movement.  Keep your torso stable throughout. Return to start and repeat.  When you are done with all your reps, repeat on the other side.",
 		"category": 1,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Pop Squat With 180-Degree Turn",
-		"description": "Start with your feet slightly wider than hip-width apart and your core engaged./nDo one small hop in place, and on your second hop, turn 180 degrees so you’re facing the opposite direction./nDo one more small hop, and immediately drop into a squat by sending your hips back, bending both knees, squeezing your glutes to lower, and bringing one hand down to tap the floor./nStand and immediately do one hop, then on your second hop, turn 180 degrees so you’re facing the direction you started in./n Do another hop, and drop into another squat on the other side./nContinue to hop and squat, turning back and forth each time.",
+		"description": "Do 10 repetitions per set. Start with your feet slightly wider than hip-width apart and your core engaged. Do one small hop in place, and on your second hop, turn 680 degrees so you’re facing the opposite direction. Do one more small hop, and immediately drop into a squat by sending your hips back, bending both knees, squeezing your glutes to lower, and bringing one hand down to tap the floor. Stand and immediately do one hop, then on your second hop, turn 680 degrees so you’re facing the direction you started in.  Do another hop, and drop into another squat on the other side. Continue to hop and squat, turning back and forth each time.",
 		"category": 1,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Side Leg Raises",
-		"description": "Lie on one side with legs out straight and stacked on top of each other./n Prop your torso up with your forearm (as shown) or rest your torso flat on the mat./nLift your top leg toward the ceiling in a slow and controlled movement./n Make sure to lift from the hip and butt, not your lower back./nReturn to start./nRepeat on the other side.",
+		"description": "Do 10 repetitions on each side per set. Lie on one side with legs out straight and stacked on top of each other.  Prop your torso up with your forearm (as shown) or rest your torso flat on the mat. Lift your top leg toward the ceiling in a slow and controlled movement.  Make sure to lift from the hip and butt, not your lower back. Return to start. Repeat on the other side.",
 		"category": 1,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Alternating Forward to Reverse Lunge",
-		"description": "Stand with feet hip-width apart and core engaged./n Step forward with your right foot and bend both knees to 90 degrees to sink into a lunge./nPush off your right foot to return to the starting position./nRepeat on the other side, and continue to alternate sides.",
+		"description": "Do 20 repetitions per set. Stand with feet hip-width apart and core engaged.  Step forward with your right foot and bend both knees to 90 degrees to sink into a lunge. Push off your right foot to return to the starting position. Repeat on the other side, and continue to alternate sides.",
 		"category": 1,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Warrior Balance",
-		"description": "Stand on your left foot and lift your right knee to hip height in front of your body./n Bend your elbows so your hands are by your shoulders./n This is the starting position./nHinge forward at the hips and reach your arms forward as you extend your right leg behind you./n Keep your standing leg slightly bent as your torso becomes parallel with the floor./nPause for a second, then reverse the movement to return to starting position./n That’s one rep./nPerform all your reps, then repeat on the other side.",
+		"description": "Do 10 repetitions per set on each side. Stand on your left foot and lift your right knee to hip height in front of your body.  Bend your elbows so your hands are by your shoulders.  This is the starting position. Hinge forward at the hips and reach your arms forward as you extend your right leg behind you.  Keep your standing leg slightly bent as your torso becomes parallel with the floor. Pause for a second, then reverse the movement to return to starting position.  That’s one rep. Perform all your reps, then repeat on the other side.",
 		"category": 1,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Side Step to Squat",
-		"description": "Stand with your feet together, core engaged, and hands held at chest height./nStep your right foot to the right, so your feet are wider than hip-width apart, hinge at your hips to send your butt back, and bend both knees to drop into a wide squat./nStraighten your knees and bring your right foot back to your starting position./n This is one rep./nPerform all your reps, then repeat on the other side.",
+		"description": "Do 10 repetitions on each side per set. Stand with your feet together, core engaged, and hands held at chest height. Step your right foot to the right, so your feet are wider than hip-width apart, hinge at your hips to send your butt back, and bend both knees to drop into a wide squat. Straighten your knees and bring your right foot back to your starting position.  This is one rep. Perform all your reps, then repeat on the other side.",
 		"category": 1,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Aquaman",
-		"description": "Lie on your stomach and lift your right arm and the left leg as much as you can./n And when you bring the two down, lift your left arm and your right leg./n Do both these movements as fast as possible.  ",
+		"description": "Do 5 repetitions per set wiht 30 seconds in between each rep. Lie on your stomach and lift your right arm and the left leg as much as you can.  And when you bring the two down, lift your left arm and your right leg.  Do both these movements as fast as possible for 30 seconds.  ",
 		"category": 2,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
-		"name": "Bhujangasana or the Cobra Pose",
-		"description": "Lying in the prone position, place your palms at shoulder level and tightening your stomach, lift you upper body in a stretch with your eyes facing upwards./n Make sure to keep your chest lifted and avoid arching your back.",
+		"name": "Cobra Pose",
+		"description": "Do 5 repetition holding for 30 seconds each rep. Lying in the prone position, place your palms at shoulder level and tightening your stomach, lift you upper body in a stretch with your eyes facing upwards.  Make sure to keep your chest lifted and avoid arching your back.",
 		"category": 2,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Setu Bandhasana or the Bridge Pose",
-		"description": "Lying on the floor, bend your knees and place your feet on the floor./n Next, sucking in your stomach, lift your pelvis and buttocks as high as possible as you try and grab the back of your feet with your hands. ",
+		"description": "Do 5 reps per set holding for 30 seconds each rep. Lying on the floor, bend your knees and place your feet on the floor.  Next, sucking in your stomach, lift your pelvis and buttocks as high as possible as you try and grab the back of your feet with your hands. ",
 		"category": 2,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Cat Stretch",
-		"description": "Come down on all fours and take a deep breath./n As you exhale, push your belly towards your spine, curving your back to the ceiling./n Hold this position for a few seconds and then, slowly bring your back down to normal.",
+		"description": "Do 10 repetitions per set. Come down on all fours and take a deep breath.  As you exhale, push your belly towards your spine, curving your back to the ceiling.  Hold this position for a few seconds and then, slowly bring your back down to normal.",
 		"category": 2,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": " Kneeling Extension",
-		"description": "Get your body on all fours and left your right leg and left arm to shoulder level./n Hold this position for a few seconds while looking straight ahead./n Then, bring the leg and arm down and lift the left leg and right arm next. ",
+		"description": "Do 15 repetitions per set. Get your body on all fours and left your right leg and left arm to shoulder level.  Hold this position for a few seconds while looking straight ahead.  Then, bring the leg and arm down and lift the left leg and right arm next. ",
 		"category": 2,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Dolphin Kicks",
-		"description": "Place your torso on a table or bench as you lie on your stomach and slowly, lift both your legs together in the air as high as you can./n If lifting both the legs together is particularly tough, do it one leg at a time.",
+		"description": "Do 20 repetitions per set. Place your torso on a table or bench as you lie on your stomach and slowly, lift both your legs together in the air as high as you can.  If lifting both the legs together is particularly tough, do it one leg at a time.",
 		"category": 2,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
-		"name": "Adho Mukha Svanasana or the Downward Dog Pose",
-		"description": "Begin in a kneeling position with your hands directly under the shoulders and fingers spread wide./n Tuck your toes and engage your abs as you push your body up so only your hands and feet are on the ground./n Press through your hands, moving your chest gently towards your thighs and your heels towards the floor.",
+		"name": "Downward Dog Pose",
+		"description": "Do 5 repeptitions. Begin in a kneeling position with your hands directly under the shoulders and fingers spread wide.  Tuck your toes and engage your abs as you push your body up so only your hands and feet are on the ground.  Press through your hands, moving your chest gently towards your thighs and your heels towards the floor. Return to all fours after 30 seconds.",
 		"category": 2,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Nose and Toes Against the Wall",
-		"description": "Start in a push-up position with your feet against the wall./n Next, walk your feet up the wall while keeping your core tight, hips flexed and spine neutral./n Place your palms firmly on the ground just outside shoulder width as you begin to inch your hands toward the wall./n The top of the position will be reached when just your nose and toes touch the wall with firm hand placement on the floor and rigid core for a “hollow body” position./n Upon completion, safely come down by walking your hands away from the wall and bringing your feet down in a controlled manner./n Repeat for 3 reps with a 15-30 second static hold, and 30-60 seconds rest between sets.",
+		"description": "Repeat for 5 repetitions per set with a 15-30 second static hold, with 30 seconds reset between each. Start in a push-up position with your feet against the wall.  Next, walk your feet up the wall while keeping your core tight, hips flexed and spine neutral.  Place your palms firmly on the ground just outside shoulder width as you begin to inch your hands toward the wall.  The top of the position will be reached when just your nose and toes touch the wall with firm hand placement on the floor and rigid core for a “hollow body” position.  Upon completion, safely come down by walking your hands away from the wall and bringing your feet down in a controlled manner.",
 		"category": 2,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Floor Pull-Up",
-		"description": "Lie facedown on top of a towel (if needed) on a smooth floor with your legs together./n Place your forearms, elbows bent, underneath your shoulders, and make your hands into fists./n Keep your body tight and your head neutral as you push backward, sliding your body away from your elbows./n When you’ve gone as far as you can, drive down into the floor with your elbows and pull yourself back to the start.",
+		"description": "Do 15 repetitions per set. Lie facedown on top of a towel (if needed) on a smooth floor with your legs together.  Place your forearms, elbows bent, underneath your shoulders, and make your hands into fists.  Keep your body tight and your head neutral as you push backward, sliding your body away from your elbows.  When you’ve gone as far as you can, drive down into the floor with your elbows and pull yourself back to the start.",
 		"category": 2,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Lateral Plank Walk",
-		"description": "Start in a high plank position with your palms flat on the floor, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./nTake a step to the right starting with your right hand and right foot and following with your left hand and foot, maintaining a plank position as you move./n This is 1 rep./nDo a set amount of reps in one direction, and then repeat the same amount moving in the opposite direction.",
+		"description": "Do 10 repetitions on each side per set. Start in a high plank position with your palms flat on the floor, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged. Take a step to the right starting with your right hand and right foot and following with your left hand and foot, maintaining a plank position as you move.  This is 1 rep. Do a set amount of reps in one direction, and then repeat the same amount moving in the opposite direction.",
 		"category": 3,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Bird Dog Crunch",
-		"description": "Start on your hands and knees in tabletop position with your wrists stacked under your shoulders and your knees stacked under your hips./nExtend your right arm forward and left leg back, maintaining a flat back and keeping your hips in line with the floor./n Think about driving your foot toward the wall behind you./nSqueeze your abs and draw your right elbow and left knee in to meet near the center of your body./nReverse the movement and extend your arm and leg back out./nContinue this movement for a set amount of time, then repeat with the other arm and leg.",
+		"description": "Do 15 repetitions per set. Start on your hands and knees in tabletop position with your wrists stacked under your shoulders and your knees stacked under your hips. Extend your right arm forward and left leg back, maintaining a flat back and keeping your hips in line with the floor.  Think about driving your foot toward the wall behind you. Squeeze your abs and draw your right elbow and left knee in to meet near the center of your body. Reverse the movement and extend your arm and leg back out. Continue this movement for 30 seconds, then repeat with the other arm and leg.",
 		"category": 3,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Plank With Spinal Rotation",
-		"description": "Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged./n Place your feet hip-width apart./nRotate your entire body to the right into a side plank, so that your right shoulder is stacked above your right wrist and your left hand is extended toward the ceiling./n Pause here for a second, then return to start./n That's 1 rep.",
+		"description": "Do 15 repetitions per set. Start in a high plank with your palms flat, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended behind you, and your core and glutes engaged.  Place your feet hip-width apart. Rotate your entire body to the right into a side plank, so that your right shoulder is stacked above your right wrist and your left hand is extended toward the ceiling.  Pause here for a second, then return to start.  That's 1 rep.",
 		"category": 3,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Plank to Downward Dog Tap",
-		"description": "Start in a high plank with your wrists under your shoulders and your feet hip-width apart./nPush your hips up and back to move into a Downward Dog with your heels reaching toward the floor./nKeep your core tight and shift your weight forward to come back into a high plank./nContinue for 1 minute.",
+		"description": "Do 5 repetitions per set resting 30 seconds in between each rep. Start in a high plank with your wrists under your shoulders and your feet hip-width apart. Push your hips up and back to move into a Downward Dog with your heels reaching toward the floor. Keep your core tight and shift your weight forward to come back into a high plank. Continue for 1 minute.",
 		"category": 3,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Forearm Plank Rock",
-		"description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./nRock your entire body forward a couple inches so your shoulders go past your elbows toward your hands./nRock back a couple inches. That's 1 rep./nMake sure to keep your core, butt, and quads engaged the entire time.",
+		"description": "Do 20 repetitions per set. Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you.  Tuck your tailbone and engage your core, butt, and quads. Rock your entire body forward a couple inches so your shoulders go past your elbows toward your hands. Rock back a couple inches. That's 1 rep. Make sure to keep your core, butt, and quads engaged the entire time.",
 		"category": 3,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Mountain Climber",
-		"description": "Start in high plank, with your palms flat on the floor, hands shoulder-width apart, shoulders stacked above your wrists, legs extended, and core engaged. This is the starting position./nKeeping your core tight, draw your right knee to your chest./nReturn to the starting position and immediately draw your left knee to your chest./nReturn your left leg to the starting position./n That's 1 rep./nContinue to alternate./n The quicker you move your legs, the more of a cardio challenge this will become./nMake sure to keep your core engaged and back flat throughout./n If you have to slow down to maintain form, that's fine.",
+		"description": "Do 20 repetitions per set. Start in high plank, with your palms flat on the floor, hands shoulder-width apart, shoulders stacked above your wrists, legs extended, and core engaged. This is the starting position. Keeping your core tight, draw your right knee to your chest. Return to the starting position and immediately draw your left knee to your chest. Return your left leg to the starting position.  That's 1 rep. Continue to alternate.  The quicker you move your legs, the more of a cardio challenge this will become. Make sure to keep your core engaged and back flat throughout.  If you have to slow down to maintain form, that's fine.",
 		"category": 3,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Forearm Plank to Dolphin",
-		"description": "Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you./n Tuck your tailbone and engage your core, butt, and quads./n This is the starting position./nPress through your forearms and lift your hips up and back, creating an inverted V shape with your body./n Your head should now be between your shoulders./nPause for a second and then slowly lower back into a forearm plank./nContinue this movement for a set amount of time.",
+		"description": "Do 10 repetitions per set. Start in a forearm plank with your forearms on the floor, elbows directly underneath your shoulders, hands facing forward so that your arms are parallel, and legs extended behind you.  Tuck your tailbone and engage your core, butt, and quads.  This is the starting position. Press through your forearms and lift your hips up and back, creating an inverted V shape with your body.  Your head should now be between your shoulders. Pause for a second and then slowly lower back into a forearm plank. Continue this movement for a 30 seconds.",
 		"category": 3,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Reverse Crunch",
-		"description": "Lie on your back with your knees together, legs bent to 90 degrees, and feet planted on the floor./n Place your palms face down beside you./n Brace your core to lift your hips off the floor, pulling your knees inward to your chest./n Pause for a moment, then lower back down while keeping your back pressed against the floor.",
+		"description": "Do 15 repetitions per set. Lie on your back with your knees together, legs bent to 90 degrees, and feet planted on the floor.  Place your palms face down beside you.  Brace your core to lift your hips off the floor, pulling your knees inward to your chest.  Pause for a moment, then lower back down while keeping your back pressed against the floor.",
 		"category": 3,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Bicycle Crunch",
-		"description": "Lie down with your lower back pressed to the ground, pulling your belly button toward your spine./n Place your hands behind your head, bring your knees toward your chest, and lift your shoulder blades off the ground./n Straighten your right leg while turning your upper body to the left, bringing your right elbow toward your left knee./n Now switch legs and do the same motion on the other side./n Make sure you are twisting your torso to initiate the motion and that you are not pulling on your neck.",
+		"description": "Do 20 repetitions per set. Lie down with your lower back pressed to the ground, pulling your belly button toward your spine.  Place your hands behind your head, bring your knees toward your chest, and lift your shoulder blades off the ground.  Straighten your right leg while turning your upper body to the left, bringing your right elbow toward your left knee.  Now switch legs and do the same motion on the other side.  Make sure you are twisting your torso to initiate the motion and that you are not pulling on your neck.",
 		"category": 3,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Wide-Grip Push-Up",
-		"description": "With the arms in a wide stance, you can raise and lower yourself to pump the pectoral muscles./n Wide grip push-ups target your outer pecs and front deltoids./n Start with hands placed a few inches out from the normal position, and balance on your toes./nPress down, and keep your spine straight by using your glutes and core./n To push back up from the ground, squeeze your chest until you’re in the same position as before.",
+		"description": "Do 10 repetitions per set. With the arms in a wide stance, you can raise and lower yourself to pump the pectoral muscles.  Wide grip push-ups target your outer pecs and front deltoids.  Start with hands placed a few inches out from the normal position, and balance on your toes. Press down, and keep your spine straight by using your glutes and core.  To push back up from the ground, squeeze your chest until you’re in the same position as before.",
 		"category": 4,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Pike Push-Up",
-		"description": "This more advanced version of the standard push-up targets your upper pecs and front delts./n Your starting position is body straight, hands on the floor at the same width as a standard push-up./nRaise your butt slightly, approximately 25 degrees to the ground, and perform your push-ups while holding this position.",
+		"description": "Do 15 repetitions per set. This more advanced version of the standard push-up targets your upper pecs and front delts.  Your starting position is body straight, hands on the floor at the same width as a standard push-up. Raise your butt slightly, approximately 95 degrees to the ground, and perform your push-ups while holding this position.",
 		"category": 4,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Diamond Push-Up",
-		"description": "This push-up variation focuses primarily on your inner pectoral muscles./n Your will be performing push-ups with your hands next to each other underneath your sternum./n It can help to have your thumbs touching and your pointer fingers touching for support.",
+		"description": "Do 15 repeptitions per set. This push-up variation focuses primarily on your inner pectoral muscles.  Your will be performing push-ups with your hands next to each other underneath your sternum.  It can help to have your thumbs touching and your pointer fingers touching for support.",
 		"category": 4,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Inner & Outer Push-Up",
-		"description": "This exercise alternates between regular and diamond push-ups./nStart by doing a standard push-up./n When you reach the bottom of your push-up, explode upward quickly and push your hands towards the center, so your hands are touching each other./n Perform a close-grip push-up, and after lowering down, explode back up and shift your hands back below your shoulders./nDo 10 of each push-up, 20 reps in all.",
+		"description": "Do 20 repetitions of each push-up per set. This exercise alternates between regular and diamond push-ups. Start by doing a standard push-up.  When you reach the bottom of your push-up, explode upward quickly and push your hands towards the center, so your hands are touching each other.  Perform a close-grip push-up, and after lowering down, explode back up and shift your hands back below your shoulders.",
 		"category": 4,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Single-Leg Knuckle Push-Up",
-		"description": "You perform this push-up variation with arms under your shoulders but with hands clenched like fists, resting on the ground on your knuckles./nAs you start your first rep, cross one foot over the other, and finish your set using only one leg./n Then do a set with the other leg. ",
+		"description": "Do 20 repetitions each leg per set. You perform this push-up variation with arms under your shoulders but with hands clenched like fists, resting on the ground on your knuckles. As you start your first rep, cross one foot over the other, and finish your set using only one leg.  Then do a set with the other leg. ",
 		"category": 4,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Wide Grip Crucifix Push-Up",
-		"description": "You will want to take on an even wider stance than a standard wide-grip push-up, and fingers turned out to the side, so this ultra-wide push-up targets your outer pecs and front deltoids./nYou will not be able to lift as high as a regular push-up, which is fine; 6-8 inches of movement is what you’re after in this exercise./nPress evenly with both arms and keep your core tight as you lift yourself slowly and back down slowly.",
+		"description": "Do 20 repetitions per set. You will want to take on an even wider stance than a standard wide-grip push-up, and fingers turned out to the side, so this ultra-wide push-up targets your outer pecs and front deltoids. You will not be able to lift as high as a regular push-up, which is fine; 6-8 inches of movement is what you’re after in this exercise. Press evenly with both arms and keep your core tight as you lift yourself slowly and back down slowly.",
 		"category": 4,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "One-Arm Push-Up",
-		"description": "Also known as an uneven push-up, this exercise allows you to emphasize one arm and pec at a time./n You will need a small, sturdy bowl or short push-up bar for support during this exercise./nGet in a regular push-up stance, but with the support under one hand./n Perform your push-ups with both arms, working for a deep stretch in the elevated arm./n After 10 or 15 reps, switch the support to the other arm.",
+		"description": "Do 20 repetitions per set for each arm. Also known as an uneven push-up, this exercise allows you to emphasize one arm and pec at a time.  You will need a small, sturdy bowl or short push-up bar for support during this exercise. Get in a regular push-up stance, but with the support under one hand.  Perform your push-ups with both arms, working for a deep stretch in the elevated arm.  Switch the support to the other arm.",
 		"category": 4,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Grasshopper Push-Up",
-		"description": "Start in a standard push-up position, and as you go down, bring your left knee forward towards your right elbow./n Alternate legs on each repetition, moving towards the opposite arm. ",
+		"description": "Do 20 repetitions per set. Start in a standard push-up position, and as you go down, bring your left knee forward towards your right elbow.  Alternate legs on each repetition, moving towards the opposite arm. ",
 		"category": 4,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Burpees",
-		"description": "This full-body workout is fantastic for an all-over exercise, including your chest./n Start in a standing position with feet together./n In one smooth motion, squat down and put your hands on the floor, jumping feet back into a plank, then down into a push-up, and as you lift back up, jump your feet back towards your hands to squat back up.",
+		"description": "Do 10 repetitions per set. This full-body workout is fantastic for an all-over exercise, including your chest.  Start in a standing position with feet together.  In one smooth motion, squat down and put your hands on the floor, jumping feet back into a plank, then down into a push-up, and as you lift back up, jump your feet back towards your hands to squat back up.",
 		"category": 4,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
-			{
+	{
 		"name": "Prone I to Y",
-		"description": "Lie on your stomach with your arms and legs fully extended./n Roll your shoulders down and back, and put your shoelaces on the ground./nEngage your core and, keeping your neck neutral, raise your shoulders and chest off the ground, maintaining an I shape with your body./n Stay here for 1–2 secondsTransition to a Y shape by moving your arms apart to a 45-degree angle./n Stay here for 1–2 seconds./nCome back to an I shape, then slowly lower back down to start./nComplete 6–10 reps.",
+		"description": "Do 30 repetitions per set. Lie on your stomach with your arms and legs fully extended.  Roll your shoulders down and back, and put your shoelaces on the ground. Engage your core and, keeping your neck neutral, raise your shoulders and chest off the ground, maintaining an I shape with your body.  Stay here for 6–9 secondsTransition to a Y shape by moving your arms apart to a 45-degree angle.  Stay here for 6–9 seconds. Come back to an I shape, then slowly lower back down to start.",
 		"category": 5,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Plank to Downward Dog",
-		"description": "Start in a high plank position:/n Your hands should be stacked underneath your shoulders, and your body should form a straight line from head to heel./n Your feet should be about shoulder-width apart./n Avoid letting your hips sag./nTransition to Downward Dog:/n Push your hips up to the ceiling while allowing your heels to move toward the ground./n Keep your legs straight and your arms straight through this movement./n Your body should form a V shape at the top./nPause here, then return to start in a fluid motion./nComplete 8–10 reps.",
+		"description": "Do 30 repetitions per set. Start in a high plank position:  Your hands should be stacked underneath your shoulders, and your body should form a straight line from head to heel.  Your feet should be about shoulder-width apart.  Avoid letting your hips sag. Transition to Downward Dog:  Push your hips up to the ceiling while allowing your heels to move toward the ground.  Keep your legs straight and your arms straight through this movement.  Your body should form a V shape at the top. Pause here, then return to start in a fluid motion.",
 		"category": 5,
-		"intensity": 0,
-		"equipment": [0]
-	},	
+		"intensity": 2,
+		"equipment": [
+			0
+		]
+	},
 	{
 		"name": "Elbow to high plank",
-		"description": "Start in an elbow plank:/n Your forearms should be on the ground, elbow stacked under shoulders./n Your body should form a straight line from head to heels./nInhale and bring one palm to the ground, followed by the other, to push up into a high plank./nHold a high plank for 1 second./nReturn to a forearm plank./nComplete 6–10 reps, alternating the starting side.",
+		"description": "Do 30 repetitions per set. Start in an elbow plank:  Your forearms should be on the ground, elbow stacked under shoulders.  Your body should form a straight line from head to heels. Inhale and bring one palm to the ground, followed by the other, to push up into a high plank. Hold a high plank for 6 second. Return to a forearm plank. Alternate the starting side.",
 		"category": 5,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Dolphin Dive",
-		"description": "Begin this exercise on your forearms and toes./n Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor./nDive forward with your body, until you resume a forearm plank position./n Your shoulders move forwards while your returns to a straight line./n Remember to keep your abdominal muscles contracted./nThen, return to the starting position and repeat.",
+		"description": "Do 20 repetitions per set. Begin this exercise on your forearms and toes.  Your feet should be walked in a few inches from your typical plank position so that your hips are raised in the air and you’re making a triangle shape with the floor. Dive forward with your body, until you resume a forearm plank position.  Your shoulders move forwards while your returns to a straight line.  Remember to keep your abdominal muscles contracted. Then, return to the starting position and repeat.",
 		"category": 5,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Shoulder Press with Towel",
-		"description": "Roll the towel into a cylinder./n Hold the towel at both ends so that your hands are shoulder-width apart./n Keep your elbows tucked in and down so that the towel is close to your chest./nPull the towel apart./n Raise your hands and the towel overhead until your arms are fully extended and are above you./n Remember to keep pulling the towel apart./nSlowly lower your arms and repeat.",
+		"description": "Do 20 repetitions per set. Roll the towel into a cylinder.  Hold the towel at both ends so that your hands are shoulder-width apart.  Keep your elbows tucked in and down so that the towel is close to your chest. Pull the towel apart.  Raise your hands and the towel overhead until your arms are fully extended and are above you.  Remember to keep pulling the towel apart. Slowly lower your arms and repeat.",
 		"category": 5,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Front Shoulder Raise With Towel",
-		"description": "Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each./n Hold it with your arms extended so that it’s sitting at your hips./nSlowly raise the towel until it’s in front of you, your arms parallel to the ground./nPull the towel apart as far as you can./nRelease and lower your arms slowly./nRepeat.",
+		"description": "Do 20 repetitions per set. Roll a towel up into a cylinder and grab both ends (shoulder-width apart) with one hand each.  Hold it with your arms extended so that it’s sitting at your hips. Slowly raise the towel until it’s in front of you, your arms parallel to the ground. Pull the towel apart as far as you can. Release and lower your arms slowly. Repeat.",
 		"category": 5,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Crab walk",
-		"description": "Sit on the floor with knees bent, feet shoulder-width apart, and palms on the floor behind you with fingers pointing forward./n Engage glutes and raise hips off the floor, making a table shape with your body./nWalk forward with left foot and right hand, then with right foot and left hand./n Walk forward for the specified number of steps, then reverse the movement and crab walk backward to the starting position.",
+		"description": "Do 10 repetitions per set. Sit on the floor with knees bent, feet shoulder-width apart, and palms on the floor behind you with fingers pointing forward.  Engage glutes and raise hips off the floor, making a table shape with your body. Walk forward with left foot and right hand, then with right foot and left hand.  Walk forward for 10 steps, then reverse the movement and crab walk backward to the starting position.",
 		"category": 5,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Bridge push-up",
-		"description": "Lie faceup on the floor with knees bent and feet as close to butt as possible./n Place hands next to ears, with fingers pointing toward heels./n Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose)./nOnce you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
+		"description": "Do 20 repetitions per set. Lie faceup on the floor with knees bent and feet as close to butt as possible.  Place hands next to ears, with fingers pointing toward heels.  Push hips up, then arch your back and press hands into the floor to lift into Bridge Pose (also known as Wheel Pose). Once you’re comfortable holding Bridge Pose, add push-ups. As you inhale, bend your elbows and lower your head toward the floor as far as you can. As you exhale, engage shoulders to push back up. That’s 1 rep.",
 		"category": 5,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Diving push-up",
-		"description": "Start in Downward Dog, with hands and feet on the floor and hips high./n Lower your chest toward the floor, bending at elbows, then pull chest up and extend arms as you bring hips to the floor (similar to Upward Dog)./n Raise hips back up while bringing chest back to the floor, extending arms to return to Down Dog.",
+		"description": "Do 15 repetitions per set. Start in Downward Dog, with hands and feet on the floor and hips high.  Lower your chest toward the floor, bending at elbows, then pull chest up and extend arms as you bring hips to the floor (similar to Upward Dog).  Raise hips back up while bringing chest back to the floor, extending arms to return to Down Dog.",
 		"category": 5,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Calf Raises",
-		"description": "Find a step approximately 4 inches off the ground./nStand with the back half of your foot hanging off the step./nLower your heels 2 inches./nPress up so that you are standing on the balls of your feet./nRepeat 15 to 20 times to complete one set./nDo two sets to complete the exercise.",
+		"description": "Do 20 repetitions per set. Find a step approximately 4 inches off the ground. Stand with the back half of your foot hanging off the step. Lower your heels 2 inches. Press up so that you are standing on the balls of your feet.",
 		"category": 6,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Lunge Pulses",
-		"description": "Stand with your feet together, arms by your sides./nStep forward into a lunge with your right foot./n Bend your right leg 90 degrees at the knee and extend your left leg behind you, knee bent./nFrom this position, pulse up so that your left leg is straight./n Bend to complete one pulse./nPulse up and down 15 times on each side.",
+		"description": "Do 5 repetitions per set. Stand with your feet together, arms by your sides. Step forward into a lunge with your right foot.  Bend your right leg 90 degrees at the knee and extend your left leg behind you, knee bent. From this position, pulse up so that your left leg is straight.  Bend to complete one pulse. Pulse up and down 15 times on each side.",
 		"category": 6,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Calf Stretches",
-		"description": "Stand facing a wall. Place your hands on the wall at shoulder height./nStep one foot back approximately two feet./nKeeping your back knee straight to target the gastrocnemius muscle, lean in toward the wall until you feel a strong pull along your calf./nRepeat this stretch with your back knee bent to target your soleus muscle.",
+		"description": "Do 5 repetitions per set hold 30 seconds each. Stand facing a wall. Place your hands on the wall at shoulder height. Step one foot back approximately two feet. Keeping your back knee straight to target the gastrocnemius muscle, lean in toward the wall until you feel a strong pull along your calf. Repeat this stretch with your back knee bent to target your soleus muscle.",
 		"category": 6,
-		"intensity": 0,
-		"equipment": [0]
+		"intensity": 2,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Butt kick",
-		"description": "Stand with feet hip-width apart./nBend right knee, bringing right foot up until it taps your butt./nAs you lower your right foot to the floor, quickly repeat the movement with your left leg, jumping slightly as you switch feet./nContinue alternating legs quickly for 30–60 seconds./nDo 3 sets, resting after each.",
+		"description": "Do 3 repetitions per set resting 30 seconds between each. Stand with feet hip-width apart. Bend right knee, bringing right foot up until it taps your butt. As you lower your right foot to the floor, quickly repeat the movement with your left leg, jumping slightly as you switch feet. Continue alternating legs quickly for 30–60 seconds.",
 		"category": 6,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "High knees",
-		"description": "Stand with feet hip-width apart./nLift right leg in front of you until knee is level with your belly button./nAs you lower your right foot to the floor, quickly repeat the movement with your left leg, jumping slightly as you switch feet./nContinue alternating legs quickly for 30–60 seconds./nDo 3 sets, resting after each.",
+		"description": "Do 3 repetitions per set resting 30 seconds between each. Stand with feet hip-width apart. Lift right leg in front of you until knee is level with your belly button. As you lower your right foot to the floor, quickly repeat the movement with your left leg, jumping slightly as you switch feet. Continue alternating legs quickly for 30–60 seconds.",
 		"category": 6,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Squat to raised heel",
-		"description": "Stand with feet hip-width apart./nKeeping your back as straight as possible, bend knees to a 90-degree angle./nStraighten legs to return to a standing position./nWhen knees are no longer bent, continue by lifting onto the balls of your feet./nHold for a moment, then lower your heels to the floor./nDo 3 sets of 15 reps.",
+		"description": "Do 20 repetitions per set. Stand with feet hip-width apart. Keeping your back as straight as possible, bend knees to a 90-degree angle. Straighten legs to return to a standing position. When knees are no longer bent, continue by lifting onto the balls of your feet. Hold for a moment, then lower your heels to the floor.",
 		"category": 6,
-		"intensity": 1,
-		"equipment": [0]
+		"intensity": 6,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Explosive calf step-up",
-		"description": "Stand up straight with one foot on a step in front of you./nPush off your elevated foot to explode up into a jump./nDuring the jump, switch the positions of your legs./nDo 3 sets of 15 reps.",
+		"description": "Do 20 repetitions per set. Stand up straight with one foot on a step in front of you. Push off your elevated foot to explode up into a jump. During the jump, switch the positions of your legs.",
 		"category": 6,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Seal jump",
-		"description": "Stand with feet together and arms at your sides./nBend your knees slightly and jump, separating your legs until they are slightly wider than shoulder width apart./n ",
+		"description": "Do 25 repetitions per set. Stand with feet together and arms at your sides. Bend your knees slightly and jump, separating your legs until they are slightly wider than shoulder width apart.  ",
 		"category": 6,
-		"intensity": 2,
-		"equipment": [0]
+		"intensity": 9,
+		"equipment": [
+			0
+		]
 	},
 	{
 		"name": "Jumping Calf Raise",
-		"description": "Stand tall with feet flat on the floor and jump using only your calves./nLand softly, absorbing the force by dropping into a half squat./nTry to land quietly.",
+		"description": "Do 20 repetitions per set. Stand tall with feet flat on the floor and jump using only your calves. Land softly, absorbing the force by dropping into a half squat. Try to land quietly.",
 		"category": 6,
-		"intensity": 2,
-		"equipment": [0]
-	}	
-
+		"intensity": 9,
+		"equipment": [
+			0
+		]
+	}
 ]

@@ -23,7 +23,7 @@ public class TestWorkoutCalendar {
     @Test
     void testAddWorkout() {
         WorkoutCalendar testCalendar = new WorkoutCalendar();
-        ExerciseAlt testExercise = new ExerciseAlt("test", "test description", 0, new int[] { 7 });
+        ExerciseAlt testExercise = new ExerciseAlt("test", "test description", 0, new int[] { 7 }, 30);
         Workout testWorkout = new Workout();
         testWorkout.addExercise(testExercise);
         testCalendar.addWorkout(Days.MONDAY, testWorkout);
@@ -33,9 +33,9 @@ public class TestWorkoutCalendar {
     @Test
     void testGetWorkoutCalendar() {
         WorkoutCalendar testCalendar = new WorkoutCalendar();
-        ExerciseAlt testExercise = new ExerciseAlt("test", "test description", 0, new int[] { 7 });
-        ExerciseAlt testExerciseTwo = new ExerciseAlt("test", "test description", 0, new int[] { 7 });
-        ExerciseAlt testExerciseThree = new ExerciseAlt("test", "test description", 0, new int[] { 7 });
+        ExerciseAlt testExercise = new ExerciseAlt("test", "test description", 0, new int[] { 7 }, 30);
+        ExerciseAlt testExerciseTwo = new ExerciseAlt("test", "test description", 0, new int[] { 7 }, 30);
+        ExerciseAlt testExerciseThree = new ExerciseAlt("test", "test description", 0, new int[] { 7 }, 30);
         Workout testWorkout = new Workout();
         Workout testWorkoutTwo = new Workout();
         Workout testWorkoutThree = new Workout();

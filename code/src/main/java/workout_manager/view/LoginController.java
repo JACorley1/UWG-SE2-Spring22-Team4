@@ -1,8 +1,7 @@
 package workout_manager.view;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Calendar;
 
 import com.google.gson.Gson;
 
@@ -17,10 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import workout_manager.Main;
 import workout_manager.model.Client;
-import workout_manager.model.Days;
-import workout_manager.model.Intensity;
-import workout_manager.model.MuscleGroup;
-import workout_manager.model.Preferences;
 import workout_manager.model.User;
 import workout_manager.utils.ServerErrorMessages;
 import workout_manager.viewmodel.ModelControllerManager;
@@ -69,10 +64,10 @@ public class LoginController {
             this.mcm.deSerialize(response);
             this.errorLabel.setVisible(false);
             Stage stage = (Stage) this.loginButton.getScene().getWindow();
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.WEEKLY_VIEW_PAGE));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource(Main.DAILY_DETAILS_PAGE));
             Parent parent = loader.load();
-            WeeklyViewController wvc = loader.<WeeklyViewController>getController();
-            wvc.initParams(this.mcm);
+            DailyDetailsController ddc = loader.<DailyDetailsController>getController();
+            ddc.initParams(this.mcm, this.getDay());
             Scene scene = new Scene(parent);
             stage.setTitle(Main.WINDOW_TITLE);
             stage.setScene(scene);
@@ -122,6 +117,12 @@ public class LoginController {
     void initialize() {
         this.bindLoginButtonVisibility();
         this.bindRegisterButtonVisibility();
+    }
+
+    private String getDay() {
+        Calendar calendar = Calendar.getInstance();
+        String[] weekDays = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+        return weekDays[calendar.get(Calendar.DAY_OF_WEEK) - 1];
     }
 
     private void bindLoginButtonVisibility() {

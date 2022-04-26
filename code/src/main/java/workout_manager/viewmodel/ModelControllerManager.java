@@ -1,6 +1,8 @@
 package workout_manager.viewmodel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -17,6 +19,7 @@ import workout_manager.model.Intensity;
 
 import workout_manager.model.MuscleGroup;
 import workout_manager.model.Preferences;
+import workout_manager.model.Stats;
 import workout_manager.model.User;
 import workout_manager.model.UserSerializer;
 import workout_manager.model.Workout;
@@ -28,7 +31,7 @@ import workout_manager.model.WorkoutCalendar;
  * @author group 4
  */
 public class ModelControllerManager {
-    
+
     private User user;
     private Workout currentWorkout;
     private UserSerializer serializer;
@@ -77,9 +80,9 @@ public class ModelControllerManager {
      * @precondition none
      * @postcondition none
      * 
-     * @param muscles the list of selected muscles to set for the user's preferred
-     *                muscles
-     * @param days    the list of selected days to set the user's available days
+     * @param muscles   the list of selected muscles to set for the user's preferred
+     *                  muscles
+     * @param days      the list of selected days to set the user's available days
      * @param intensity the intensity at which the user wishes to work out
      */
     public void setUserPrefs(SimpleListProperty<MuscleGroup> muscles, SimpleListProperty<Days> days,
@@ -87,6 +90,16 @@ public class ModelControllerManager {
         this.user.setPreferences(
                 new Preferences(muscles.subList(0, muscles.size()), days.subList(0, days.size()), intensity));
         this.generateWorkoutCalendar();
+    }
+
+    private void updateStats() {
+        Client client = Client.getClient();
+        Gson gson = new GsonBuilder().create();
+        String statsJson = gson.toJson(this.user.getUserStats());
+        client.sendRequest("update" + ", " + statsJson);
+        String response = client.receiveResponse();
+        client.closeSocket();
+        System.out.println(response);
     }
 
     private void generateWorkoutCalendar() {
@@ -99,13 +112,14 @@ public class ModelControllerManager {
         String response = client.receiveResponse();
         var test = gson.fromJson(response, Map.class);
         WorkoutCalendar calendar = new WorkoutCalendar();
-        for (Object day: test.keySet()) {
+        for (Object day : test.keySet()) {
             Days currentDay = gson.fromJson((String) day, Days.class);
-            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>>) test.get(day);
+            LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>> list = (LinkedTreeMap<String, ArrayList<LinkedTreeMap<String, String>>>) test
+                    .get(day);
             for (ArrayList<LinkedTreeMap<String, String>> current : list.values()) {
                 calendar.addWorkout(currentDay, this.createWorkoutFromString(current));
             }
-            
+
         }
         this.user.setWorkoutCalender(calendar);
         client.closeSocket();
@@ -122,6 +136,7 @@ public class ModelControllerManager {
         }
         return createdWorkout;
     }
+
     /**
      * sets this.user to the given user
      * 
@@ -158,6 +173,36 @@ public class ModelControllerManager {
     }
 
     /**
+     * Adds the specified weight and current date to the user's
+     * stats
+     * 
+     * @param weight the user's weight
+     */
+    public void addUserWeightEntry(double weight, String day) {
+        Date date = new Date();
+        date = Days.getDate(date, day);
+        this.user.getUserStats().addWeight(date, weight);
+        this.updateStats();
+    }
+
+
+    /**
+     * Adds the specifed time duration and current date to the user's
+     * stats
+     * 
+     * @param workoutDuration the number of minutes it took the user to
+     *                        finish the workout
+     */
+    public void addUserWorkoutCompletionTimeEntry(double workoutDuration, String day) {
+        Date today = new Date();
+        today = Days.getDate(today, day);
+        int fitnessPoints = this.currentWorkout.getTotalPoints();
+        this.user.getUserStats().addFitnessPoints(today, (int) fitnessPoints);
+        this.user.getUserStats().addExerciseCompletiton(today, workoutDuration);
+        this.updateStats();
+    }
+
+    /**
      * deserializes the user
      * 
      * @precondition none
@@ -167,6 +212,7 @@ public class ModelControllerManager {
      * 
      */
     public void deSerialize(String serializedUser) {
+        
         this.user = this.serializer.deserialize(serializedUser);
     }
 
@@ -180,4 +226,7 @@ public class ModelControllerManager {
         this.serializer.serialize(this.user);
     }
 
+    public Stats getUserStats() {
+        return this.user.getUserStats();
+    }
 }

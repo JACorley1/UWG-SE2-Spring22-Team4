@@ -79,7 +79,6 @@ public class PreferenceController {
         stage.setTitle(Main.WINDOW_TITLE);
         stage.setScene(scene);
         stage.show();
-
     }
 
     private SimpleListProperty<Days> getDaysSelected() {
@@ -166,11 +165,11 @@ public class PreferenceController {
     private void displayIntensity() {
         if (this.mcm.getCurrentPreferences().getIntensity() == null) {
             this.beginnerRadioButton.selectedProperty().set(true);
-        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 0) {
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 30) {
             this.beginnerRadioButton.selectedProperty().set(true);
-        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 1) {
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 45) {
             this.intermediateRadioButton.selectedProperty().set(true);
-        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 2) {
+        } else if (this.mcm.getCurrentPreferences().getIntensity().getCode() == 60) {
             this.advancedRadioButton.selectedProperty().set(true);
         }
     }

@@ -21,6 +21,7 @@ public class Main extends Application {
     public static final String LOGIN_PAGE = "view/codebehind/LoginPage.fxml";
     public static final String PREFERENCE_PAGE = "view/codebehind/PreferencePage.fxml";
     public static final String WEEKLY_VIEW_PAGE = "view/codebehind/WeeklyView.fxml";
+    public static final String STATS_VIEW_PAGE = "view/codebehind/StatsView.fxml";
     public static final String DAILY_DETAILS_PAGE = "view/codebehind/DailyDetailsPage.fxml";
     public static final String USER_FILE_PATH = "src/main/java/workout_manager/model/userFile.json";
     private ModelControllerManager mcm;

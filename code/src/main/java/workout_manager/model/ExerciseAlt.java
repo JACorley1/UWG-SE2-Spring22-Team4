@@ -12,6 +12,7 @@ public class ExerciseAlt {
     private String description;
     private int category;
     private int[] equipment;
+    private int intensity;
 
     /**
      * creates an exerciseAlt object
@@ -24,7 +25,7 @@ public class ExerciseAlt {
      * @param category    the muscle category
      * @param equipment   int representation of equipment
      */
-    public ExerciseAlt(String name, String description, int category, int[] equipment) {
+    public ExerciseAlt(String name, String description, int category, int[] equipment, int intensity) {
         if (name == null) {
             throw new IllegalArgumentException("name cant be null created");
         }
@@ -37,11 +38,14 @@ public class ExerciseAlt {
         if (description.isEmpty()) {
             throw new IllegalArgumentException("exercise description cant be empty");
         }
+        if (intensity < 0) {
+            throw new IllegalArgumentException("intensity must be greater than zero");
+        }
         this.name = name;
         this.description = description;
         this.category = category;
         this.equipment = equipment;
-
+        this.intensity = intensity;
     }
 
     /**
@@ -91,6 +95,17 @@ public class ExerciseAlt {
             return 0;
         }
 
+    }
+
+    /**
+     * returns the int representation of the exercise intensity
+     * 
+     * @precondition none
+     * @postcondition none
+     * @return the int representation for intensity
+     */
+    public int getIntensity() {
+        return this.intensity;
     }
 
 }

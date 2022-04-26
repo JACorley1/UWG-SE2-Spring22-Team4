@@ -146,9 +146,21 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <RadioButton fx:id="beginnerRadioButton" mnemonicParsing="false" text="Beginner" />
-            <RadioButton fx:id="intermediateRadioButton" mnemonicParsing="false" text="Intermediate" GridPane.rowIndex="1" />
-            <RadioButton fx:id="advancedRadioButton" mnemonicParsing="false" text="Advanced" GridPane.rowIndex="2" />
+            <RadioButton fx:id="beginnerRadioButton" alignment="CENTER_LEFT" mnemonicParsing="false" text="Beginner">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="5.0" />
+               </padding></RadioButton>
+            <RadioButton fx:id="intermediateRadioButton" mnemonicParsing="false" text="Intermediate" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></RadioButton>
+            <RadioButton fx:id="advancedRadioButton" mnemonicParsing="false" text="Advanced" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></RadioButton>
          </children>
       </GridPane>
    </children>
