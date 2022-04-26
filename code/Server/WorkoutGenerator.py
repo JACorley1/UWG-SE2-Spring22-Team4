@@ -37,7 +37,7 @@ class WorkoutGenerator:
         return calendar
 
     def createSets(intensityThreshold, workout):
-        intensity = 0;
+        intensity = 0
         for exercise in workout:
             if (intensity < intensityThreshold):
                 workout.append(exercise)
